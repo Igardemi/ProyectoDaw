@@ -1,0 +1,100 @@
+@function getBorderSize($size) {
+	@return 10px * $size;
+}
+
+// funciones de Padding
+
+@function getPadding($key) {
+	@return nth($padding-margins-values, $key + 1); //los arrays empiezan en 1.
+}
+
+@function getPaddingKeys() {
+	$key: ();
+
+	@for $indice from 0 to length($padding-margins-values) {
+		$key: append($key, $indice);
+	}
+
+	@return $key;
+}
+
+// funciones de Margins
+
+@function getMarginKeys() {
+	$key: ();
+
+	@for $indice from 0 to length($padding-margins-values) {
+		$key: append($key, $indice);
+	}
+
+	@return $key;
+}
+
+@function getMargin($key) {
+	@return (nth($padding-margins-values, $key + 1));
+}
+
+//Funciones Colores
+
+@function getColor($key, $index) {
+	@return nth(map-get($colors, $key), $index + 1);
+}
+
+//Funciones Sombreado
+
+@function getShadow($valor) {
+	@return unquote(
+		nth($profundidades, $valor + 1)
+	); //Crea la función getShadow($key) de forma que retorne cada una de los sombreados.
+}
+
+@function getShadowKeys() {
+	$response: ();
+	@for $index from 0 to length($profundidades) {
+		$response: append($response, $index);
+	}
+
+	@return $response;
+}
+
+//Funciones Gap
+
+@function getGapKeys() {
+	$resultado: ();
+
+	@for $i from 0 to length($padding-margins-values) {
+		$resultado: append($resultado, $i);
+	}
+
+	@return $resultado;
+}
+
+@function getGap($key) {
+	@return nth($padding-margins-values, $key + 1);
+}
+
+//funciones de tipo de letra
+
+@function getFontSizeKeys() {
+	$key: ();
+	@for $indice from 0 to length($font-size-values) {
+		$key: append($key, $indice);
+	}
+	@return $key;
+}
+
+//funciones de sombreado
+
+@function getShadowKeys() {
+	$response: ();
+	@for $index from 0 to length($profundidades) {
+		$response: append($response, $index);
+	}
+	@return $response;
+}
+
+//funciones de border radius
+
+@function getBorderRadius($key) {
+	@return (nth($borderRadius, $key + 1));
+}

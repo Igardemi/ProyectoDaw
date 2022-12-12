@@ -1,0 +1,21 @@
+@each $id,$px in $fontSizes{
+    .g--font-size-#{$id}{
+      font-size: $px;
+    }
+}
+
+@for $var from -3 to 7 {
+  $name:"";
+  @if $var<0 {
+    $name:$var+"s";
+  }
+  @if $var==0 {
+    $name:"";
+  }
+  @if $var>0 {
+    $name:"-"+$var+"l";
+  }
+  .g--fonts-size#{$name}{
+    font-size: getFontSize2($var);
+  }
+} 

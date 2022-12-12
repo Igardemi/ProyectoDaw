@@ -1,0 +1,29 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-scss": "node-sass -o ./dist/css ./src/web/scss",
+    "compile-ts": "tsc --outDir  ./dist/js/ ./src/web/ts/main.ts",
+    "compile": "npm run compile-scss && npm run compile-ts",
+    "onchange": "onchange **/*.ts **/*.scss -- npm run compile"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mathjs": "^11.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Igardemi/ProyectoDaw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Igardemi/ProyectoDaw/issues"
+  },
+  "homepage": "https://github.com/Igardemi/ProyectoDaw#readme"
+}

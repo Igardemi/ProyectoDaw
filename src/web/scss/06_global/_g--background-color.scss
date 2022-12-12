@@ -1,0 +1,9 @@
+@each $type,$color in $colors{
+    $contador:0;  
+      @each $a in $color{
+        .g--background-color-#{$type}-#{$contador}{
+          background-color: $a;     
+        }
+        $contador:$contador+1;
+      }
+  }

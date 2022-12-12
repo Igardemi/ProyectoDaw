@@ -1,0 +1,13 @@
+.l-main-page{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax( 100px, 1fr ) );  
+  }
+
+  .l-main-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);  
+  }
+
+  .l-main{
+   display:grid;
+  }

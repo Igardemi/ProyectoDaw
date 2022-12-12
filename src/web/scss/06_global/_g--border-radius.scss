@@ -1,0 +1,5 @@
+@for $index from 0 to length($borderRadius){
+    .g--border-radius-#{$index}{
+      border-radius: getBorderRadius($index);
+    }
+  }

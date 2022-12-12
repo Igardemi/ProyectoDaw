@@ -1,0 +1,6 @@
+@each $index in getShadowKeys() {
+
+    .g--shadow-#{$index}{
+       @include shadow($index);
+    }
+}

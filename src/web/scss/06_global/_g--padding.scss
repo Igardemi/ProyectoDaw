@@ -1,0 +1,28 @@
+@each $index in getPaddingKeys(){
+  
+  $value:getPadding($index);
+
+    .g--padding-#{$index}{
+      padding:$value;
+    }
+    .g--padding-left-#{$index}{
+      padding-left:$value;
+    }
+    .g--padding-right-#{$index}{
+      padding-right:$value;
+    }
+    .g--padding-top-#{$index}{
+      padding-top:$value;
+    }
+    .g--padding-bottom-#{$index}{
+      padding-bottom:$value;
+    }
+    .g--padding-vertical-#{$index}{
+      margin-bottom: $value;
+      margin-top: $value;
+    }
+    .g--padding-horizonal-#{$index}{
+      margin-left: $value; 
+      margin-right:$value;
+    }
+  }

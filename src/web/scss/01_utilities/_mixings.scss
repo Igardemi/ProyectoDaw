@@ -1,0 +1,10 @@
+
+
+  @mixin shadow($key) {
+    -webkit-box-shadow: getShadow($key);
+    -moz-box-shadow: getShadow($key);
+    box-shadow: getShadow($key);
+  }
+   
+  
+  

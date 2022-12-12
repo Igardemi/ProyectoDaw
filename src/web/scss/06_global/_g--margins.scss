@@ -1,0 +1,28 @@
+@each $index in getMarginKeys(){
+  
+  $value:getMargin($index);
+
+    .g--margin-#{$index}{
+      margin: $value;
+    }
+    .g--margin-left-#{$index}{
+      margin-left: $value;
+    }
+    .g--margin-right-#{$index}{
+      margin-right: $value;
+    }
+    .g--margin-top-#{$index}{
+      margin-top: $value;
+    }
+    .g--margin-bottom-#{$index}{
+      margin-bottom: $value;
+    }
+    .g--margin-vertical-#{$index}{
+      margin-bottom: $value;
+      margin-top: $value;
+    }
+    .g--margin-horizonal-#{$index}{
+      margin-left: $value; 
+      margin-right:$value;
+    }
+  }

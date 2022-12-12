@@ -1,0 +1,9 @@
+
+@each $type,$color in $colors{
+
+  @for $index from 0 to length($color){
+      .g--color-#{$type}-#{$index}{
+        color: getColor($type,$index);
+      }
+    }
+}
