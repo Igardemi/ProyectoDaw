@@ -5,13 +5,13 @@
 // funciones de Padding
 
 @function getPadding($key) {
-	@return nth($padding-margins-values, $key + 1); //los arrays empiezan en 1.
+	@return nth($padding-values, $key + 1); //los arrays empiezan en 1.
 }
 
 @function getPaddingKeys() {
 	$key: ();
 
-	@for $indice from 0 to length($padding-margins-values) {
+	@for $indice from 0 to length($padding-values) {
 		$key: append($key, $indice);
 	}
 
@@ -23,7 +23,7 @@
 @function getMarginKeys() {
 	$key: ();
 
-	@for $indice from 0 to length($padding-margins-values) {
+	@for $indice from 0 to length($margin-values) {
 		$key: append($key, $indice);
 	}
 
@@ -31,7 +31,7 @@
 }
 
 @function getMargin($key) {
-	@return (nth($padding-margins-values, $key + 1));
+	@return (nth($margin-values, $key + 1));
 }
 
 //Funciones Colores
@@ -62,7 +62,7 @@
 @function getGapKeys() {
 	$resultado: ();
 
-	@for $i from 0 to length($padding-margins-values) {
+	@for $i from 0 to length($gap-values) {
 		$resultado: append($resultado, $i);
 	}
 
@@ -70,7 +70,7 @@
 }
 
 @function getGap($key) {
-	@return nth($padding-margins-values, $key + 1);
+	@return nth($gap-values, $key + 1);
 }
 
 //funciones de tipo de letra

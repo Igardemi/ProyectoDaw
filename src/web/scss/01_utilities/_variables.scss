@@ -1,6 +1,6 @@
 $colors:(
-  "principal":(#02263C, #024474, #015FAD, #0073E6, #1F87FF, #579DFF, #8FBAFE, #C8DAFE, #FFFFFF),
-  "alternativo":(#461502, #792D06, #AC470C, #D96512, #ED8835, #F3AD68, #F8CD9B, #FCE7CA, #FFFFFF),
+  "principal":(#190701, #501902, #8D3002, #C54D02, #FC6B03, #FD953A, #FDBA77, #FDDAAF, #FEF4E6),
+  "alternativo":(#023A46, #04617B, #0786B0, #0BA0E0, #2EB3F5, #63BFF8, #98D2FB, #C9E5FD, #FFFFFF),
   "grises":(#292929, #454545, #5E5E5E, #7A7A7A, #949494, #B0B0B0, #C9C9C9, #E6E6E6, #FFFFFF),
   "blancos":(#EBEBEB, #EDEDED, #F0F0F0, #F2F2F2, #F5F5F5, #F7F7F7, #FAFAFA, #FCFCFC, #FFFFFF),
   "rojos":(#811D1D, #981B1B, #BA1C1C, #DC2828, #EF4343, #F87272, #FCA6A6, #FEC8C8, #FEE1E1),
@@ -9,7 +9,9 @@ $colors:(
   "amarillos":(#76350F, #91400D, #B35309, #DB7706, #F59F0A, #FBBD23, #FCD44F, #FDE68B, #FEF3C8)
   );
 
-$padding-margins-values:(0px,4px,6px, 8px, 10px, 12px, 16px,20px, 24px, 32px, 40px,48px,64px, 80px, 96px,128px,160px, 192px,224px,256px,320px,480px,640px);
+$margin-values:(0px,4px,6px, 8px, 10px, 12px, 16px,20px, 24px, 32px, 40px,48px,64px, 80px, 96px,128px,160px, 192px,224px,256px,320px,480px,640px);
+$padding-values:(0px,4px,6px, 8px, 10px, 12px, 16px,20px, 24px, 32px, 40px,48px,64px, 80px, 96px,128px,160px, 192px,224px,256px,320px,480px,640px);
+$gap-values:(0px,4px,6px, 8px, 10px, 12px, 16px,20px, 24px, 32px, 40px,48px,64px, 80px, 96px,128px,160px, 192px,224px,256px,320px,480px,640px);
 
 $fontSizes:(
   "2XS":8px,
