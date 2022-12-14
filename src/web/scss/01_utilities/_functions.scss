@@ -83,6 +83,9 @@
 	@return $key;
 }
 
+@function getFontSize($key){
+    @return map-get($fontSizes,$key);
+}
 //funciones de sombreado
 
 @function getShadowKeys() {

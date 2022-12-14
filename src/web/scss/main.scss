@@ -7,6 +7,9 @@
 '03_layout/l-flex',
 '04_components/c-button', 
 '04_components/c-panel',
+'04_components/c-login',
+'04_components/c-modal',
+'04_components/c-button',
 '06_global/g--font-size',
 '06_global/g--margins',
 '06_global/g--padding',
@@ -15,4 +18,5 @@
 '06_global/g--background-color',
 '06_global/g--shadow.scss';
 
+// cd .\src\web\scss\
 // sass --watch ./main.scss ../css/style.css

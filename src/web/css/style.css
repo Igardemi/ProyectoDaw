@@ -493,21 +493,98 @@ table {
   gap: 640px;
 }
 
-.c-boton {
-  display: inline-block;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  border: 1px solid;
-  border-radius: 6px;
+.c-button {
+  background-color: #2EB3F5;
+  width: 280px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 30px;
+  border: 0;
+  margin-bottom: 25px;
   color: white;
-  border-color: #FC6B03;
-  background-color: #501902;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 12px;
-  padding-right: 12px;
-  font-size: 16px;
-  text-decoration: none;
-  cursor: pointer;
+  font-weight: bold;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.c-button:hover {
+  background-color: #0BA0E0;
+}
+
+.c-login {
+  background-color: #E6E6E6;
+  border-radius: 20px;
+  width: 1000px;
+}
+.c-login__izquierda {
+  background-color: #2EB3F5;
+  border: 1px solid white;
+  width: 500px;
+  height: 700px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.c-login__imagen {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 500px;
+  height: 90%;
+  border-radius: 20px;
+}
+.c-login__derecha {
+  text-align: center;
+  width: 500px;
+  height: 700px;
+}
+.c-login__header {
+  margin-top: 160px;
+  margin-bottom: 32px;
+}
+.c-login__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-left: 96px;
+  margin-right: 96px;
+}
+.c-login__input {
+  padding: 16px;
+  width: 250px;
+  border-radius: 8px;
+  background-color: #fefeff;
+  border: 0;
+  margin-top: 10px;
+}
+.c-login__title {
+  font-weight: bolder;
+  font-size: 30px;
+}
+.c-login__icon {
+  height: 48px;
+  width: 50px;
+}
+
+.c-modal {
+  padding: 0;
+  border: 0;
+  margin-top: 20px;
+}
+
+.c-button {
+  background-color: #2EB3F5;
+  width: 280px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 30px;
+  border: 0;
+  margin-bottom: 25px;
+  color: white;
+  font-weight: bold;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.c-button:hover {
+  background-color: #0BA0E0;
 }
 
 .g--font-size-2XS {
@@ -1996,6 +2073,10 @@ table {
 
 .g--border-radius-5 {
   border-radius: 16px;
+}
+
+.g--border-radius-6 {
+  border-radius: 20px;
 }
 
 .g--color-principal-0 {

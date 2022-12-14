@@ -1,0 +1,64 @@
+.c-login{
+    background-color: getColor("grises",7);
+    border-radius: getBorderRadius(6);
+    width: 1000px;
+
+    &__izquierda{
+        // background-color: getColor("principal",4);
+        background-color: getColor("alternativo",4);
+        border: 1px solid white ;
+        width: 500px;
+        height: 700px;
+        border-top-left-radius: getBorderRadius(6);
+        border-bottom-left-radius: getBorderRadius(6);
+
+    }
+
+    &__imagen{
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 500px;
+        height: 90%;
+        border-radius: getBorderRadius(6);
+    }
+
+    &__derecha{
+        text-align: center;
+        width: 500px;
+        height: 700px;
+    }
+
+    &__header{
+        margin-top:getMargin(16);
+        margin-bottom: getMargin(9);
+    }
+
+    &__footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: getMargin(7);
+        margin-left: getMargin(14);
+        margin-right: getMargin(14);
+    }
+
+    &__input{
+        padding: getPadding(6);
+        width: 250px;
+        border-radius: getBorderRadius(4);
+        background-color: #fefeff;
+        border: 0;
+        margin-top: getMargin(4);
+    }
+
+    &__title{
+        font-weight: bolder;
+        font-size: getFontSize("3XL")
+    }
+
+    &__icon{
+        height: 48px;
+        width: 50px;
+    }
+
+}
