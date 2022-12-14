@@ -1,0 +1,15 @@
+.l-grid{
+    display: grid;
+
+    &--colums-auto{
+      grid-template-columns: repeat( auto-fit, minmax( 400px, 1fr ));  
+    }
+
+    @each $gap in getGapKeys() {
+      
+      &--gap-#{$gap}{
+          gap: getGap($gap);
+      }
+  }
+  }
+

@@ -331,18 +331,80 @@ table {
   border-spacing: 0;
 }
 
-.l-main-page {
+.l-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
-
-.l-main-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.l-grid--colums-auto {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
-
-.l-main {
-  display: grid;
+.l-grid--gap-0 {
+  gap: 0px;
+}
+.l-grid--gap-1 {
+  gap: 4px;
+}
+.l-grid--gap-2 {
+  gap: 6px;
+}
+.l-grid--gap-3 {
+  gap: 8px;
+}
+.l-grid--gap-4 {
+  gap: 10px;
+}
+.l-grid--gap-5 {
+  gap: 12px;
+}
+.l-grid--gap-6 {
+  gap: 16px;
+}
+.l-grid--gap-7 {
+  gap: 20px;
+}
+.l-grid--gap-8 {
+  gap: 24px;
+}
+.l-grid--gap-9 {
+  gap: 32px;
+}
+.l-grid--gap-10 {
+  gap: 40px;
+}
+.l-grid--gap-11 {
+  gap: 48px;
+}
+.l-grid--gap-12 {
+  gap: 64px;
+}
+.l-grid--gap-13 {
+  gap: 80px;
+}
+.l-grid--gap-14 {
+  gap: 96px;
+}
+.l-grid--gap-15 {
+  gap: 128px;
+}
+.l-grid--gap-16 {
+  gap: 160px;
+}
+.l-grid--gap-17 {
+  gap: 192px;
+}
+.l-grid--gap-18 {
+  gap: 224px;
+}
+.l-grid--gap-19 {
+  gap: 256px;
+}
+.l-grid--gap-20 {
+  gap: 320px;
+}
+.l-grid--gap-21 {
+  gap: 480px;
+}
+.l-grid--gap-22 {
+  gap: 640px;
 }
 
 .l-flex {
@@ -585,6 +647,39 @@ table {
 
 .c-button:hover {
   background-color: #0BA0E0;
+}
+
+.c-categorie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 350px 70px;
+  grid-template-areas: "imagen" "title";
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
+  font-family: roboto;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.c-categorie__image {
+  grid-area: imagen;
+  background-image: none;
+  opacity: 0;
+}
+
+.c-categorie__title {
+  grid-area: title;
+  background-color: #454545;
+  opacity: 0.8;
+  font-size: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  user-select: none;
+  list-style: none;
+  text-decoration: none;
+  color: #F2F2F2;
+  font-weight: bold;
 }
 
 .g--font-size-2XS {
@@ -2365,6 +2460,11 @@ table {
 
 .g--color-amarillos-8 {
   color: #FEF3C8;
+}
+
+.g--decoration-none {
+  text-decoration: none;
+  list-style: none;
 }
 
 .g--background-color-principal-0 {
