@@ -1,0 +1,24 @@
+.c-article{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid grey;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
+    font-family: Helvetica, sans-serif;
+
+    &__imagen{
+        display: flex;
+    }
+    &__nombre{
+        font-size: 2rem;
+    }
+    &__descripcion{
+        font-size: 1rem;
+        width: 300px;
+    }
+    &__duracion{
+        height: 30px;
+    }
+    &__precio{
+        font-size: 2rem;
+    }
+}

@@ -693,21 +693,28 @@ table {
   margin-top: 20px;
 }
 
-.c-button {
-  background-color: #2EB3F5;
-  width: 280px;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 30px;
-  border: 0;
-  margin-bottom: 25px;
-  color: white;
-  font-weight: bold;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+.c-article {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid grey;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
+  font-family: Helvetica, sans-serif;
 }
-
-.c-button:hover {
-  background-color: #0BA0E0;
+.c-article__imagen {
+  display: flex;
+}
+.c-article__nombre {
+  font-size: 2rem;
+}
+.c-article__descripcion {
+  font-size: 1rem;
+  width: 300px;
+}
+.c-article__duracion {
+  height: 30px;
+}
+.c-article__precio {
+  font-size: 2rem;
 }
 
 .c-categorie {
@@ -716,19 +723,18 @@ table {
   grid-template-rows: 350px 70px;
   grid-template-areas: "imagen" "title";
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
-  font-family: roboto;
+  font-family: Helvetica, sans-serif;
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
 }
-
 .c-categorie__image {
+  flex-basis: 40%;
   grid-area: imagen;
   background-image: none;
   opacity: 0;
 }
-
 .c-categorie__title {
   grid-area: title;
   background-color: #454545;
