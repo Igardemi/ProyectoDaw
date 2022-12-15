@@ -11,14 +11,54 @@
 
 <body>
     <nav>
-        <!-- raquel -->
+        <ul class="c-header l-flex l-flex--align-items-center l-flex--direction-row">
+            <li class="c-header__logo">
+                <div>
+                <img class="c-header__logo" src="assets/img/logo.png">
+                </div>
+            </li>
+            <li class="c-header__content">
+                <div class="l-flex l-flex--direction-column">
+                    <div class="c-header__search-input">
+                        <input type="search" class="c-header__search" placeholder="Buscar producto">
+                        <img class="c-header__search-input-icon" src="assets/img/icono-lupa.png">                    </div>
+                </div>
+            </li>
+            <li class="c-header__item">
+                <img class="c-header__icons" src="assets/img/icono-usuario.png"/>
+                <img class="c-header__icons" src="assets/img/heart-icon.png"/>
+                <img class="c-header__icons" src="assets/img/icono-carrito.png"/>
+                <span id="contador"></span>
+            </li>            
+        </ul>
     </nav>
     
     <div id="contenido">
         <!-- contenido -->
     </div>
+
     <footer>
-        <!-- dd -->
+        <div class="c-footer l-flex l-flex--direction-column l-flex--align-items-space-between">
+            <div class="c-footer__logo">
+                <img class="c-footer__logo" src="assets/img/logo_vertical.png"/>
+            <div class="c-footer__social">
+                <img class="c-footer__social-icons" src="assets/img/instagram.png" alt="Instagram icon"></img>
+                <img class="c-footer__social-icons" src="assets/img/facebook.png" alt="Facebook icon"></img>
+                <img class="c-footer__social-icons" src="assets/img/twitter.png" alt="Twitter icon"></img>
+            </div>
+        </div>
+            
+            <div class="c-footer__content">
+                    <a href="#" class="c-footer__content-links">Preguntas frecuentes</a></li>
+                    <a href="#" class="c-footer__content-links">Política de privacidad</a></li>
+                    <a href="#" class="c-footer__content-links">Términos y condiciones</a></li>
+                    <a href="#" class="c-footer__content-links">Aviso legal</a></li>
+                    <a href="#" class="c-footer__content-links">Contacto</a></li>
+            </div>
+            <div class="c-footer__final">
+                <p class="c-footer__final-copyright">Easy Move © 2022 - Todos los derechos reservados</p>
+            </div>
+        </div>
     </footer>
 
     <dialog id="carrito">
