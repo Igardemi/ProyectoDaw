@@ -636,17 +636,15 @@ table {
 
 .c-pago {
   height: 520px;
-  width: 550px;
+  width: 600px;
   border: none;
   background-color: #2EB3F5;
   border-radius: 16px;
   color: #eee;
   font-size: 16px;
   display: flex;
-  box-sizing: border-box;
   padding-left: 24px;
   padding-right: 24px;
-  position: relative;
 }
 .c-pago__input {
   background: rgba(255, 255, 255, 0.2);
@@ -678,20 +676,27 @@ table {
 }
 .c-pago__boton {
   border: none;
-  background: #22b877;
-  line-height: 2em;
+  line-height: 40px;
   border-radius: 10px;
-  font-size: 19px;
+  font-size: 18px;
   color: #fff;
   cursor: pointer;
-  position: absolute;
-  bottom: 25px;
-  width: calc(100% - 50px);
+  width: 45%;
 }
-.c-pago__boton:hover {
+.c-pago__boton--negativo {
+  background: rgb(255, 54, 54);
+}
+.c-pago__boton--positivo {
+  background: #22b877;
+}
+.c-pago__boton--positivo:hover {
   background: #22a877;
   color: #eee;
-  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.c-pago__boton--negativo:hover {
+  background: rgb(197, 2, 2);
+  color: #eee;
   transition: all 0.2s ease;
 }
 

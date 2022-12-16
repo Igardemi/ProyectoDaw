@@ -212,8 +212,8 @@
                     <hr>
                 </div>
                 <div class="g--padding-bottom-4">
-                    <img src='./assets/img/tarjetas.png' height='50' width="80" class="imagen"></img>
-                    <img src='./assets/img/logoPaypal.png' height='30' width="90" class="imagen"></img>
+                    <img src='./assets/img/tarjetas.png' height='50' width="80"></img>
+                    <img src='./assets/img/logoPaypal.png' height='30' width="90"></img>
                 </div>
                 <div>
                     <div class=" g--font-size-L">Numero de tarjeta</div>
@@ -234,10 +234,12 @@
                     <input class='c-pago__input' placeholder="Juan Pérez"></input>
                 </div>
                 <div>
-                    <input type="checkbox"> Guardar para la próxima compra
-
+                    <input type="checkbox" id="guardarTarjeta"> Guardar para la próxima compra</input>
                 </div>
-                <button class=' c-pago__boton'>Aceptar</button>
+                <div class="g--margin-top-4 l-flex l-flex--direction-row l-flex--justify-content-space-between">
+                    <button class='c-pago__boton c-pago__boton--positivo'>Aceptar</button>
+                    <button class="c-pago__boton c-pago__boton--negativo" >Cancelar</button>
+                </div>
             </div>
         </div>
     </dialog>
