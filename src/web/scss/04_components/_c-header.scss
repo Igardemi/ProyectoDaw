@@ -7,7 +7,6 @@
     padding-bottom: getPadding(5);
 
 
-    
     &__logo{
         width: 150px;
     }    
@@ -18,7 +17,6 @@
     }
 
     &__search-input{
-        position: relative;
         margin-left: getMargin(15);
         margin-top: getMargin(5);
     }
@@ -36,8 +34,7 @@
     &__search{
         border-radius: getBorderRadius(6);
         border-color: getColor("blancos", 2);
-        font-family:'Ubuntu-Regular';
-        padding-right: getPadding(18);
+        padding-right: getPadding(10);
         padding-left: getPadding(10);
         height: 40px;
         border: 0ch;
@@ -50,10 +47,3 @@
         margin-top: getMargin(5);
     }
 }
-
-@font-face {
-    font-family: 'Ubuntu-Regular';
-    src: url('/src/web/assets/fonts/Ubuntu-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-  }

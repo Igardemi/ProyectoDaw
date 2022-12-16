@@ -24,16 +24,15 @@
                         <img class="c-header__search-input-icon" src="assets/img/icono-lupa.png">                    </div>
                 </div>
             </li>
-            <li class="c-header__item">
-                <img class="c-header__icons" src="assets/img/icono-usuario.png"/>
-                <img class="c-header__icons" src="assets/img/heart-icon.png"/>
-                <img class="c-header__icons" src="assets/img/icono-carrito.png"/>
+            <li class="c-header__item l-flex l-flex--gap-10">
+                <img id="bntUsuario" class="c-header__icons" src="assets/img/icono-usuario.png"/>
+                <img id="btnCarrito" class="c-header__icons" src="assets/img/icono-carrito.png"/>
                 <span id="contador"></span>
             </li>            
         </ul>
     </nav>
     
-    <div id="contenido">
+    <div id="contenido" class="l-flex l-flex--wrap l-flex--align-content-space-between l-grid--gap-10 g--margin-horizonal-12 g--margin-top-10 g--margin-bottom-10">
         <!-- contenido -->
     </div>
 
@@ -200,7 +199,7 @@
 
 
 
-    <dialog id="pago" open="1" class="c-modal">
+    <dialog id="pago" class="c-modal">
         <div class=' c-pago'>
             <div class=' c-pago__info'>
                 <div class=" c-pago__titulo ">

@@ -736,7 +736,7 @@ table {
 .c-categorie {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: 350px 70px;
+  grid-template-rows: 200px 50px;
   grid-template-areas: "imagen" "title";
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
   font-family: Helvetica, sans-serif;
@@ -746,7 +746,6 @@ table {
   height: 100%;
 }
 .c-categorie__image {
-  flex-basis: 40%;
   grid-area: imagen;
   background-image: none;
   opacity: 0;
@@ -756,14 +755,15 @@ table {
   background-color: #454545;
   opacity: 0.8;
   font-size: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   user-select: none;
   list-style: none;
   text-decoration: none;
   color: #F2F2F2;
   font-weight: bold;
 }
+
 .c-header {
   display: flex;
   border: 1px solid #E6E6E6;
@@ -796,6 +796,7 @@ table {
 .c-header__search {
   border-radius: 20px;
   border-color: #F0F0F0;
+  font-family: "Ubuntu-Regular";
   padding-right: 224px;
   padding-left: 40px;
   height: 40px;
@@ -808,10 +809,15 @@ table {
   margin-top: 12px;
 }
 
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url("/src/web/assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 .c-footer {
   display: flex;
   background-color: #B0B0B0;
-  position: absolute;
   bottom: 0;
   width: 100%;
 }

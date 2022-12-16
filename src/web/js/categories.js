@@ -7,7 +7,6 @@ function getCategories(){
     enlace.href="#";
     enlace.className="g--decoration-none";
     enlace.addEventListener("click",()=>{
-        console.log(element);
         getProductos(element);});
     let box = document.createElement("div");
     box.style.backgroundImage="url(./assets/img/"+element.foto+")";
@@ -44,7 +43,6 @@ object.opciones.forEach(opcion => {
     </div>
     <div class='l-flex l-flex--direction-column g--margin-4'>
     <div class='c-article__nombre g--margin-4'>${opcion.nombre}</div>
-    <div class='c-article__descripcion g--margin-4'>${opcion.descripcion}</div>
     <div class='c-article__duracion'>${getOption(opcion.duracion)}</div>
     <div class='c-article__precio'>${opcion.precio[0]} Euros</div>
     <button class="c-button ${opcion.nombre} ${opcion.duracion} btnBuy">Comprar</button>   
@@ -60,11 +58,8 @@ object.opciones.forEach(opcion => {
 
 window.onload=()=>{
 contenido = document.getElementById("contenido");
-contenido.className="l-grid l-grid--colums-auto l-grid--gap-10 g--margin-horizonal-12";
 getCategories();
+document.getElementById("bntUsuario").addEventListener("click",()=>{document.getElementById("login").showModal()});
+document.getElementById("bntCarrito").addEventListener("click",()=>{document.getElementById("carrito").showModal()})
+document.getElementById("btnPagar").addEventListener("click",()=>{document.getElementById("pago").showModal()});
 }
-
-
-
-
-
