@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -567,6 +568,13 @@ table {
   font-weight: bold;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+.c-button--pagar {
+  background-color: black;
+  width: 370px;
+}
+.c-button--pagar:hover {
+  background-color: #292929;
+}
 
 .c-button:hover {
   background-color: #0BA0E0;
@@ -691,6 +699,7 @@ table {
   padding: 0;
   border: 0;
   margin-top: 20px;
+  background-color: transparent;
 }
 
 .c-article {
@@ -716,11 +725,18 @@ table {
 .c-article__precio {
   font-size: 2rem;
 }
+.c-button--pagar {
+  background-color: black;
+  width: 370px;
+}
+.c-button--pagar:hover {
+  background-color: #292929;
+}
 
 .c-categorie {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: 350px 70px;
+  grid-template-rows: 200px 50px;
   grid-template-areas: "imagen" "title";
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
   font-family: Helvetica, sans-serif;
@@ -730,7 +746,6 @@ table {
   height: 100%;
 }
 .c-categorie__image {
-  flex-basis: 40%;
   grid-area: imagen;
   background-image: none;
   opacity: 0;
@@ -740,14 +755,15 @@ table {
   background-color: #454545;
   opacity: 0.8;
   font-size: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   user-select: none;
   list-style: none;
   text-decoration: none;
   color: #F2F2F2;
   font-weight: bold;
 }
+
 .c-header {
   display: flex;
   border: 1px solid #E6E6E6;
@@ -780,6 +796,7 @@ table {
 .c-header__search {
   border-radius: 20px;
   border-color: #F0F0F0;
+  font-family: "Ubuntu-Regular";
   padding-right: 224px;
   padding-left: 40px;
   height: 40px;
@@ -792,10 +809,15 @@ table {
   margin-top: 12px;
 }
 
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url("/src/web/assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 .c-footer {
   display: flex;
   background-color: #B0B0B0;
-  position: absolute;
   bottom: 0;
   width: 100%;
 }
@@ -843,6 +865,93 @@ table {
   margin-bottom: 4px;
   opacity: 0.75;
   font-family: "Ubuntu-Regular";
+}
+
+.c-carrito {
+  background-color: white;
+  height: 700px;
+  width: 1000px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.c-carrito__left {
+  width: 600px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+.c-carrito__right {
+  width: 400px;
+  height: 700px;
+  background-color: #f6f6f6;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.c-carrito__descuento {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  background-color: white;
+  border-radius: 5px;
+  border: 0;
+}
+.c-carrito__titulo {
+  margin-top: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.c-carrito__resumen {
+  margin-top: 30px;
+}
+.c-carrito__volver {
+  margin-top: auto;
+  margin-right: auto;
+  font-size: 16px;
+  font-weight: bold;
+}
+.c-carrito__nombre {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+.c-carrito__grande {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.c-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+.c-item__imagen {
+  width: 100px;
+  height: 100px;
+}
+.c-item__borrar {
+  border: 0;
+  background-color: transparent;
+  color: #EF4343;
+  width: bold;
+}
+.c-item__nombre {
+  width: 120px;
+}
+.c-item__nombre--pequeño {
+  width: 35px;
+}
+.c-item__texto {
+  font-size: 16px;
+  font-weight: 600;
+}
+.c-item__texto--pequeño {
+  font-size: 12px;
+  font-weight: 100;
+  color: grey;
 }
 
 .g--font-size-2XS {
