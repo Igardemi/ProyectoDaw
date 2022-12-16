@@ -63,3 +63,8 @@ contenido = document.getElementById("contenido");
 contenido.className="l-grid l-grid--colums-auto l-grid--gap-10 g--margin-horizonal-12";
 getCategories();
 }
+
+
+
+
+
