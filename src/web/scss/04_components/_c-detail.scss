@@ -1,19 +1,29 @@
 .c-detail {
     border-radius: getBorderRadius(4);
-    background-color: getColor("grises", 7);
+    background-color: getColor("azules", 7);
+    font-size: getFontSize("XL");
 
-    &__title {
-        font-size: getFontSize("XL");
+    &__imagen{
+
+    }
+
+    &__titulo {
+        font-size: getFontSize("2XL");
         font-weight: bold;
     }
 
-    &__price {
-        color: getColor("rojos", 3);
-        font-size: getFontSize("L");
+    &__precio {
+        font-size: getFontSize("5XL");
+        color: black;
     }
 
-    &__quantity {
+    &__descripcion {
         border-color: getColor("alternativo", 3);
-        background-color: getColor("blancos", 5);
+    }
+
+    &__cantidad {
+        width: 100px;
+        border-color: getColor("alternativo", 3);
+
     }
 }

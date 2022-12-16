@@ -557,7 +557,6 @@ table {
 
 .c-button {
   background-color: #2EB3F5;
-  width: 280px;
   padding: 15px;
   border-radius: 10px;
   margin-top: 30px;
@@ -748,6 +747,7 @@ table {
   color: #F2F2F2;
   font-weight: bold;
 }
+
 .c-header {
   display: flex;
   border: 1px solid #E6E6E6;
@@ -780,6 +780,7 @@ table {
 .c-header__search {
   border-radius: 20px;
   border-color: #F0F0F0;
+  font-family: "Ubuntu-Regular";
   padding-right: 224px;
   padding-left: 40px;
   height: 40px;
@@ -792,6 +793,12 @@ table {
   margin-top: 12px;
 }
 
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url("/src/web/assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 .c-footer {
   display: flex;
   background-color: #B0B0B0;
@@ -843,6 +850,33 @@ table {
   margin-bottom: 4px;
   opacity: 0.75;
   font-family: "Ubuntu-Regular";
+}
+
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url("fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.c-detail {
+  border-radius: 8px;
+  background-color: #CEDAFD;
+  font-size: 20px;
+}
+.c-detail__titulo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.c-detail__precio {
+  font-size: 48px;
+  color: black;
+}
+.c-detail__descripcion {
+  border-color: #0BA0E0;
+}
+.c-detail__cantidad {
+  width: 100px;
+  border-color: #0BA0E0;
 }
 
 .g--font-size-2XS {

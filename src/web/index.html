@@ -78,21 +78,22 @@
     </dialog>
 
     <dialog id="detalleProducto" class="c-detail">
-        <div id="imagen" class="l-flex">
-            <img src="./assets/img/bonometro.jpg">
+        <div class="l-flex l-flex--direction-row">
+        <div id="c-detail__imagen" class="l-flex">
+            <img src="./assets/img/logo.png">
         </div>
-        <div id="datos" class="">
-            <h2 id="tituloProducto" class="c-detail c-detail__title">Bono de transporte</h2>
-            <h3 id="precioProducto" class="c-detail c-detail__price">7,00€</h3>
-            <p id="descripcionProducto">Este bono de transporte sirve para todo el transporte público de la ciudad de
-                Valencia</p>
-                Introduce la cantidad:
-            <input type="number" id="cantidadProducto" class="c-detail c-detail__quantity" value="1" min="1"></input>
-            <button id="anyadirCarrito" class="c-button">Añadir al carrito</button>
+        <div id="datos" class="l-flex l-flex--direction-column l-flex--gap-7">
+            <div id="detailTitulo" class="c-detail__titulo">Bono de transporte</div>
+            <p class="detailDescripcion">Este bono de transporte sirve para todo el transporte público de la ciudad de Valencia</p>
+            <div class="l-flex l-flex--direction-row l-flex--gap-7">
+            <span>Introduce la cantidad:</span>
+            <input type="number" id="cantidadProducto" class="c-detail__cantidad" value="1" min="1" width=100px></input>
+            </div>
+            <div class="c-detail__precio">7,00 €</div>
+            <button id="anyadirCarrito" class="c-button ">Añadir a carrito</button>
+        </div>
         </div>
     </dialog>
-
-
 
     <dialog id="login" class="c-modal">
         <div class="c-login">
@@ -134,9 +135,7 @@
     </dialog>
 
 
-
-
-    <dialog id="pago" open="1" class="c-modal">
+    <dialog id="pago" class="c-modal">
         <div class=' c-pago'>
             <div class=' c-pago__info'>
                 <div class=" c-pago__titulo ">
