@@ -1,7 +1,8 @@
 .c-categorie {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	grid-template-rows: 350px 70px;
+	// grid-template-columns: 295px;
+	grid-template-rows: 200px 50px;
 	grid-template-areas: "imagen" "title";
 	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
 	font-family: Helvetica, sans-serif;
@@ -10,7 +11,6 @@
 	background-repeat: no-repeat;
 	height: 100%;
 	&__image {
-		flex-basis: 40%;
 		grid-area: imagen;
 		background-image: none;
 		opacity: 0;
@@ -20,8 +20,8 @@
 		background-color: getColor("grises", 1);
 		opacity: 0.8;
 		font-size: 40px;
-		padding-top: 20px;
-		padding-bottom: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
 		user-select: none;
 		list-style: none;
 		text-decoration: none;

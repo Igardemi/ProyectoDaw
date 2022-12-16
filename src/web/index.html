@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,21 +19,25 @@
             </li>
             <li class="c-header__content">
                 <div class="l-flex l-flex--direction-column">
-                    <div class="c-header__search-input">
+                    <div class="c-header__search-input l-flex l-flex--direction-row">
+                        <img class="c-header__search-input-icon" src="assets/img/icono-lupa.png"> 
                         <input type="search" class="c-header__search" placeholder="Buscar producto">
-                        <img class="c-header__search-input-icon" src="assets/img/icono-lupa.png">                    </div>
+                      </div>
                 </div>
             </li>
-            <li class="c-header__item">
-                <img class="c-header__icons" src="assets/img/icono-usuario.png"/>
-                <img class="c-header__icons" src="assets/img/heart-icon.png"/>
-                <img class="c-header__icons" src="assets/img/icono-carrito.png"/>
+            <li class="c-header__item l-flex l-flex--gap-10">
+                <img id="btnUsuario" class="c-header__icons" src="assets/img/icono-usuario.png"/>
+                <img id="btnCarrito" class="c-header__icons" src="assets/img/icono-carrito.png"/>
                 <span id="contador"></span>
             </li>            
         </ul>
     </nav>
+
+    <div id="banner" class="l-flex ">
+        <div></div>
+    </div>
     
-    <div id="contenido">
+    <div id="contenido" class="l-flex l-flex--wrap l-flex--gap-10 g--margin-top-20 g--margin-bottom-20 l-flex--justify-content-center">
         <!-- contenido -->
     </div>
 
@@ -61,19 +65,94 @@
         </div>
     </footer>
 
-    <dialog id="carrito">
-        <div id="dialogHead">
-            <h2> Carrito <span id="idPedido" class="h5"></span>
-                <h2>
-        </div>
-        <div id="dialogContent">
-        </div>
-        <div id="dialogFooter">
-            <h3 class="text-right">Total: <span id="total"></span></h3>
-        </div>
-        <div class="text-center">
-            <button id="btnCierraDialog" class="btn btn-secondary">Seguir comprando</button>
-            <button id="btnEfectuaPedido" class="btn btn-info">Efectuar pedido</button>
+    <dialog id="carrito" class="c-modal">
+        <div class="c-carrito">
+            <div class="l-flex l-flex--direction-row l-flex--align-items-space-between">
+                <div class="c-carrito__left">
+                    <div class="c-carrito__grande g--margin-top-10">
+                        CARRITO
+                        <hr>
+                    </div>
+                    
+                    <div class="l-flex l-flex--direction-column">
+                        <div class="c-item">
+                            <img src="assets/img/bus.png" alt="bus" class="c-item__imagen">
+                            <div class="c-item__nombre">
+                                <div class="c-item__texto c-item__texto--pequeño">3 dias</div>
+                                <div class="c-item__texto">autobus</div>
+                            </div>
+                            <div class="l-flex l-flex--direction-row l-flex--gap-5">
+                                <div class="c-item__texto">-</div>
+                                <div class="c-item__cantidad">07</div>
+                                <div class="c-item__texto">+</div>
+                            </div>
+                            <div class="c-item__texto c-item__nombre--pequeño">76€</div>
+                            <button class="c-item__borrar">X</button>
+                        </div>
+
+                        <div class="c-item">
+                            <img src="assets/img/Cartaxi_generated-removebg-preview.png" alt="bus" class="c-item__imagen">
+                            <div class="c-item__nombre">
+                                <div class="c-item__texto c-item__texto--pequeño">8 dias</div>
+                                <div class="c-item__texto">Coche electico</div>
+                            </div>
+                            <div class="l-flex l-flex--direction-row l-flex--gap-5">
+                                <div class="c-item__texto">-</div>
+                                <div class="c-item__cantidad">15</div>
+                                <div class="c-item__texto">+</div>
+                            </div>
+                            <div class="c-item__texto c-item__nombre--pequeño">876€</div>
+                            <button class="c-item__borrar">X</button>
+                        </div>
+
+                        <div class="c-item">
+                            <img src="assets/img/moto.png" alt="bus" class="c-item__imagen">
+                            <div class="c-item__nombre">
+                                <div class="c-item__texto c-item__texto--pequeño">1 hora</div>
+                                <div class="c-item__texto">moto electrica</div>
+                            </div>
+                            <div class="l-flex l-flex--direction-row l-flex--gap-5">
+                                <div class="c-item__texto">-</div>
+                                <div class="c-item__cantidad">20</div>
+                                <div class="c-item__texto">+</div>
+                            </div>
+                            <div class="c-item__texto c-item__nombre--pequeño">1876€</div>
+                            <button class="c-item__borrar">X</button>
+                        </div>
+
+                        
+                    </div>
+                    <button id="volver" class="c-carrito__volver">Seguir comprando</button>
+
+                </div>
+
+
+
+
+
+
+                <div class="c-carrito__right">
+                    <div class="c-carrito__titulo">RESUMEN</div>
+                    <hr>
+                    <div class="c-carrito__resumen">
+                        <div class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-9 g--margin-bottom-9">
+                            <div class="c-carrito__nombre">ARTICULOS 3</div>
+                            <div class="c-carrito__nombre">2.828€</div>
+                        </div>
+                        <div class="l-flex l-flex--direction-column l-flex--gap-7  g--margin-bottom-12">
+                            <div class="c-carrito__nombre">CODIGO DE DESCUENTO</div>
+                            <input type="text" class="c-carrito__descuento" placeholder="Introduce tu codigo">
+                        </div>
+                        <hr>
+                        <div class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-7 g--margin-bottom-9">
+                            <div class="c-carrito__nombre">PRECIO TOTAL</div>
+                            <div class="c-carrito__precioTotal">2.828€</div>
+                        </div>
+                    </div>
+                    
+                    <button id="btnPagar" class="c-button c-button--pagar">PAGAR</button>
+                </div>
+            </div>
         </div>
     </dialog>
 
@@ -134,7 +213,6 @@
         </div>
     </dialog>
 
-
     <dialog id="pago" class="c-modal">
         <div class=' c-pago'>
             <div class=' c-pago__info'>
@@ -143,8 +221,8 @@
                     <hr>
                 </div>
                 <div class="g--padding-bottom-4">
-                    <img src='./assets/img/tarjetas.png' height='50' width="80" class="imagen"></img>
-                    <img src='./assets/img/logoPaypal.png' height='30' width="90" class="imagen"></img>
+                    <img src='./assets/img/tarjetas.png' height='50' width="80"></img>
+                    <img src='./assets/img/logoPaypal.png' height='30' width="90"></img>
                 </div>
                 <div>
                     <div class=" g--font-size-L">Numero de tarjeta</div>
@@ -165,10 +243,12 @@
                     <input class='c-pago__input' placeholder="Juan Pérez"></input>
                 </div>
                 <div>
-                    <input type="checkbox"> Guardar para la próxima compra
-
+                    <input type="checkbox" id="guardarTarjeta"> Guardar para la próxima compra</input>
                 </div>
-                <button class=' c-pago__boton'>Aceptar</button>
+                <div class="g--margin-top-4 l-flex l-flex--direction-row l-flex--justify-content-space-between">
+                    <button class='c-pago__boton c-pago__boton--positivo'>Aceptar</button>
+                    <button class="c-pago__boton c-pago__boton--negativo" >Cancelar</button>
+                </div>
             </div>
         </div>
     </dialog>
