@@ -3,22 +3,31 @@
 '01_utilities/mixings',
 '01_utilities/functions',
 '02_base/resetcss.scss', 
-'03_layout/l-main-page',
+'03_layout/l-grid',
 '03_layout/l-flex',
+
 '04_components/c-button', 
 '04_components/c-panel',
 '04_components/c-login',
+'04_components/c-pago',
 '04_components/c-modal',
 '04_components/c-button',
 '04_components/c-carrito',
 '04_components/c-item',
+'04_components/_c-article',
+'04_components/c-categorie',
+'04_components/c-header',
+'04_components/c-footer',
+
+
 '06_global/g--font-size',
 '06_global/g--margins',
 '06_global/g--padding',
 '06_global/g--border-radius',
 '06_global/g--color',
+'06_global/g--decoration.scss',
 '06_global/g--background-color',
 '06_global/g--shadow.scss';
 
-// cd .\src\web\scss\
-// sass --watch ./main.scss ../css/style.css
+
+// sass --watch ./web/scss/main.scss ./web/css/style.css

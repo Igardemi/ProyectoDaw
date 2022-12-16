@@ -332,18 +332,80 @@ table {
   border-spacing: 0;
 }
 
-.l-main-page {
+.l-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
-
-.l-main-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.l-grid--colums-auto {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
-
-.l-main {
-  display: grid;
+.l-grid--gap-0 {
+  gap: 0px;
+}
+.l-grid--gap-1 {
+  gap: 4px;
+}
+.l-grid--gap-2 {
+  gap: 6px;
+}
+.l-grid--gap-3 {
+  gap: 8px;
+}
+.l-grid--gap-4 {
+  gap: 10px;
+}
+.l-grid--gap-5 {
+  gap: 12px;
+}
+.l-grid--gap-6 {
+  gap: 16px;
+}
+.l-grid--gap-7 {
+  gap: 20px;
+}
+.l-grid--gap-8 {
+  gap: 24px;
+}
+.l-grid--gap-9 {
+  gap: 32px;
+}
+.l-grid--gap-10 {
+  gap: 40px;
+}
+.l-grid--gap-11 {
+  gap: 48px;
+}
+.l-grid--gap-12 {
+  gap: 64px;
+}
+.l-grid--gap-13 {
+  gap: 80px;
+}
+.l-grid--gap-14 {
+  gap: 96px;
+}
+.l-grid--gap-15 {
+  gap: 128px;
+}
+.l-grid--gap-16 {
+  gap: 160px;
+}
+.l-grid--gap-17 {
+  gap: 192px;
+}
+.l-grid--gap-18 {
+  gap: 224px;
+}
+.l-grid--gap-19 {
+  gap: 256px;
+}
+.l-grid--gap-20 {
+  gap: 320px;
+}
+.l-grid--gap-21 {
+  gap: 480px;
+}
+.l-grid--gap-22 {
+  gap: 640px;
 }
 
 .l-flex {
@@ -572,6 +634,67 @@ table {
   width: 50px;
 }
 
+.c-pago {
+  height: 520px;
+  width: 550px;
+  border: none;
+  background-color: #2EB3F5;
+  border-radius: 16px;
+  color: #eee;
+  font-size: 16px;
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+}
+.c-pago__input {
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: none;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+}
+.c-pago__input::placeholder {
+  color: rgba(238, 238, 238, 0.568);
+}
+.c-pago__input:hover {
+  background: rgba(255, 255, 255, 0.367);
+}
+.c-pago__titulo {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.c-pago__info {
+  margin-top: 10px;
+  width: 100%;
+}
+.c-pago__boton {
+  border: none;
+  background: #22b877;
+  line-height: 2em;
+  border-radius: 10px;
+  font-size: 19px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  bottom: 25px;
+  width: calc(100% - 50px);
+}
+.c-pago__boton:hover {
+  background: #22a877;
+  color: #eee;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
 .c-modal {
   padding: 0;
   border: 0;
@@ -579,17 +702,28 @@ table {
   background-color: transparent;
 }
 
-.c-button {
-  background-color: #2EB3F5;
-  width: 280px;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 30px;
-  border: 0;
-  margin-bottom: 25px;
-  color: white;
-  font-weight: bold;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+.c-article {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid grey;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
+  font-family: Helvetica, sans-serif;
+}
+.c-article__imagen {
+  display: flex;
+}
+.c-article__nombre {
+  font-size: 2rem;
+}
+.c-article__descripcion {
+  font-size: 1rem;
+  width: 300px;
+}
+.c-article__duracion {
+  height: 30px;
+}
+.c-article__precio {
+  font-size: 2rem;
 }
 .c-button--pagar {
   background-color: black;
@@ -599,8 +733,132 @@ table {
   background-color: #292929;
 }
 
-.c-button:hover {
-  background-color: #0BA0E0;
+.c-categorie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 350px 70px;
+  grid-template-areas: "imagen" "title";
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.c-categorie__image {
+  flex-basis: 40%;
+  grid-area: imagen;
+  background-image: none;
+  opacity: 0;
+}
+.c-categorie__title {
+  grid-area: title;
+  background-color: #454545;
+  opacity: 0.8;
+  font-size: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  user-select: none;
+  list-style: none;
+  text-decoration: none;
+  color: #F2F2F2;
+  font-weight: bold;
+}
+.c-header {
+  display: flex;
+  border: 1px solid #E6E6E6;
+  background-color: #E6E6E6;
+  padding-left: 192px;
+  padding-right: 192px;
+  padding-bottom: 12px;
+}
+.c-header__logo {
+  width: 150px;
+}
+.c-header__content {
+  margin-left: auto;
+  margin-right: auto;
+}
+.c-header__search-input {
+  position: relative;
+  margin-left: 128px;
+  margin-top: 12px;
+}
+.c-header__search-input-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 10px;
+  margin-top: 4px;
+  opacity: 0.6;
+  margin-right: 100px;
+}
+.c-header__search {
+  border-radius: 20px;
+  border-color: #F0F0F0;
+  padding-right: 224px;
+  padding-left: 40px;
+  height: 40px;
+  border: 0ch;
+  background-color: #FFFFFF;
+}
+.c-header__icons {
+  justify-content: flex-end;
+  width: 35px;
+  margin-top: 12px;
+}
+
+.c-footer {
+  display: flex;
+  background-color: #B0B0B0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.c-footer__logo {
+  display: flex;
+  margin-left: 250px;
+  height: 80px;
+}
+.c-footer__content {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  font-size: 14px;
+}
+.c-footer__content-links {
+  color: black;
+  text-decoration: none;
+  font-family: "Ubuntu-Regular";
+  margin-top: 20px;
+}
+.c-footer__social {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 450px;
+  color: black;
+}
+.c-footer__social-icons {
+  width: 30px;
+  display: inline-block;
+  margin: 0 9px;
+  opacity: 0.8;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.c-footer__final {
+  text-align: center;
+  margin-top: 40px;
+  background-color: #454545;
+  padding-top: 10px;
+}
+.c-footer__final-copyright {
+  font-size: 12px;
+  color: white;
+  margin-bottom: 4px;
+  opacity: 0.75;
+  font-family: "Ubuntu-Regular";
 }
 
 .c-carrito {
@@ -2468,6 +2726,11 @@ table {
 
 .g--color-amarillos-8 {
   color: #FEF3C8;
+}
+
+.g--decoration-none {
+  text-decoration: none;
+  list-style: none;
 }
 
 .g--background-color-principal-0 {

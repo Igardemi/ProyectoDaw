@@ -6,19 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto de Grupo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <nav>
-        <!-- raquel -->
+        <ul class="c-header l-flex l-flex--align-items-center l-flex--direction-row">
+            <li class="c-header__logo">
+                <div>
+                <img class="c-header__logo" src="assets/img/logo.png">
+                </div>
+            </li>
+            <li class="c-header__content">
+                <div class="l-flex l-flex--direction-column">
+                    <div class="c-header__search-input">
+                        <input type="search" class="c-header__search" placeholder="Buscar producto">
+                        <img class="c-header__search-input-icon" src="assets/img/icono-lupa.png">                    </div>
+                </div>
+            </li>
+            <li class="c-header__item">
+                <img class="c-header__icons" src="assets/img/icono-usuario.png"/>
+                <img class="c-header__icons" src="assets/img/heart-icon.png"/>
+                <img class="c-header__icons" src="assets/img/icono-carrito.png"/>
+                <span id="contador"></span>
+            </li>            
+        </ul>
     </nav>
-
-    <div>
+    
+    <div id="contenido">
         <!-- contenido -->
     </div>
+
     <footer>
-        <!-- dd -->
+        <div class="c-footer l-flex l-flex--direction-column l-flex--align-items-space-between">
+            <div class="c-footer__logo">
+                <img class="c-footer__logo" src="assets/img/logo_vertical.png"/>
+            <div class="c-footer__social">
+                <img class="c-footer__social-icons" src="assets/img/instagram.png" alt="Instagram icon"></img>
+                <img class="c-footer__social-icons" src="assets/img/facebook.png" alt="Facebook icon"></img>
+                <img class="c-footer__social-icons" src="assets/img/twitter.png" alt="Twitter icon"></img>
+            </div>
+        </div>
+            
+            <div class="c-footer__content">
+                    <a href="#" class="c-footer__content-links">Preguntas frecuentes</a></li>
+                    <a href="#" class="c-footer__content-links">Política de privacidad</a></li>
+                    <a href="#" class="c-footer__content-links">Términos y condiciones</a></li>
+                    <a href="#" class="c-footer__content-links">Aviso legal</a></li>
+                    <a href="#" class="c-footer__content-links">Contacto</a></li>
+            </div>
+            <div class="c-footer__final">
+                <p class="c-footer__final-copyright">Easy Move © 2022 - Todos los derechos reservados</p>
+            </div>
+        </div>
     </footer>
 
     <dialog id="carrito" open="1" class="c-modal">
@@ -160,12 +200,52 @@
 
 
 
-    <dialog id="pago">
+    <dialog id="pago" open="1" class="c-modal">
+        <div class=' c-pago'>
+            <div class=' c-pago__info'>
+                <div class=" c-pago__titulo ">
+                    PANTALLA PAGO
+                    <hr>
+                </div>
+                <div class="g--padding-bottom-4">
+                    <img src='./assets/img/tarjetas.png' height='50' width="80" class="imagen"></img>
+                    <img src='./assets/img/logoPaypal.png' height='30' width="90" class="imagen"></img>
+                </div>
+                <div>
+                    <div class=" g--font-size-L">Numero de tarjeta</div>
+                    <input class=' c-pago__input' placeholder="1234 5678 9012 3456"></input>
+                </div>
+                <div class=" l-flex l-flex--direction-row l-flex--justify-content-space-between">
+                    <div>
+                        <div class="g--font-size-L">Fecha caducidad</div>
+                        <input class='c-pago__input' placeholder="MM/YY"></input>
+                    </div>
+                    <div>
+                        <div class="g--font-size-L">CVC/CVV</div>
+                        <input class='c-pago__input' placeholder="3 dígitos"></input>
+                    </div>
+                </div>
+                <div>
+                    <div class="g--font-size-L">Nombre titular</div>
+                    <input class='c-pago__input' placeholder="Juan Pérez"></input>
+                </div>
+                <div>
+                    <input type="checkbox"> Guardar para la próxima compra
 
+                </div>
+                <button class=' c-pago__boton'>Aceptar</button>
+            </div>
+        </div>
     </dialog>
+
+
+
+
     <dialog id="historialCarritos">
 
     </dialog>
+    <script src="../../db/data.js"> </script>
+    <script src="./js/categories.js"> </script>
 </body>
 
 </html>

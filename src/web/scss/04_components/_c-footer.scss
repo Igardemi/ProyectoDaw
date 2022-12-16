@@ -1,0 +1,67 @@
+.c-footer{
+    display: flex;
+    background-color: getColor("grises", 5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    &__logo{
+        display: flex;
+        margin-left: 250px;
+        height: 80px;
+    }
+
+    &__content{
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+        font-size: getFontSize("S");
+    }
+
+    &__content-links{
+        color: black;
+        text-decoration: none;
+        font-family: 'Ubuntu-Regular';  
+        margin-top: getMargin(7);
+
+    }
+
+    &__social{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 450px;
+        color: black;
+    }
+
+    &__social-icons{
+        width: 30px;
+        display: inline-block;
+        margin: 0 9px;
+        opacity: 0.80;
+        margin-top: getMargin(5);
+        margin-bottom: getMargin(5);
+    }
+
+    &__final{
+        text-align: center;
+        margin-top: getMargin(10);
+        background-color: getColor("grises", 1);
+        padding-top: 10px;
+    }
+
+    &__final-copyright{
+        font-size: getFontSize("XS");
+        color: white;
+        margin-bottom: getMargin(1);
+        opacity: 0.75;
+        font-family: 'Ubuntu-Regular';
+    }
+}
+
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url('fonts/Ubuntu-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
