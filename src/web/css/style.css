@@ -626,6 +626,72 @@ table {
   width: 50px;
 }
 
+.c-pago {
+  height: 520px;
+  width: 600px;
+  border: none;
+  background-color: #2EB3F5;
+  border-radius: 16px;
+  color: #eee;
+  font-size: 16px;
+  display: flex;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.c-pago__input {
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: none;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+}
+.c-pago__input::placeholder {
+  color: rgba(238, 238, 238, 0.568);
+}
+.c-pago__input:hover {
+  background: rgba(255, 255, 255, 0.367);
+}
+.c-pago__titulo {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.c-pago__info {
+  margin-top: 10px;
+  width: 100%;
+}
+.c-pago__boton {
+  border: none;
+  line-height: 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  width: 45%;
+}
+.c-pago__boton--negativo {
+  background: rgb(255, 54, 54);
+}
+.c-pago__boton--positivo {
+  background: #22b877;
+}
+.c-pago__boton--positivo:hover {
+  background: #22a877;
+  color: #eee;
+  transition: all 0.2s ease;
+}
+.c-pago__boton--negativo:hover {
+  background: rgb(197, 2, 2);
+  color: #eee;
+  transition: all 0.2s ease;
+}
+
 .c-modal {
   padding: 0;
   border: 0;
