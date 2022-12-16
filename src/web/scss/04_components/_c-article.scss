@@ -1,13 +1,11 @@
 .c-article{
     display: flex;
-    flex-direction: row;
-    border: 2px solid grey;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
-    font-family: Helvetica, sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
 
-    &__imagen{
-        display: flex;
-    }
     &__nombre{
         font-size: 2rem;
     }
@@ -16,9 +14,13 @@
         width: 300px;
     }
     &__duracion{
-        height: 30px;
+        height: 50px;
     }
     &__precio{
-        font-size: 2rem;
+        font-size: 1rem;
+    }
+
+    &__button{
+        width: 90px;
     }
 }

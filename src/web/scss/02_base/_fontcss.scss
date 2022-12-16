@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  
+.cabecera {
+  font-size: 2rem;
+    display: flex;
+    width: 100%;
+    color:black;
+    justify-content: center;
+}
