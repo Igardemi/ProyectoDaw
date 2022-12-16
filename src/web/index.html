@@ -21,19 +21,94 @@
         <!-- dd -->
     </footer>
 
-    <dialog id="carrito">
-        <div id="dialogHead">
-            <h2> Carrito <span id="idPedido" class="h5"></span>
-                <h2>
-        </div>
-        <div id="dialogContent">
-        </div>
-        <div id="dialogFooter">
-            <h3 class="text-right">Total: <span id="total"></span></h3>
-        </div>
-        <div class="text-center">
-            <button id="btnCierraDialog" class="btn btn-secondary">Seguir comprando</button>
-            <button id="btnEfectuaPedido" class="btn btn-info">Efectuar pedido</button>
+    <dialog id="carrito" open="1" class="c-modal">
+        <div class="c-carrito">
+            <div class="l-flex l-flex--direction-row l-flex--align-items-space-between">
+                <div class="c-carrito__left">
+                    <div class="c-carrito__grande g--margin-top-10">
+                        CARRITO
+                        <hr>
+                    </div>
+                    
+                    <div class="l-flex l-flex--direction-column">
+                        <div class="c-item">
+                            <img src="assets/img/bus.png" alt="bus" class="c-item__imagen">
+                            <div class="c-item__nombre">
+                                <div class="c-item__texto c-item__texto--pequeño">3 dias</div>
+                                <div class="c-item__texto">autobus</div>
+                            </div>
+                            <div class="l-flex l-flex--direction-row l-flex--gap-5">
+                                <div class="c-item__texto">-</div>
+                                <div class="c-item__cantidad">07</div>
+                                <div class="c-item__texto">+</div>
+                            </div>
+                            <div class="c-item__texto c-item__nombre--pequeño">76€</div>
+                            <button class="c-item__borrar">X</button>
+                        </div>
+
+                        <div class="c-item">
+                            <img src="assets/img/Cartaxi_generated-removebg-preview.png" alt="bus" class="c-item__imagen">
+                            <div class="c-item__nombre">
+                                <div class="c-item__texto c-item__texto--pequeño">8 dias</div>
+                                <div class="c-item__texto">Coche electico</div>
+                            </div>
+                            <div class="l-flex l-flex--direction-row l-flex--gap-5">
+                                <div class="c-item__texto">-</div>
+                                <div class="c-item__cantidad">15</div>
+                                <div class="c-item__texto">+</div>
+                            </div>
+                            <div class="c-item__texto c-item__nombre--pequeño">876€</div>
+                            <button class="c-item__borrar">X</button>
+                        </div>
+
+                        <div class="c-item">
+                            <img src="assets/img/moto.png" alt="bus" class="c-item__imagen">
+                            <div class="c-item__nombre">
+                                <div class="c-item__texto c-item__texto--pequeño">1 hora</div>
+                                <div class="c-item__texto">moto electrica</div>
+                            </div>
+                            <div class="l-flex l-flex--direction-row l-flex--gap-5">
+                                <div class="c-item__texto">-</div>
+                                <div class="c-item__cantidad">20</div>
+                                <div class="c-item__texto">+</div>
+                            </div>
+                            <div class="c-item__texto c-item__nombre--pequeño">1876€</div>
+                            <button class="c-item__borrar">X</button>
+                        </div>
+
+                        
+                    </div>
+                    <div class="c-carrito__volver">Seguir comprando</div>
+
+                </div>
+
+
+
+
+
+
+                <div class="c-carrito__right">
+                    <div class="c-carrito__titulo">RESUMEN</div>
+                    <hr>
+                    <div class="c-carrito__resumen">
+                        <div class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-9 g--margin-bottom-9">
+                            <div class="c-carrito__nombre">ARTICULOS 3</div>
+                            <div class="c-carrito__nombre">2.828€</div>
+                        </div>
+                        <div class="l-flex l-flex--direction-column l-flex--gap-7  g--margin-bottom-12">
+                            <div class="c-carrito__nombre">CODIGO DE DESCUENTO</div>
+                            <input type="text" class="c-carrito__descuento" placeholder="Introduce tu codigo">
+                        </div>
+                        <hr>
+                        <div class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-7 g--margin-bottom-9">
+                            <div class="c-carrito__nombre">PRECIO TOTAL</div>
+                            <div class="c-carrito__precioTotal">2.828€</div>
+                        </div>
+                    </div>
+                    
+                    <button class="c-button c-button--pagar">PAGAR</button>
+                </div>
+            </div>
         </div>
     </dialog>
 
