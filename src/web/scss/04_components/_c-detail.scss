@@ -1,0 +1,19 @@
+.c-detail {
+    border-radius: getBorderRadius(4);
+    background-color: getColor("grises", 7);
+
+    &__title {
+        font-size: getFontSize("XL");
+        font-weight: bold;
+    }
+
+    &__price {
+        color: getColor("rojos", 3);
+        font-size: getFontSize("L");
+    }
+
+    &__quantity {
+        border-color: getColor("alternativo", 3);
+        background-color: getColor("blancos", 5);
+    }
+}
