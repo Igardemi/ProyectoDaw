@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,20 +19,25 @@
             </li>
             <li class="c-header__content">
                 <div class="l-flex l-flex--direction-column">
-                    <div class="c-header__search-input">
+                    <div class="c-header__search-input l-flex l-flex--direction-row">
+                        <img class="c-header__search-input-icon" src="assets/img/icono-lupa.png"> 
                         <input type="search" class="c-header__search" placeholder="Buscar producto">
-                        <img class="c-header__search-input-icon" src="assets/img/icono-lupa.png">                    </div>
+                      </div>
                 </div>
             </li>
             <li class="c-header__item l-flex l-flex--gap-10">
-                <img id="bntUsuario" class="c-header__icons" src="assets/img/icono-usuario.png"/>
+                <img id="btnUsuario" class="c-header__icons" src="assets/img/icono-usuario.png"/>
                 <img id="btnCarrito" class="c-header__icons" src="assets/img/icono-carrito.png"/>
                 <span id="contador"></span>
             </li>            
         </ul>
     </nav>
+
+    <div id="banner" class="l-flex ">
+        <div></div>
+    </div>
     
-    <div id="contenido" class="l-flex l-flex--wrap l-flex--align-content-space-between l-grid--gap-10 g--margin-horizonal-12 g--margin-top-10 g--margin-bottom-10">
+    <div id="contenido" class="l-flex l-flex--wrap l-flex--gap-10 g--margin-top-20 g--margin-bottom-20 l-flex--justify-content-center">
         <!-- contenido -->
     </div>
 
@@ -60,7 +65,7 @@
         </div>
     </footer>
 
-    <dialog id="carrito" open="1" class="c-modal">
+    <dialog id="carrito" class="c-modal">
         <div class="c-carrito">
             <div class="l-flex l-flex--direction-row l-flex--align-items-space-between">
                 <div class="c-carrito__left">

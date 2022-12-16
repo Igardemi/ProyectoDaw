@@ -59,7 +59,7 @@ object.opciones.forEach(opcion => {
 window.onload=()=>{
 contenido = document.getElementById("contenido");
 getCategories();
-document.getElementById("bntUsuario").addEventListener("click",()=>{document.getElementById("login").showModal()});
-document.getElementById("bntCarrito").addEventListener("click",()=>{document.getElementById("carrito").showModal()})
+document.getElementById("btnUsuario").addEventListener("click",()=>{document.getElementById("login").showModal()});
+document.getElementById("btnCarrito").addEventListener("click",()=>{document.getElementById("carrito").showModal()});
 document.getElementById("btnPagar").addEventListener("click",()=>{document.getElementById("pago").showModal()});
 }
