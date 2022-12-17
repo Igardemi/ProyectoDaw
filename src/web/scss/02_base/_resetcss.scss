@@ -377,3 +377,7 @@ dialog[open] {
       transform: translateY(0%);
   }
 }
+
+hr{
+  background-color: getColor("principal", 2);
+}

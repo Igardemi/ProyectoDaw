@@ -4,11 +4,12 @@
     border: none;
     background-color: getColor("blancos", 4);
     border-radius: getBorderRadius(5);
-    color: grey;
+    color: black;
     font-size: getFontSize("M");
     display: flex;
     padding-left: getPadding(8);
     padding-right: getPadding(8);
+    border:2px solid lightgrey;
 
     &__input {
         background: rgba(255, 255, 255, 0.2);

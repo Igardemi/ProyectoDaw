@@ -344,25 +344,22 @@ dialog[open] {
     transform: translateY(0%);
   }
 }
+hr {
+  background-color: #1C63A0;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
-.cabecera {
-  font-size: 2rem;
-  display: flex;
-  width: 100%;
-  color: black;
-  justify-content: center;
-}
-
 .seleccion {
+  font-family: "Roboto";
   display: flex;
   margin-top: 30px;
   margin-bottom: 30px;
-  color: #154B75;
+  color: #1C63A0;
   font-size: 50px;
   font-weight: bold;
   text-shadow: 2px 2px 1px grey;
@@ -681,11 +678,12 @@ dialog[open] {
   border: none;
   background-color: #F5F5F5;
   border-radius: 16px;
-  color: grey;
+  color: black;
   font-size: 16px;
   display: flex;
   padding-left: 24px;
   padding-right: 24px;
+  border: 2px solid lightgrey;
 }
 .c-pago__input {
   background: rgba(255, 255, 255, 0.2);
@@ -934,7 +932,7 @@ dialog[open] {
 }
 
 .c-header {
-  background-color: #EBEBEB;
+  background-color: #1C63A0;
   padding-left: 192px;
   padding-right: 192px;
   padding-bottom: 12px;
@@ -995,12 +993,13 @@ dialog[open] {
 
 .c-footer {
   display: flex;
-  background-color: #F5F5F5;
+  background-color: #1C63A0;
   justify-content: flex-end;
   margin-top: 30px;
   width: 100%;
 }
 .c-footer__logo {
+  fill: white;
   display: flex;
   margin-left: 250px;
   height: 80px;
@@ -1012,9 +1011,9 @@ dialog[open] {
   font-size: 14px;
 }
 .c-footer__content-links {
-  color: black;
+  color: white;
   text-decoration: none;
-  font-family: "Ubuntu-Regular";
+  font-family: "Roboto";
   margin-top: 20px;
 }
 .c-footer__social {
@@ -1022,7 +1021,6 @@ dialog[open] {
   align-items: center;
   margin-left: auto;
   margin-right: 450px;
-  color: black;
 }
 .c-footer__social-icons {
   width: 30px;

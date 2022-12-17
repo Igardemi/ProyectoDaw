@@ -1,12 +1,13 @@
 .c-footer{
     display: flex;
-    background-color: getColor("blancos", 4);
+    background-color: getColor("principal", 2);
     justify-content: flex-end;
     margin-top: 30px;
     width: 100%;
 
 
     &__logo{
+        fill:white;
         display: flex;
         margin-left: 250px;
         height: 80px;
@@ -20,9 +21,9 @@
     }
 
     &__content-links{
-        color: black;
+        color:white;
         text-decoration: none;
-        font-family: 'Ubuntu-Regular';  
+        font-family: 'Roboto';  
         margin-top: getMargin(7);
 
     }
@@ -32,7 +33,7 @@
         align-items: center;
         margin-left: auto;
         margin-right: 450px;
-        color: black;
+        
     }
 
     &__social-icons{
