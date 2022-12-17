@@ -11,30 +11,44 @@
 
 <body>
     <nav>
-        <ul class="c-header l-flex l-flex--align-items-center l-flex--direction-row">
-            <li class="c-header__logo">
-                <div>
-                <img class="c-header__logo" src="assets/img/logo.png">
+        <div class="l-flex l-flex--direction-column ">
+            <div class="c-header">
+                <div class="l-flex l-flex--align-items-center l-flex--direction-row">
+
+                    <div class="c-header__logo">
+                        <img class="c-header__logo" src="assets/img/logo.png">
+                    </div>
+
+                    <div class="c-header__content">
+                        <div class="l-flex l-flex--direction-row l-flex--align-items-center">
+                            <img class="c-header__search-input-icon" src="assets/img/icono-lupa.png">
+                            <input type="search" class="c-header__search" placeholder="Buscar producto">
+                        </div>
+                    </div>
+
+                    <div class="l-flex l-flex--direction-row auto l-flex--gap-5">
+                        <img id="btnUsuario" class="c-header__icons" src="assets/img/icono-usuario.png"/>
+                        <img id="btnCarrito" class="c-header__icons" src="assets/img/icono-carrito.png"/>
+                    </div>
                 </div>
-            </li>
-            <li class="c-header__content">
-                <div class="l-flex l-flex--direction-column">
-                    <div class="c-header__search-input l-flex l-flex--direction-row">
-                        <img class="c-header__search-input-icon" src="assets/img/icono-lupa.png"> 
-                        <input type="search" class="c-header__search" placeholder="Buscar producto">
-                      </div>
+            </div>
+
+
+            <div class="c-header__class">
+                <div class="l-flex l-flex--justify-content-space-around g--margin-horizonal-12">
+                    <button class="c-header__btnCategory">MADRID</button>
+                    <button class="c-header__btnCategory">VALENCIA</button>
+                    <button class="c-header__btnCategory">BARCELONA</button>
+                    <button class="c-header__btnCategory">MURCIA</button>
                 </div>
-            </li>
-            <li class="c-header__item l-flex l-flex--gap-10">
-                <img id="btnUsuario" class="c-header__icons" src="assets/img/icono-usuario.png"/>
-                <img id="btnCarrito" class="c-header__icons" src="assets/img/icono-carrito.png"/>
-                <span id="contador"></span>
-            </li>            
-        </ul>
+            </div>
+        </div>
     </nav>
 
-    <div id="banner" class="l-flex ">
-        <div></div>
+    <div id="banner">
+        <div class="l-flex l-flex--justify-content-center">
+            <img src="assets/img/banner1.png" alt="imagen banner" class="c-banner">
+        </div>
     </div>
     
     <div id="contenido" class="l-flex l-flex--wrap l-flex--gap-10 g--margin-top-20 g--margin-bottom-20 l-flex--justify-content-center">

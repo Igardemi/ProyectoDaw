@@ -874,13 +874,11 @@ table {
 }
 
 .c-header {
-  display: flex;
-  border: 1px solid #F5F5F5;
-  background-color: #F5F5F5;
+  background-color: #EBEBEB;
   padding-left: 192px;
   padding-right: 192px;
   padding-bottom: 12px;
-  height: 170px;
+  height: 90px;
   outline-color: grey;
 }
 .c-header__logo {
@@ -889,28 +887,23 @@ table {
 .c-header__content {
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
+  border-radius: 20px;
 }
 .c-header__search-input {
-  background-color: white;
-  border-radius: 14px;
   margin-left: 128px;
   margin-top: 12px;
 }
 .c-header__search-input-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 30px;
   height: 30px;
-  margin-top: 4px;
   opacity: 0.6;
   padding-left: 5px;
 }
 .c-header__search {
-  border-radius: 20px;
-  border-color: #F0F0F0;
   padding-right: 40px;
   padding-left: 40px;
+  margin-right: 15px;
   height: 40px;
   border: 0;
   background-color: #FFFFFF;
@@ -920,9 +913,21 @@ table {
   outline: none;
 }
 .c-header__icons {
-  justify-content: flex-end;
   width: 35px;
-  margin-top: 12px;
+}
+.c-header__class {
+  background-color: #454545;
+}
+.c-header__btnCategory {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  padding: 10px;
+}
+.c-header__btnCategory:hover {
+  background-color: white;
+  border-radius: 10px;
+  color: #454545;
 }
 
 .c-footer {
@@ -983,6 +988,11 @@ table {
   font-style: normal;
   font-weight: normal;
 }
+.c-banner {
+  margin-top: 40px;
+  width: 1400px;
+}
+
 .g--font-size-2XS {
   font-size: 8px;
 }
@@ -1097,6 +1107,22 @@ table {
   margin-right: 0px;
 }
 
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
+}
+
 .g--margin-1 {
   margin: 4px;
 }
@@ -1125,6 +1151,22 @@ table {
 .g--margin-horizonal-1 {
   margin-left: 4px;
   margin-right: 4px;
+}
+
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
 }
 
 .g--margin-2 {
@@ -1157,6 +1199,22 @@ table {
   margin-right: 6px;
 }
 
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
+}
+
 .g--margin-3 {
   margin: 8px;
 }
@@ -1185,6 +1243,22 @@ table {
 .g--margin-horizonal-3 {
   margin-left: 8px;
   margin-right: 8px;
+}
+
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
 }
 
 .g--margin-4 {
@@ -1217,6 +1291,22 @@ table {
   margin-right: 10px;
 }
 
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
+}
+
 .g--margin-5 {
   margin: 12px;
 }
@@ -1245,6 +1335,22 @@ table {
 .g--margin-horizonal-5 {
   margin-left: 12px;
   margin-right: 12px;
+}
+
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
 }
 
 .g--margin-6 {
@@ -1277,6 +1383,22 @@ table {
   margin-right: 16px;
 }
 
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
+}
+
 .g--margin-7 {
   margin: 20px;
 }
@@ -1305,6 +1427,22 @@ table {
 .g--margin-horizonal-7 {
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
 }
 
 .g--margin-8 {
@@ -1337,6 +1475,22 @@ table {
   margin-right: 24px;
 }
 
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
+}
+
 .g--margin-9 {
   margin: 32px;
 }
@@ -1365,6 +1519,22 @@ table {
 .g--margin-horizonal-9 {
   margin-left: 32px;
   margin-right: 32px;
+}
+
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
 }
 
 .g--margin-10 {
@@ -1397,6 +1567,22 @@ table {
   margin-right: 40px;
 }
 
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
+}
+
 .g--margin-11 {
   margin: 48px;
 }
@@ -1425,6 +1611,22 @@ table {
 .g--margin-horizonal-11 {
   margin-left: 48px;
   margin-right: 48px;
+}
+
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
 }
 
 .g--margin-12 {
@@ -1457,6 +1659,22 @@ table {
   margin-right: 64px;
 }
 
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
+}
+
 .g--margin-13 {
   margin: 80px;
 }
@@ -1485,6 +1703,22 @@ table {
 .g--margin-horizonal-13 {
   margin-left: 80px;
   margin-right: 80px;
+}
+
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
 }
 
 .g--margin-14 {
@@ -1517,6 +1751,22 @@ table {
   margin-right: 96px;
 }
 
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
+}
+
 .g--margin-15 {
   margin: 128px;
 }
@@ -1545,6 +1795,22 @@ table {
 .g--margin-horizonal-15 {
   margin-left: 128px;
   margin-right: 128px;
+}
+
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
 }
 
 .g--margin-16 {
@@ -1577,6 +1843,22 @@ table {
   margin-right: 160px;
 }
 
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
+}
+
 .g--margin-17 {
   margin: 192px;
 }
@@ -1605,6 +1887,22 @@ table {
 .g--margin-horizonal-17 {
   margin-left: 192px;
   margin-right: 192px;
+}
+
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
 }
 
 .g--margin-18 {
@@ -1637,6 +1935,22 @@ table {
   margin-right: 224px;
 }
 
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
+}
+
 .g--margin-19 {
   margin: 256px;
 }
@@ -1665,6 +1979,22 @@ table {
 .g--margin-horizonal-19 {
   margin-left: 256px;
   margin-right: 256px;
+}
+
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
 }
 
 .g--margin-20 {
@@ -1697,6 +2027,22 @@ table {
   margin-right: 320px;
 }
 
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
+}
+
 .g--margin-21 {
   margin: 480px;
 }
@@ -1725,6 +2071,22 @@ table {
 .g--margin-horizonal-21 {
   margin-left: 480px;
   margin-right: 480px;
+}
+
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
 }
 
 .g--margin-22 {
@@ -1757,6 +2119,22 @@ table {
   margin-right: 640px;
 }
 
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
+  margin-right: auto;
+}
+
 .g--margin-23 {
   margin: auto;
 }
@@ -1784,6 +2162,22 @@ table {
 
 .g--margin-horizonal-23 {
   margin-left: auto;
+  margin-right: auto;
+}
+
+.g--margin-top-auto {
+  margin-top: auto;
+}
+
+.g--margin-left-auto {
+  margin-left: auto;
+}
+
+.g--margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.g--margin-right-auto {
   margin-right: auto;
 }
 
