@@ -1,6 +1,6 @@
 .c-detail {
     border-radius: getBorderRadius(4);
-    background-color: getColor("azules", 7);
+    background-color: getColor("blancos", 7);
     font-size: getFontSize("XL");
 
     &__imagen{
@@ -22,8 +22,15 @@
     }
 
     &__cantidad {
-        width: 100px;
+        width: 80px;
         border-color: getColor("alternativo", 3);
 
+    }
+
+    &__cerrar{
+        color: red;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
     }
 }

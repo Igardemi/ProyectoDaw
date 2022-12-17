@@ -2,9 +2,9 @@
     height: 520px;
     width: 600px;
     border: none;
-    background-color: getColor("alternativo", 4);
+    background-color: getColor("blancos", 4);
     border-radius: getBorderRadius(5);
-    color: #eee;
+    color: grey;
     font-size: getFontSize("M");
     display: flex;
     padding-left: getPadding(8);
@@ -20,12 +20,12 @@
         padding-right: getPadding(4);
         padding-bottom: getPadding(4);
         padding-left: getPadding(4);
-        color: #fff;
+        color: grey;
         box-sizing: border-box;
         width: 100%;
     }
     &__input::placeholder {
-        color: rgba(238, 238, 238, 0.568);
+        color: grey;
     }
     &__input:hover {
         background: rgba(255, 255, 255, 0.367);

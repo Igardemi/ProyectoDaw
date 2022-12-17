@@ -35,29 +35,32 @@ function getOption(opciones){
 
 function getProductos(object){
     console.log(object);
-    let innerText=`
-    <div class='cabecera'>
-    Opciones de movilidad en ${object.ciudad}
-    </div>
-    <div class='l-flex l-flex--wrap l-flex--gap-10 l-flex--justify-content-center'>`;
+    document.getElementById("seleccion").innerText="Opciones de movilidad en "+object.ciudad;
+    let innerText=`<div class='l-flex l-flex--wrap l-flex--gap-10 l-flex--justify-content-center'>`;
      
 object.opciones.forEach(opcion => {
     innerText+=`
-    <div class='c-article g--padding-5'>
-    <img src="${opcion.image}" alt="foto ticket" width="200" height="200">
+    <div class='c-article'>
+    <img class='c-article__imagen' src="${opcion.image}" alt="foto ticket" width="300" height="200">
     <div class='c-article__nombre'>${opcion.nombre}</div>
     <div class='c-article__duracion'>${getOption(opcion.duracion)}</div>
     <div class='c-article__precio'>${opcion.precio[0]} Euros</div>
-    <div class='l-flex l-flex--direction-row l-flex--gap-10'>
+    <div class='l-flex l-flex--direction-row l-flex--gap-5'>
     <button class="c-button c-article__button c-button--alternativo ${opcion.nombre} ${opcion.duracion} btnBuy">Comprar</button>
-    <button class="c-button c-article__button ${opcion.nombre} ${opcion.duracion} btnBuy">info</button>      
+    <button class="c-button c-article__button ${opcion.nombre} ${opcion.duracion} btnInfo">info</button>      
     </div>
     </div>`;   
 })
     innerText+="</div>"
     let lienzo = document.getElementById("contenido");
     lienzo.innerHTML=innerText;
-    document.getElementById('opciones').selectedIndex
+    Array.from(document.getElementsByClassName("btnInfo")).forEach(btn =>{
+        btn.addEventListener("click",()=>{document.getElementById("detalleProducto").showModal()})
+    });
+    Array.from(document.getElementsByClassName("btnBuy")).forEach(btn =>{
+        btn.addEventListener("click",()=>{alert("Producto añadido al carrito")});
+    });
+
 }
 
 
@@ -66,5 +69,12 @@ contenido = document.getElementById("contenido");
 getCategories();
 document.getElementById("btnUsuario").addEventListener("click",()=>{document.getElementById("login").showModal()});
 document.getElementById("btnCarrito").addEventListener("click",()=>{document.getElementById("carrito").showModal()});
-document.getElementById("btnPagar").addEventListener("click",()=>{document.getElementById("pago").showModal()});
+document.getElementById("btnPagar").addEventListener("click",()=>{
+    document.getElementById("carrito").close();
+    document.getElementById("pago").showModal()});
+document.getElementsByClassName("c-pago__boton--negativo")[0].addEventListener("click",()=>{document.getElementById("pago").close();});
+document.getElementById("volver").addEventListener("click",()=>{document.getElementById("carrito").close();});
+document.getElementById("anyadirCarrito").addEventListener("click",()=>{document.getElementById("detalleProducto").close();}); 
+document.getElementsByClassName("c-detail__cerrar")[0].addEventListener("click",()=>{document.getElementById("detalleProducto").close();});
 }
+

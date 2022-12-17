@@ -332,6 +332,18 @@ table {
   border-spacing: 0;
 }
 
+dialog[open] {
+  -webkit-animation: show 1s ease normal;
+}
+
+@-webkit-keyframes show {
+  from {
+    transform: translateY(-110%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
 @font-face {
   font-family: "Roboto";
   src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
@@ -344,6 +356,23 @@ table {
   width: 100%;
   color: black;
   justify-content: center;
+}
+
+.seleccion {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #154B75;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px grey;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-bottom: solid 1px #154B75;
+}
+
+.c-banner {
+  height: 600px;
 }
 
 .l-grid {
@@ -650,9 +679,9 @@ table {
   height: 520px;
   width: 600px;
   border: none;
-  background-color: #58D586;
+  background-color: #F5F5F5;
   border-radius: 16px;
-  color: #eee;
+  color: grey;
   font-size: 16px;
   display: flex;
   padding-left: 24px;
@@ -668,12 +697,12 @@ table {
   padding-right: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
-  color: #fff;
+  color: grey;
   box-sizing: border-box;
   width: 100%;
 }
 .c-pago__input::placeholder {
-  color: rgba(238, 238, 238, 0.568);
+  color: grey;
 }
 .c-pago__input:hover {
   background: rgba(255, 255, 255, 0.367);
@@ -833,11 +862,26 @@ table {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid lightgray;
+  border-radius: 16px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
 }
+.c-article__imagen {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
 .c-article__nombre {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 70px;
+  width: 90%;
+  background-color: #498CDF;
   font-size: 2rem;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
 }
 .c-article__descripcion {
   font-size: 1rem;
@@ -848,126 +892,17 @@ table {
 }
 .c-article__precio {
   font-size: 1rem;
+  color: #154B75;
+  font-weight: bold;
 }
 .c-article__button {
   width: 90px;
 }
 
-.c-carrito {
-  background-color: white;
-  height: 700px;
-  width: 1000px;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-.c-carrito__left {
-  width: 600px;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-}
-.c-carrito__right {
-  width: 400px;
-  height: 700px;
-  background-color: #f6f6f6;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-.c-carrito__descuento {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  background-color: white;
-  border-radius: 5px;
-  border: 0;
-}
-.c-carrito__titulo {
-  margin-top: 80px;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.c-carrito__resumen {
-  margin-top: 32px;
-}
-.c-carrito__volver {
-  margin-top: auto;
-  margin-right: auto;
-  font-size: 16px;
-  font-weight: bold;
-}
-.c-carrito__nombre {
-  font-size: 16px;
-  font-weight: 700;
-  color: #4a4a4a;
-}
-.c-carrito__grande {
-  font-size: 30px;
-  font-weight: bolder;
-}
-
-.c-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 30px;
-}
-.c-item__imagen {
-  width: 100px;
-  height: 100px;
-}
-.c-item__borrar {
-  border: 0;
-  background-color: transparent;
-  color: #EF4343;
-  width: bold;
-}
-.c-item__nombre {
-  width: 120px;
-}
-.c-item__nombre--pequeño {
-  width: 35px;
-}
-.c-item__texto {
-  font-size: 16px;
-  font-weight: 600;
-}
-.c-item__texto--pequeño {
-  font-size: 12px;
-  font-weight: 100;
-  color: grey;
-}
-
-.c-article {
-  display: flex;
-  flex-direction: row;
-  border: 2px solid grey;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
-  font-family: Helvetica, sans-serif;
-}
-.c-article__imagen {
-  display: flex;
-}
-.c-article__nombre {
-  font-size: 2rem;
-}
-.c-article__descripcion {
-  font-size: 1rem;
-  width: 300px;
-}
-.c-article__duracion {
-  height: 30px;
-}
-.c-article__precio {
-  font-size: 2rem;
-}
-
 .c-categorie {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: 220px 70px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-rows: 250px 60px;
   grid-template-areas: "imagen" "title";
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
   font-family: Helvetica, sans-serif;
@@ -1051,7 +986,7 @@ table {
   display: flex;
   background-color: #F5F5F5;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 30px;
   width: 100%;
 }
 .c-footer__logo {
@@ -1108,7 +1043,7 @@ table {
 }
 .c-detail {
   border-radius: 8px;
-  background-color: #CEDAFD;
+  background-color: #FCFCFC;
   font-size: 20px;
 }
 .c-detail__titulo {
@@ -1123,8 +1058,14 @@ table {
   border-color: #2FCA63;
 }
 .c-detail__cantidad {
-  width: 100px;
+  width: 80px;
   border-color: #2FCA63;
+}
+.c-detail__cerrar {
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
 }
 
 .g--font-size-2XS {
@@ -1952,13 +1893,13 @@ table {
 }
 
 .g--padding-vertical-0 {
-  margin-bottom: 0px;
-  margin-top: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 
 .g--padding-horizonal-0 {
-  margin-left: 0px;
-  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .g--padding-1 {
@@ -1982,13 +1923,13 @@ table {
 }
 
 .g--padding-vertical-1 {
-  margin-bottom: 4px;
-  margin-top: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
 }
 
 .g--padding-horizonal-1 {
-  margin-left: 4px;
-  margin-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .g--padding-2 {
@@ -2012,13 +1953,13 @@ table {
 }
 
 .g--padding-vertical-2 {
-  margin-bottom: 6px;
-  margin-top: 6px;
+  padding-bottom: 6px;
+  padding-top: 6px;
 }
 
 .g--padding-horizonal-2 {
-  margin-left: 6px;
-  margin-right: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .g--padding-3 {
@@ -2042,13 +1983,13 @@ table {
 }
 
 .g--padding-vertical-3 {
-  margin-bottom: 8px;
-  margin-top: 8px;
+  padding-bottom: 8px;
+  padding-top: 8px;
 }
 
 .g--padding-horizonal-3 {
-  margin-left: 8px;
-  margin-right: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .g--padding-4 {
@@ -2072,13 +2013,13 @@ table {
 }
 
 .g--padding-vertical-4 {
-  margin-bottom: 10px;
-  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .g--padding-horizonal-4 {
-  margin-left: 10px;
-  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .g--padding-5 {
@@ -2102,13 +2043,13 @@ table {
 }
 
 .g--padding-vertical-5 {
-  margin-bottom: 12px;
-  margin-top: 12px;
+  padding-bottom: 12px;
+  padding-top: 12px;
 }
 
 .g--padding-horizonal-5 {
-  margin-left: 12px;
-  margin-right: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .g--padding-6 {
@@ -2132,13 +2073,13 @@ table {
 }
 
 .g--padding-vertical-6 {
-  margin-bottom: 16px;
-  margin-top: 16px;
+  padding-bottom: 16px;
+  padding-top: 16px;
 }
 
 .g--padding-horizonal-6 {
-  margin-left: 16px;
-  margin-right: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .g--padding-7 {
@@ -2162,13 +2103,13 @@ table {
 }
 
 .g--padding-vertical-7 {
-  margin-bottom: 20px;
-  margin-top: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .g--padding-horizonal-7 {
-  margin-left: 20px;
-  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .g--padding-8 {
@@ -2192,13 +2133,13 @@ table {
 }
 
 .g--padding-vertical-8 {
-  margin-bottom: 24px;
-  margin-top: 24px;
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 
 .g--padding-horizonal-8 {
-  margin-left: 24px;
-  margin-right: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .g--padding-9 {
@@ -2222,13 +2163,13 @@ table {
 }
 
 .g--padding-vertical-9 {
-  margin-bottom: 32px;
-  margin-top: 32px;
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
 
 .g--padding-horizonal-9 {
-  margin-left: 32px;
-  margin-right: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .g--padding-10 {
@@ -2252,13 +2193,13 @@ table {
 }
 
 .g--padding-vertical-10 {
-  margin-bottom: 40px;
-  margin-top: 40px;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 .g--padding-horizonal-10 {
-  margin-left: 40px;
-  margin-right: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .g--padding-11 {
@@ -2282,13 +2223,13 @@ table {
 }
 
 .g--padding-vertical-11 {
-  margin-bottom: 48px;
-  margin-top: 48px;
+  padding-bottom: 48px;
+  padding-top: 48px;
 }
 
 .g--padding-horizonal-11 {
-  margin-left: 48px;
-  margin-right: 48px;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 
 .g--padding-12 {
@@ -2312,13 +2253,13 @@ table {
 }
 
 .g--padding-vertical-12 {
-  margin-bottom: 64px;
-  margin-top: 64px;
+  padding-bottom: 64px;
+  padding-top: 64px;
 }
 
 .g--padding-horizonal-12 {
-  margin-left: 64px;
-  margin-right: 64px;
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
 .g--padding-13 {
@@ -2342,13 +2283,13 @@ table {
 }
 
 .g--padding-vertical-13 {
-  margin-bottom: 80px;
-  margin-top: 80px;
+  padding-bottom: 80px;
+  padding-top: 80px;
 }
 
 .g--padding-horizonal-13 {
-  margin-left: 80px;
-  margin-right: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .g--padding-14 {
@@ -2372,13 +2313,13 @@ table {
 }
 
 .g--padding-vertical-14 {
-  margin-bottom: 96px;
-  margin-top: 96px;
+  padding-bottom: 96px;
+  padding-top: 96px;
 }
 
 .g--padding-horizonal-14 {
-  margin-left: 96px;
-  margin-right: 96px;
+  padding-left: 96px;
+  padding-right: 96px;
 }
 
 .g--padding-15 {
@@ -2402,13 +2343,13 @@ table {
 }
 
 .g--padding-vertical-15 {
-  margin-bottom: 128px;
-  margin-top: 128px;
+  padding-bottom: 128px;
+  padding-top: 128px;
 }
 
 .g--padding-horizonal-15 {
-  margin-left: 128px;
-  margin-right: 128px;
+  padding-left: 128px;
+  padding-right: 128px;
 }
 
 .g--padding-16 {
@@ -2432,13 +2373,13 @@ table {
 }
 
 .g--padding-vertical-16 {
-  margin-bottom: 160px;
-  margin-top: 160px;
+  padding-bottom: 160px;
+  padding-top: 160px;
 }
 
 .g--padding-horizonal-16 {
-  margin-left: 160px;
-  margin-right: 160px;
+  padding-left: 160px;
+  padding-right: 160px;
 }
 
 .g--padding-17 {
@@ -2462,13 +2403,13 @@ table {
 }
 
 .g--padding-vertical-17 {
-  margin-bottom: 192px;
-  margin-top: 192px;
+  padding-bottom: 192px;
+  padding-top: 192px;
 }
 
 .g--padding-horizonal-17 {
-  margin-left: 192px;
-  margin-right: 192px;
+  padding-left: 192px;
+  padding-right: 192px;
 }
 
 .g--padding-18 {
@@ -2492,13 +2433,13 @@ table {
 }
 
 .g--padding-vertical-18 {
-  margin-bottom: 224px;
-  margin-top: 224px;
+  padding-bottom: 224px;
+  padding-top: 224px;
 }
 
 .g--padding-horizonal-18 {
-  margin-left: 224px;
-  margin-right: 224px;
+  padding-left: 224px;
+  padding-right: 224px;
 }
 
 .g--padding-19 {
@@ -2522,13 +2463,13 @@ table {
 }
 
 .g--padding-vertical-19 {
-  margin-bottom: 256px;
-  margin-top: 256px;
+  padding-bottom: 256px;
+  padding-top: 256px;
 }
 
 .g--padding-horizonal-19 {
-  margin-left: 256px;
-  margin-right: 256px;
+  padding-left: 256px;
+  padding-right: 256px;
 }
 
 .g--padding-20 {
@@ -2552,13 +2493,13 @@ table {
 }
 
 .g--padding-vertical-20 {
-  margin-bottom: 320px;
-  margin-top: 320px;
+  padding-bottom: 320px;
+  padding-top: 320px;
 }
 
 .g--padding-horizonal-20 {
-  margin-left: 320px;
-  margin-right: 320px;
+  padding-left: 320px;
+  padding-right: 320px;
 }
 
 .g--padding-21 {
@@ -2582,13 +2523,13 @@ table {
 }
 
 .g--padding-vertical-21 {
-  margin-bottom: 480px;
-  margin-top: 480px;
+  padding-bottom: 480px;
+  padding-top: 480px;
 }
 
 .g--padding-horizonal-21 {
-  margin-left: 480px;
-  margin-right: 480px;
+  padding-left: 480px;
+  padding-right: 480px;
 }
 
 .g--padding-22 {
@@ -2612,13 +2553,13 @@ table {
 }
 
 .g--padding-vertical-22 {
-  margin-bottom: 640px;
-  margin-top: 640px;
+  padding-bottom: 640px;
+  padding-top: 640px;
 }
 
 .g--padding-horizonal-22 {
-  margin-left: 640px;
-  margin-right: 640px;
+  padding-left: 640px;
+  padding-right: 640px;
 }
 
 .g--border-radius-0 {
