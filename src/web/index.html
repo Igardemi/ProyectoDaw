@@ -44,14 +44,15 @@
             </div>
         </div>
     </nav>
+    <div id="banner" class="c-banner g--margin-vertical-5 g--padding-horizonal-12">
+        <img src="assets/img/banner.png" width="100%">
+    </div>
 
-    <div id="banner">
-        <div class="l-flex l-flex--justify-content-center">
-            <img src="assets/img/banner1.png" alt="imagen banner" class="c-banner">
-        </div>
+    <div id="titulo" class="l-flex l-flex--justify-content-center g--padding-horizonal-12 g--padding-vertical-6">
+        <div id="seleccion" class="seleccion">Elige la ciudad de destino</div>
     </div>
     
-    <div id="contenido" class="l-flex l-flex--wrap l-flex--gap-10 g--margin-top-20 g--margin-bottom-20 l-flex--justify-content-center">
+    <div id="contenido" class="l-flex l-flex--wrap l-flex--gap-10 g--padding-horizonal-12 g--padding-vertical-6 l-flex--justify-content-center">
         <!-- contenido -->
     </div>
 
@@ -140,11 +141,6 @@
 
                 </div>
 
-
-
-
-
-
                 <div class="c-carrito__right">
                     <div class="c-carrito__titulo">RESUMEN</div>
                     <hr>
@@ -170,11 +166,24 @@
         </div>
     </dialog>
 
-    <dialog id="detalleProducto">
-
+    <dialog id="detalleProducto" class="c-detail">
+        <div class="l-flex l-flex--direction-row">
+        <div id="c-detail__imagen" class="l-flex">
+            <img src="./assets/img/logo.png">
+        </div>
+        <div id="datos" class="l-flex l-flex--direction-column l-flex--gap-7">
+            <div class="c-detail__cerrar">&#10005;</div>
+            <div id="detailTitulo" class="c-detail__titulo">Bono de transporte</div>
+            <p class="detailDescripcion">Este bono de transporte sirve para todo el transporte público de la ciudad de Valencia</p>
+            <div class="l-flex l-flex--direction-row l-flex--gap-7">
+            <span>Introduce la cantidad:</span>
+            <input type="number" id="cantidadProducto" class="c-detail__cantidad" value="1" min="1" width=100px></input>
+            </div>
+            <div class="c-detail__precio">7,00 €</div>
+            <button id="anyadirCarrito" class="c-button ">Añadir a carrito</button>
+        </div>
+        </div>
     </dialog>
-
-
 
     <dialog id="login" class="c-modal">
         <div class="c-login">
@@ -215,9 +224,6 @@
         </div>
     </dialog>
 
-
-
-
     <dialog id="pago" class="c-modal">
         <div class=' c-pago'>
             <div class=' c-pago__info'>
@@ -231,7 +237,7 @@
                 </div>
                 <div>
                     <div class=" g--font-size-L">Numero de tarjeta</div>
-                    <input class=' c-pago__input' placeholder="1234 5678 9012 3456"></input>
+                    <input class=' c-pago__input' placeholder="xxxx xxxx xxxx xxxx"></input>
                 </div>
                 <div class=" l-flex l-flex--direction-row l-flex--justify-content-space-between">
                     <div>
@@ -245,7 +251,7 @@
                 </div>
                 <div>
                     <div class="g--font-size-L">Nombre titular</div>
-                    <input class='c-pago__input' placeholder="Juan Pérez"></input>
+                    <input class='c-pago__input' placeholder="Jonh Doe"></input>
                 </div>
                 <div>
                     <input type="checkbox" id="guardarTarjeta"> Guardar para la próxima compra</input>

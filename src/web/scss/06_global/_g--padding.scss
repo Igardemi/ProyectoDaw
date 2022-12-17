@@ -18,11 +18,11 @@
       padding-bottom:$value;
     }
     .g--padding-vertical-#{$index}{
-      margin-bottom: $value;
-      margin-top: $value;
+      padding-bottom: $value;
+      padding-top: $value;
     }
     .g--padding-horizonal-#{$index}{
-      margin-left: $value; 
-      margin-right:$value;
+      padding-left: $value; 
+      padding-right:$value;
     }
   }
