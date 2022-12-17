@@ -9,6 +9,11 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100%;
+	&:hover{
+		transform: translateY(20px);
+
+	}
+
 	&__image {
 		grid-area: imagen;
 		background-image: none;

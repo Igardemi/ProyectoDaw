@@ -5,6 +5,7 @@
     padding-bottom: getPadding(5);
     height: 90px;
     outline-color: grey;
+    font-family: "Roboto";
 
 
     &__logo{
@@ -49,10 +50,12 @@
     }
 
     &__class{
+        font-family: "Roboto";
         background-color: getColor("grises",1);
     }
 
     &__btnCategory{
+        font-family: "Roboto";
         background-color: transparent;
         border: 0;
         color: white;

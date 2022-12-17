@@ -911,6 +911,9 @@ dialog[open] {
   background-repeat: no-repeat;
   height: 100%;
 }
+.c-categorie:hover {
+  transform: translateY(20px);
+}
 .c-categorie__image {
   grid-area: imagen;
   background-image: none;
@@ -937,6 +940,7 @@ dialog[open] {
   padding-bottom: 12px;
   height: 90px;
   outline-color: grey;
+  font-family: "Roboto";
 }
 .c-header__logo {
   width: 150px;
@@ -973,9 +977,11 @@ dialog[open] {
   width: 35px;
 }
 .c-header__class {
+  font-family: "Roboto";
   background-color: #454545;
 }
 .c-header__btnCategory {
+  font-family: "Roboto";
   background-color: transparent;
   border: 0;
   color: white;
@@ -1040,12 +1046,6 @@ dialog[open] {
   font-family: "Ubuntu-Regular";
 }
 
-@font-face {
-  font-family: "Ubuntu-Regular";
-  src: url("fonts/Ubuntu-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
 .c-detail {
   border-radius: 8px;
   background-color: #FCFCFC;
