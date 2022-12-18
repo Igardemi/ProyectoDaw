@@ -369,7 +369,7 @@ hr {
 }
 
 .c-banner {
-  height: 600px;
+  display: flex;
 }
 
 .l-grid {
@@ -936,12 +936,13 @@ hr {
   padding-left: 192px;
   padding-right: 192px;
   padding-bottom: 12px;
-  height: 90px;
+  padding-top: 30px;
+  height: 100px;
   outline-color: grey;
   font-family: "Roboto";
 }
 .c-header__logo {
-  width: 150px;
+  width: 200px;
 }
 .c-header__content {
   margin-left: auto;
@@ -960,8 +961,8 @@ hr {
   padding-left: 5px;
 }
 .c-header__search {
-  padding-right: 40px;
-  padding-left: 40px;
+  font-family: "Roboto";
+  width: 280px;
   margin-right: 15px;
   height: 40px;
   border: 0;
@@ -977,8 +978,11 @@ hr {
 .c-header__class {
   font-family: "Roboto";
   background-color: #454545;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .c-header__btnCategory {
+  width: 100%;
   font-family: "Roboto";
   background-color: transparent;
   border: 0;
