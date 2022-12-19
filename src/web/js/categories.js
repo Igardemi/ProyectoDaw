@@ -23,7 +23,7 @@ function getCategories(){
 }
 
 function getOption(opciones){
-    textInfo="<select id='opciones' name='opciones' style='height:40px;'>";
+    textInfo="<select id='opciones' name='opciones' style='height:45px; width:80px;'>";
     let contador = 0;
     opciones.forEach(opcion => {
         textInfo+=`<option value="${contador}">${opcion}</option>`;
@@ -43,11 +43,13 @@ object.opciones.forEach(opcion => {
     <div class='c-article'>
     <img class='c-article__imagen' src="${opcion.image}" alt="foto ticket" width="300" height="200">
     <div class='c-article__nombre'>${opcion.nombre}</div>
+    <div class='l-flex l-flex--direction-row l-flex--justify-content-center l-flex--align-content-center l-flex--gap-5'>
     <div class='c-article__duracion'>${getOption(opcion.duracion)}</div>
     <div class='c-article__precio'>${opcion.precio[0]} Euros</div>
-    <div class='l-flex l-flex--direction-row l-flex--gap-5'>
-    <button class="c-button c-article__button ${opcion.nombre} ${opcion.duracion} btnBuy">Comprar</button>
-    <button class="c-button c-article__button c-button--secundario ${opcion.nombre} ${opcion.duracion} btnInfo">info</button>      
+    </div>
+    <div class='l-flex l-flex--direction-row l-flex--gap-10'>
+    <button class="c-button c-article__button c-button--alternativo ${opcion.nombre} ${opcion.duracion} btnBuy">Comprar</button>
+    <button class="c-button c-article__button ${opcion.nombre} ${opcion.duracion} btnInfo">info</button>      
     </div>
     </div>`;   
 })

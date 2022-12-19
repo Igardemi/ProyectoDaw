@@ -65,7 +65,7 @@ ciudades=[
 },
 {
 "nombre": "BiciMAD",
-"duracion": ["Tarjeta Ocasional","Tarifa abono anual con abono transporte","Tarifa abono anual"],
+"duracion": ["Tarjeta Ocasional","Tarifa con abono transporte","Tarifa abono anual"],
 "precio": [10,15,25],
 "image": "https://www.bicimad.com/images/2.jpg",
 "descripcion": "BiciMAD es el nuevo medio de transporte público de la ciudad de Madrid, un servicio prestado al 100% con bicicletas eléctricas, práctico, sencillo y ecológico."
