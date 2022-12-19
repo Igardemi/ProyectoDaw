@@ -1152,31 +1152,65 @@ nav {
 }
 
 .c-detail {
+  font-family: "Roboto";
   border-radius: 8px;
   background-color: #FCFCFC;
   font-size: 20px;
   font-family: "Roboto";
 }
+.c-detail__imagen {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
 .c-detail__titulo {
+  font-family: "Roboto";
   font-size: 24px;
   font-weight: bold;
 }
 .c-detail__precio {
+  font-family: "Roboto";
   font-size: 48px;
   color: #000000;
 }
 .c-detail__descripcion {
+  font-family: "Roboto";
   border-color: #2FCA63;
+  width: 700px;
 }
 .c-detail__cantidad {
+  font-family: "Roboto";
   width: 80px;
-  border-color: #2FCA63;
+  height: 20px;
+  border-color: #2578D0;
 }
 .c-detail__cerrar {
+  font-family: "Roboto";
   color: #DC2828;
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
+}
+.c-detail__boton {
+  background-color: #498CDF;
+  margin: 0px;
+  width: 30px;
+  height: 26px;
+  border: 0;
+  font-family: "Roboto";
+  color: white;
+  font-weight: bold;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.c-detail__boton--restar {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  margin-left: 10px;
+}
+.c-detail__boton--sumar {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .c-table {

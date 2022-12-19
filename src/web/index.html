@@ -171,18 +171,20 @@
 
     <dialog id="detalleProducto" class="c-detail">
         <div class="l-flex l-flex--direction-row">
-            <div id="c-detail__imagen" class="l-flex">
-                <img src="./assets/img/logo.png">
+            <div id="imagenBono" class="c-detail__imagen">
+                <img src="./assets/img/bonometro.png">
             </div>
             <div id="datos" class="l-flex l-flex--direction-column l-flex--gap-7">
                 <div class="c-detail__cerrar">&#10005;</div>
-                <div id="detailTitulo" class="c-detail__titulo">Abono de transporte</div>
-                <p class="detailDescripcion">Este abono de transporte sirve para todo el transporte público de la ciudad
-                    de Valencia</p>
-                <div class="l-flex l-flex--direction-row l-flex--gap-7">
+                <div id="detailTitulo" class="c-detail__titulo">Bono de transporte</div>
+                <p id="detailDescripcion" class="c-detail__descripcion">Este bono de transporte sirve para todo el transporte público  de la ciudad
+                    de Valencia. Contiene 10 viajes para autobús, metro y tren en una única tarjeta. Puedes hacer transbordos gratuitos.</p>
+                <div id="detalleCantidad" class="l-flex l-flex--direction-row l-flex--align-items-center">
                     <span>Introduce la cantidad:</span>
-                    <input type="number" id="cantidadProducto" class="c-detail__cantidad" value="1" min="1"
+                    <button class="c-detail__boton c-detail__boton--restar" id="botonRestarUnidad">-</button>
+                    <input type="text" id="cantidadProducto" class="c-detail__cantidad" value="1" min="1"
                         width=100px></input>
+                    <button class="c-detail__boton c-detail__boton--sumar" id="botonSumarUnidad">+</button>
                 </div>
                 <div class="c-detail__precio">7,00 €</div>
                 <button id="anyadirCarrito" class="c-button ">Añadir a carrito</button>
