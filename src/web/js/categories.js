@@ -23,7 +23,7 @@ function getCategories(){
 }
 
 function getOption(opciones){
-    textInfo="<select id='opciones' name='opciones' style='height:45px; width:80px;'>";
+    textInfo="<select id='opciones' name='opciones' style='height:45px; width:100px;'>";
     let contador = 0;
     opciones.forEach(opcion => {
         textInfo+=`<option value="${contador}">${opcion}</option>`;
@@ -47,9 +47,9 @@ object.opciones.forEach(opcion => {
     <div class='c-article__duracion'>${getOption(opcion.duracion)}</div>
     <div class='c-article__precio'>${opcion.precio[0]} Euros</div>
     </div>
-    <div class='l-flex l-flex--direction-row l-flex--gap-10'>
-    <button class="c-button c-article__button c-button--alternativo ${opcion.nombre} ${opcion.duracion} btnBuy">Comprar</button>
-    <button class="c-button c-article__button ${opcion.nombre} ${opcion.duracion} btnInfo">info</button>      
+    <div class='l-flex l-flex--direction-row l-flex--gap-10 g--margin-top-6 g--margin-bottom-6'>
+    <button class="c-button c-article__button ${opcion.nombre} ${opcion.duracion} btnBuy">Comprar</button>
+    <button class="c-button c-button--secundario c-article__button ${opcion.nombre} ${opcion.duracion} btnInfo">info</button>      
     </div>
     </div>`;   
 })
@@ -78,5 +78,9 @@ document.getElementsByClassName("c-pago__boton--negativo")[0].addEventListener("
 document.getElementById("volver").addEventListener("click",()=>{document.getElementById("carrito").close();});
 document.getElementById("anyadirCarrito").addEventListener("click",()=>{document.getElementById("detalleProducto").close();}); 
 document.getElementsByClassName("c-detail__cerrar")[0].addEventListener("click",()=>{document.getElementById("detalleProducto").close();});
+document.getElementsByClassName("c-login__iniciar")[0].addEventListener("click",()=>{
+document.getElementById("login").close();
+document.getElementById("historialCarritos").showModal()});
+
 }
 
