@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 30px;
+    gap: getGap(9);
     font-family: 'Roboto';
 
     &__imagen{
@@ -33,7 +33,7 @@
         &--pequeño{
             font-size: getFontSize("XS");
             font-weight: 100;
-            color: grey;
+            color: getColor("grises",4);
         }
 
     }

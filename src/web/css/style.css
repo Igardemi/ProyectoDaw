@@ -361,10 +361,10 @@ hr {
 .seleccion {
   font-family: "Roboto";
   display: flex;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 32px;
+  margin-bottom: 32px;
   color: #1C63A0;
-  font-size: 50px;
+  font-size: 48px;
   font-weight: bold;
   text-shadow: 2px 2px 1px grey;
   padding-left: 40px;
@@ -664,7 +664,7 @@ nav {
 }
 .c-login__izquierda {
   background-color: #1C63A0;
-  border: 1px solid white;
+  border: 1px solid #FFFFFF;
   width: 500px;
   height: 700px;
   border-top-left-radius: 20px;
@@ -698,7 +698,7 @@ nav {
   padding: 16px;
   width: 250px;
   border-radius: 8px;
-  background-color: #fefeff;
+  background-color: #F0F0F0;
   border: 0;
   margin-top: 10px;
 }
@@ -731,7 +731,7 @@ nav {
   border: none;
   background-color: #F5F5F5;
   border-radius: 16px;
-  color: black;
+  color: #000000;
   font-size: 16px;
   display: flex;
   padding-left: 24px;
@@ -739,24 +739,25 @@ nav {
   font-family: "Roboto";
 }
 .c-pago__input {
-  background: rgba(255, 255, 255, 0.2);
+  border-color: #2578D0;
+  border-radius: 4px;
   margin-bottom: 20px;
   margin-top: 10px;
   font-size: 16px;
-  border: none;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
-  color: grey;
+  color: #7A7A7A;
   box-sizing: border-box;
   width: 100%;
 }
 .c-pago__input::placeholder {
-  color: grey;
+  color: #7A7A7A;
 }
 .c-pago__input:hover {
-  background: rgba(255, 255, 255, 0.367);
+  background: #E6E6E6;
+  border-color: #2FCA63;
 }
 .c-pago__titulo {
   font-size: 30px;
@@ -769,33 +770,32 @@ nav {
 .c-pago__boton {
   border: none;
   line-height: 40px;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 18px;
-  color: #fff;
+  color: #FFFFFF;
   cursor: pointer;
   width: 45%;
 }
 .c-pago__boton--negativo {
-  background: rgb(255, 54, 54);
+  background: #EF4343;
 }
 .c-pago__boton--positivo {
-  background: #22b877;
+  background: #2FCA63;
 }
 .c-pago__boton--positivo:hover {
-  background: #22a877;
-  color: #eee;
+  background: #0E812B;
+  color: #C9C9C9;
   transition: all 0.2s ease;
 }
 .c-pago__boton--negativo:hover {
-  background: rgb(197, 2, 2);
-  color: #eee;
+  background: #BA1C1C;
+  color: #C9C9C9;
   transition: all 0.2s ease;
 }
 
 .c-modal {
-  padding: 0;
+  padding: 0px;
   border: 0;
-  margin-top: 20px;
   font-family: "Roboto";
   border-radius: 20px;
   margin-top: auto;
@@ -856,7 +856,7 @@ nav {
 }
 
 .c-carrito {
-  background-color: white;
+  background-color: #FFFFFF;
   height: 700px;
   width: 1000px;
   border-radius: 20px;
@@ -874,7 +874,7 @@ nav {
 .c-carrito__right {
   width: 400px;
   height: 700px;
-  background-color: #f6f6f6;
+  background-color: #FCFCFC;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   padding-left: 40px;
@@ -884,8 +884,8 @@ nav {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
-  background-color: white;
-  border-radius: 5px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
   border: 0;
 }
 .c-carrito__titulo {
@@ -904,7 +904,7 @@ nav {
 .c-carrito__nombre {
   font-size: 16px;
   font-weight: 700;
-  color: #4a4a4a;
+  color: #4a4a4a #454545;
 }
 .c-carrito__grande {
   font-size: 30px;
@@ -926,7 +926,7 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 30px;
+  gap: 32px;
   font-family: "Roboto";
 }
 .c-item__imagen {
@@ -952,7 +952,7 @@ nav {
 .c-item__texto--pequeño {
   font-size: 12px;
   font-weight: 100;
-  color: grey;
+  color: #949494;
 }
 
 .c-article {
@@ -960,10 +960,10 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Roboto";
-  border: 1px solid lightgray;
+  border: 1px solid #B0B0B0;
   border-radius: 16px;
-  box-shadow: 0px 3px 10px gray;
+  box-shadow: 0 5px 15px gray;
+  font-family: "Roboto";
 }
 .c-article__imagen {
   border-top-left-radius: 16px;
@@ -975,10 +975,10 @@ nav {
   width: 90%;
   justify-content: center;
   color: #2578D0;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   padding-bottom: 10px;
-  font-size: 25px;
+  font-size: 24px;
   border-bottom: 1px solid #C9C9C9;
 }
 .c-article__duracion {
@@ -1015,9 +1015,9 @@ nav {
   grid-area: title;
   background-color: #454545;
   opacity: 0.8;
-  font-size: 40px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  font-size: 36px;
+  padding-top: 5px 6px;
+  padding-bottom: 6px;
   user-select: none;
   list-style: none;
   text-decoration: none;
@@ -1034,9 +1034,9 @@ nav {
   padding-left: 192px;
   padding-right: 192px;
   padding-bottom: 12px;
-  padding-top: 30px;
+  padding-top: 32px;
   height: 100px;
-  outline-color: grey;
+  outline-color: #949494;
   font-family: "Roboto";
 }
 .c-header__top {
@@ -1048,7 +1048,7 @@ nav {
 .c-header__content {
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
+  background-color: #FFFFFF;
   border-radius: 20px;
 }
 .c-header__search-input {
@@ -1059,18 +1059,18 @@ nav {
   width: 30px;
   height: 30px;
   opacity: 0.6;
-  padding-left: 5px;
+  padding-left: 6px;
 }
 .c-header__search {
   font-family: "Roboto";
   width: 280px;
-  margin-right: 15px;
+  margin-right: 16px;
   height: 40px;
   border: 0;
   background-color: #FFFFFF;
 }
 .c-header__search:focus {
-  border-color: white;
+  border-color: #FFFFFF;
   outline: none;
 }
 .c-header__icons {
@@ -1088,13 +1088,13 @@ nav {
   font-family: "Roboto";
   background-color: transparent;
   border: 0;
-  color: white;
+  color: #FFFFFF;
   padding: 10px;
 }
 .c-header__btnCategory:hover {
   font-family: "Roboto";
-  background-color: white;
-  border-radius: 10px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
   color: #454545;
 }
 
@@ -1103,14 +1103,14 @@ nav {
   display: flex;
   background-color: #1C63A0;
   justify-content: flex-end;
-  margin-top: 30px;
+  margin-top: 32px;
   width: 100%;
   font-family: "Roboto";
 }
 .c-footer__logo {
-  fill: white;
+  fill: #FFFFFF;
   display: flex;
-  margin-left: 250px;
+  margin-left: 256px;
   height: 80px;
 }
 .c-footer__content {
@@ -1120,7 +1120,7 @@ nav {
   font-size: 16px;
 }
 .c-footer__content-links {
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
   margin-top: 20px;
 }
@@ -1128,7 +1128,7 @@ nav {
   display: flex;
   align-items: center;
   margin-left: auto;
-  margin-right: 450px;
+  margin-right: 480px;
 }
 .c-footer__social-icons {
   width: 30px;
@@ -1146,7 +1146,7 @@ nav {
 }
 .c-footer__final-copyright {
   font-size: 14px;
-  color: white;
+  color: #FFFFFF;
   margin-bottom: 4px;
   opacity: 0.75;
 }
@@ -1163,7 +1163,7 @@ nav {
 }
 .c-detail__precio {
   font-size: 48px;
-  color: black;
+  color: #000000;
 }
 .c-detail__descripcion {
   border-color: #2FCA63;
@@ -1173,7 +1173,7 @@ nav {
   border-color: #2FCA63;
 }
 .c-detail__cerrar {
-  color: red;
+  color: #DC2828;
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
@@ -1207,7 +1207,7 @@ nav {
   margin-bottom: 20px;
 }
 .c-table__item--buttons {
-  gap: 5px;
+  gap: 6px;
   display: flex;
 }
 
@@ -3423,6 +3423,42 @@ nav {
   color: #FEF3C8;
 }
 
+.g--color-negros-0 {
+  color: #5e7a7e;
+}
+
+.g--color-negros-1 {
+  color: #526b6e;
+}
+
+.g--color-negros-2 {
+  color: #475c5f;
+}
+
+.g--color-negros-3 {
+  color: #3b4c4f;
+}
+
+.g--color-negros-4 {
+  color: #2f3d3f;
+}
+
+.g--color-negros-5 {
+  color: #232e2f;
+}
+
+.g--color-negros-6 {
+  color: #181f20;
+}
+
+.g--color-negros-7 {
+  color: #0c0f10;
+}
+
+.g--color-negros-8 {
+  color: #000000;
+}
+
 .g--decoration-none {
   text-decoration: none;
   list-style: none;
@@ -3716,34 +3752,70 @@ nav {
   background-color: #FEF3C8;
 }
 
+.g--background-color-negros-0 {
+  background-color: #5e7a7e;
+}
+
+.g--background-color-negros-1 {
+  background-color: #526b6e;
+}
+
+.g--background-color-negros-2 {
+  background-color: #475c5f;
+}
+
+.g--background-color-negros-3 {
+  background-color: #3b4c4f;
+}
+
+.g--background-color-negros-4 {
+  background-color: #2f3d3f;
+}
+
+.g--background-color-negros-5 {
+  background-color: #232e2f;
+}
+
+.g--background-color-negros-6 {
+  background-color: #181f20;
+}
+
+.g--background-color-negros-7 {
+  background-color: #0c0f10;
+}
+
+.g--background-color-negros-8 {
+  background-color: #000000;
+}
+
 .g--shadow-0 {
-  -webkit-box-shadow: 0 1px 3px hsla(0,0%,.2);
-  -moz-box-shadow: 0 1px 3px hsla(0,0%,.2);
-  box-shadow: 0 1px 3px hsla(0,0%,.2);
+  -webkit-box-shadow: 0 1px 3px gray;
+  -moz-box-shadow: 0 1px 3px gray;
+  box-shadow: 0 1px 3px gray;
 }
 
 .g--shadow-1 {
-  -webkit-box-shadow: 0 4px 6px hsla(0,0%,.2);
-  -moz-box-shadow: 0 4px 6px hsla(0,0%,.2);
-  box-shadow: 0 4px 6px hsla(0,0%,.2);
+  -webkit-box-shadow: 0 4px 6px gray;
+  -moz-box-shadow: 0 4px 6px gray;
+  box-shadow: 0 4px 6px gray;
 }
 
 .g--shadow-2 {
-  -webkit-box-shadow: 0 5px 15px hsla(0,0%,.2);
-  -moz-box-shadow: 0 5px 15px hsla(0,0%,.2);
-  box-shadow: 0 5px 15px hsla(0,0%,.2);
+  -webkit-box-shadow: 0 5px 15px gray;
+  -moz-box-shadow: 0 5px 15px gray;
+  box-shadow: 0 5px 15px gray;
 }
 
 .g--shadow-3 {
-  -webkit-box-shadow: 0 10px 24px hsla(0,0%,.2);
-  -moz-box-shadow: 0 10px 24px hsla(0,0%,.2);
-  box-shadow: 0 10px 24px hsla(0,0%,.2);
+  -webkit-box-shadow: 0 10px 24px gray;
+  -moz-box-shadow: 0 10px 24px gray;
+  box-shadow: 0 10px 24px gray;
 }
 
 .g--shadow-4 {
-  -webkit-box-shadow: 0 15px 35px hsla(0,0%,.2);
-  -moz-box-shadow: 0 15px 35px hsla(0,0%,.2);
-  box-shadow: 0 15px 35px hsla(0,0%,.2);
+  -webkit-box-shadow: 0 15px 35px gray;
+  -moz-box-shadow: 0 15px 35px gray;
+  box-shadow: 0 15px 35px gray;
 }
 
 /*# sourceMappingURL=style.css.map */

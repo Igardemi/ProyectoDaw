@@ -1,10 +1,10 @@
 .c-modal{
-    padding: 0;
+    padding: getPadding(0);
     border: 0;
-    margin-top: 20px;
+    
     font-family: 'Roboto';
     border-radius: getBorderRadius(6);
 
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: getMargin(23);
+    margin-bottom: getMargin(23);
 }

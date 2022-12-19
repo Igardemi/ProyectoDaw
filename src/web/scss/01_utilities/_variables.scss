@@ -6,7 +6,8 @@ $colors:(
   "rojos":(#811D1D, #981B1B, #BA1C1C, #DC2828, #EF4343, #F87272, #FCA6A6, #FEC8C8, #FEE1E1),
   "azules":(#033863, #054C94, #0860C4, #0B6CF4, #3C83F6, #6D9BF8, #9DB9FB, #CEDAFD, #FFFFFF),
   "verdes":(#01190D, #044427, #076940, #0C9261, #10B77F, #12E2A7, #2DF0C0, #55F6D6, #79FCE6),
-  "amarillos":(#76350F, #91400D, #B35309, #DB7706, #F59F0A, #FBBD23, #FCD44F, #FDE68B, #FEF3C8)
+  "amarillos":(#76350F, #91400D, #B35309, #DB7706, #F59F0A, #FBBD23, #FCD44F, #FDE68B, #FEF3C8),
+  "negros":(#5e7a7e, #526b6e, #475c5f, #3b4c4f, #2f3d3f, #232e2f, #181f20, #0c0f10, #000000)
   );
 
 
@@ -29,4 +30,4 @@ $fontSizes:(
 
 $borderRadius:(0px,2px,4px,6px,8px,16px,20px);
 
-$profundidades:("0 1px 3px hsla(0,0%,.2)", "0 4px 6px hsla(0,0%,.2)","0 5px 15px hsla(0,0%,.2)","0 10px 24px hsla(0,0%,.2)","0 15px 35px hsla(0,0%,.2)");
+$profundidades:("0 1px 3px gray", "0 4px 6px gray","0 5px 15px gray","0 10px 24px gray","0 15px 35px gray");

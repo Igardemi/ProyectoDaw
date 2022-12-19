@@ -1,5 +1,5 @@
 .c-carrito{
-    background-color: white;
+    background-color: getColor("blancos",8);
     height: 700px;
     width: 1000px;
     border-radius: getBorderRadius(6);
@@ -21,19 +21,19 @@
     &__right{
         width: 400px;
         height: 700px;
-        background-color: #f6f6f6;
+        background-color: getColor("blancos",7);
         border-top-right-radius: getBorderRadius(6);
         border-bottom-right-radius: getBorderRadius(6);
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: getPadding(10);
+        padding-right: getPadding(10);
     }
 
     &__descuento{
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 20px;
-        background-color: white;
-        border-radius: 5px;
+        padding-top: getPadding(4);
+        padding-bottom: getPadding(4);
+        padding-left: getPadding(7);
+        background-color: getColor("blancos",8);
+        border-radius: getBorderRadius(3);
         border: 0;
     }
 
@@ -57,7 +57,7 @@
     &__nombre{
         font-size: getFontSize("M");
         font-weight: 700;
-        color: #4a4a4a;
+        color: #4a4a4a getColor("grises",1);
     }
 
     &__grande{

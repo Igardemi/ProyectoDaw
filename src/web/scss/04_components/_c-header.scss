@@ -2,15 +2,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 10px;
+    gap: getGap(4);
     background: linear-gradient(to bottom, getColor("principal",1)60%, getColor("grises",1));
     // background-color: getColor("principal", 2);
     padding-left: getPadding(17);
     padding-right: getPadding(17);
     padding-bottom: getPadding(5);
-    padding-top: 30px;
+    padding-top: getPadding(9);
     height: 100px;
-    outline-color: grey;
+    outline-color: getColor("grises",4);
     font-family: "Roboto";
 
 
@@ -23,9 +23,9 @@
     }    
     
     &__content{
-        margin-left: auto;
-        margin-right: auto;
-        background-color: white;
+        margin-left: getMargin(23);
+        margin-right: getMargin(23);
+        background-color: getColor("blancos",8);;
         border-radius: getBorderRadius(6);
     }
 
@@ -38,20 +38,20 @@
         width: 30px;
         height: 30px;
         opacity: 0.6;
-        padding-left: 5px;
+        padding-left: getPadding(2);
     }
 
     &__search{
         font-family: "Roboto";
         width: 280px;
-        margin-right: 15px;
+        margin-right: getMargin(6);
         height: 40px;
         border: 0;
         background-color: getColor("grises", 8);
     }
 
     &__search:focus{
-        border-color: white;
+        border-color: getColor("blancos",8);
         outline: none;
     }  
     
@@ -61,8 +61,8 @@
 
     &__class{
         display: flex;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: getPadding(4);
+        padding-bottom: getPadding(4);
         justify-content: space-around;
         font-family: "Roboto";
     }
@@ -72,14 +72,14 @@
         font-family: "Roboto";
         background-color: transparent;
         border: 0;
-        color: white;
-        padding: 10px;
+        color: getColor("blancos",8);
+        padding: getPadding(4);
     }
 
     &__btnCategory:hover{
         font-family: "Roboto";
-        background-color: white;
-        border-radius: 10px;
+        background-color: getColor("blancos",8);
+        border-radius: getBorderRadius(4);
         color: getColor("grises",1);
         
     }

@@ -6,7 +6,7 @@
 
     &__izquierda{
         background-color: getColor("principal", 2);
-        border: 1px solid white ;
+        border: 1px solid getColor("blancos",8) ;
         width: 500px;
         height: 700px;
         border-top-left-radius: getBorderRadius(6);
@@ -46,7 +46,7 @@
         padding: getPadding(6);
         width: 250px;
         border-radius: getBorderRadius(4);
-        background-color: #fefeff;
+        background-color: getColor("blancos",2);
         border: 0;
         margin-top: getMargin(4);
     }

@@ -12,8 +12,8 @@
     }
 
     &__recuperar{
-       margin-top: auto;
-       margin-bottom: auto;
+       margin-top: getMargin(23);
+       margin-bottom: getMargin(23);
     }
 
     &__img{
@@ -26,13 +26,13 @@
     }
 
     &__item{
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: getPadding(7);
+        padding-right: getPadding(7);
         margin-top: getMargin(7);
         margin-bottom: getMargin(7);
 
         &--buttons{
-            gap: 5px;
+            gap: getGap(2);
             display: flex;
 
         }

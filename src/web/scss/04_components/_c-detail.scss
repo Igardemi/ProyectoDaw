@@ -16,7 +16,7 @@
 
     &__precio {
         font-size: getFontSize("5XL");
-        color: black;
+        color: getColor("negros",8);
     }
 
     &__descripcion {
@@ -30,7 +30,7 @@
     }
 
     &__cerrar{
-        color: red;
+        color: getColor("rojos",3);
         display: flex;
         justify-content: flex-end;
         cursor: pointer;

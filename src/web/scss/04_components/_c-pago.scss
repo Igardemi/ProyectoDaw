@@ -4,7 +4,7 @@
     border: none;
     background-color: getColor("blancos", 4);
     border-radius: getBorderRadius(5);
-    color: black;
+    color: getColor("negros",8);
     font-size: getFontSize("M");
     display: flex;
     padding-left: getPadding(8);
@@ -12,24 +12,27 @@
     font-family: 'Roboto';
 
     &__input {
-        background: rgba(255, 255, 255, 0.2);
+        
+        border-color: getColor("principal",3);
+        border-radius: getBorderRadius(2);
         margin-bottom: getMargin(7);
         margin-top: getMargin(4);
         font-size: getFontSize("M");
-        border: none;
         padding-top: getPadding(4);
         padding-right: getPadding(4);
         padding-bottom: getPadding(4);
         padding-left: getPadding(4);
-        color: grey;
+        color: getColor("grises",3);
         box-sizing: border-box;
         width: 100%;
     }
     &__input::placeholder {
-        color: grey;
+        color: getColor("grises",3);
+        
     }
     &__input:hover {
-        background: rgba(255, 255, 255, 0.367);
+        background: getColor("grises",7);
+        border-color: getColor("alternativo",3);
     }
     &__titulo {
         font-size: getFontSize("3XL");
@@ -44,27 +47,27 @@
         border: none;
         
         line-height: 40px;
-        border-radius: 10px;
+        border-radius: getBorderRadius(4);
         font-size: getFontSize("L");
-        color: #fff;
+        color: getColor("blancos",8);
         cursor: pointer;
         width: 45%;
 
         &--negativo{
-            background: rgb(255, 54, 54);
+            background: getColor("rojos",4);
         }
         &--positivo{
-            background: #22b877;
+            background: getColor("alternativo",3);
         }
     }
     &__boton--positivo:hover {
-        background: #22a877;
-        color: #eee;
+        background: getColor("alternativo",1);
+        color: getColor("grises",6);
         transition: all 0.2s ease;
     }
     &__boton--negativo:hover {
-        background: rgb(197, 2, 2);
-        color: #eee;
+        background: getColor("rojos",2);
+        color: getColor("grises",6);
         transition: all 0.2s ease;
     }
 }

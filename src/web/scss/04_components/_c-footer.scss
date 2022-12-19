@@ -3,16 +3,16 @@
     display: flex;
     background-color: getColor("principal", 2);
     justify-content: flex-end;
-    margin-top: 30px;
+    margin-top: getMargin(9);
     width: 100%;
     font-family: 'Roboto';
 
 
 
     &__logo{
-        fill:white;
+        fill: getColor("blancos",8);
         display: flex;
-        margin-left: 250px;
+        margin-left: getMargin(19);
         height: 80px;
     }
 
@@ -24,7 +24,7 @@
     }
 
     &__content-links{
-        color:white;
+        color: getColor("blancos",8);
         text-decoration: none; 
         margin-top: getMargin(7);
 
@@ -34,7 +34,7 @@
         display: flex;
         align-items: center;
         margin-left: auto;
-        margin-right: 450px;
+        margin-right: getMargin(21);
         
     }
 
@@ -51,12 +51,12 @@
         text-align: center;
         margin-top: getMargin(10);
         background-color: getColor("grises", 1);
-        padding-top: 10px;
+        padding-top: getPadding(4);
     }
 
     &__final-copyright{
         font-size: getFontSize("S");
-        color: white;
+        color: getColor("blancos",8);
         margin-bottom: getMargin(1);
         opacity: 0.75;
     }

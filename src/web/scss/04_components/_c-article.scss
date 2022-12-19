@@ -3,14 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid getColor("grises",5);
+    border-radius: getBorderRadius(5);
+    box-shadow: getShadow(2);
     font-family:"Roboto";
-    border: 1px solid lightgray;
-    border-radius: 16px;
-    box-shadow: 0px 3px 10px gray;
 
     &__imagen{
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
+        border-top-left-radius: getBorderRadius(5);
+        border-top-right-radius: getBorderRadius(5);
     }
     &__nombre{
         font-family: "Roboto";
@@ -18,11 +18,12 @@
         width: 90%;
         justify-content: center;
         color:getColor("principal",3);
-        margin-top: 15px;
-        margin-bottom: 15px;
-        padding-bottom: 10px;
-        font-size: 25px;
+        margin-top: getMargin(6);
+        margin-bottom: getMargin(6);
+        padding-bottom: getPadding(4);
+        font-size: getFontSize("2XL");
         border-bottom: 1px solid getColor("grises",6);
+
     }
 
     &__duracion{
