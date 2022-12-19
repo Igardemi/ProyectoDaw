@@ -25,7 +25,7 @@ ciudades=[
 },
 {
 "nombre": "Valenbisi",
-"duracion": ["7 dias"],
+"duracion": ["7 días"],
 "precio": [13.30],
 "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkpL4bbPfiSoP_0GL3xwK9NxSN0aWcOBm6gw&usqp=CAU",
 "descripcion": "Si quieres disfrutar de la ciudad de la manera más divertida ahora puedes hacerlo, por 13,30€, disfruta del servicio Valenbisi durante 7 días. Regístrate desde nuestra Web o APP. Los 30 primeros minutos son gratuitos, pero en caso de sobrepasar los 30 minutos en un mismo trayecto se aplicará la tarifa habitual: 1,04€ la primera hora y 3.12€ cada hora siguiente."
@@ -44,14 +44,14 @@ ciudades=[
 "opciones": [
 {
 "nombre": "Tarjeta turistica",
-"duracion": ["1 dia", "2 dias", "3 dias", "4 dia", "5 dias", "6 dias","7 dias"],
+"duracion": ["1 día", "2 días", "3 días", "4 días", "5 días", "6 días","7 días"],
 "precio": [17,28.40,35.40,43.00,50,80,70.80],
 "image": "https://www.crtm.es/media/326700/ot_tarjeta_turistica_193x187.jpg",
 "descripcion": "permite la utilización de todos los transportes públicos de la Comunidad de Madrid sin límites dentro de la fecha de validez, por lo que es una manera práctica y rentable para moverse por la ciudad."
 },
 {
 "nombre": "Abono Transporte",
-"duracion": ["Sencillo","Billete TFM","Billete combinado", "Abono 10 viajes", "Abono 30 dias"],
+"duracion": ["Sencillo","Billete TFM","Billete combinado", "Abono 10 viajes", "Abono 30 días"],
 "precio": [1.50,2,3,8.50,27.30],
 "image": "https://www.metrosligerosdemadrid.es/wp-content/uploads/2018/01/tarjeta_multi.jpg",
 "descripcion": "Podrás realizar viajes en cualquier trayecto dentro del ámbito de Metro de Madrid en Zona A y o en los autobuses de la EMT."
@@ -84,7 +84,7 @@ ciudades=[
 "opciones": [
 {
 "nombre": "Paris Visite",
-"duracion": ["1 dia", "2 dias", "3 dias","5 dias"],
+"duracion": ["1 día", "2 días", "3 días","5 días"],
 "precio": [12, 19.50, 26.65,38.35],
 "image": "https://shop.helptourists.com/storage/images/image?remote=https%3A%2F%2Fshop.helptourists.com%2FWebRoot%2FepagesDE%2FShops%2Fhelptourists%2F615A%2F0F75%2FBA9C%2F0C89%2FA8F6%2F0A0C%2F05B6%2FF4AA%2F047-Paris-Visite-5T-Z1-5-Erwachsene.jpg&shop=helptourists",
 "descripcion": "La tarjeta Paris Visite permite al viajero utilizar el metro, autobús, RER, tranvía, Orlyval, Montmartrobus, Noctilien y funicular de Montmartre de forma ilimitada."
@@ -130,7 +130,7 @@ ciudades=[
 },
 {
 "nombre": "Santander Cycles",
-"duracion": ["24 horas"," 7 dias", "1 año"],
+"duracion": ["24 horas"," 7 días", "1 año"],
 "precio": [2.30,11.60,104.3],
 "image": "https://cdn2.civitatis.com/reino-unido/londres/galeria/thumbs/alquiler-bicicletas-londres.jpg",
 "descripcion": "Santander Cycles es el nombre del programa público de alquiler de bicicletas pensado para los desplazamientos cortos por el centro de Londres."
@@ -148,7 +148,7 @@ ciudades=[
 "opciones": [
 {
 "nombre": "Hola Barcelona Travel Card",
-"duracion": ["2 dias","3 dias","4 dias", "5 dias"],
+"duracion": ["2 días","3 días","4 días", "5 días"],
 "precio": [16.40,23.80,31, 38.20],
 "image": "https://www.tmb.cat/documents/20182/77015/PT-basica-5-dies-hola-barcelona-travel-card/f07ef245-7503-4b7c-8414-91dfca835c2a?t=1578056626000",
 "descripcion": "Viajes ilimitados en metro, autobús (TMB) y otras redes de transporte público de Barcelona durante 2 días (48 h), 3 días (72 h), 4 días (96 h) o 5 días (120 h) consecutivos usando un único billete. Puedes usar tu abono Hola Barcelona Travel Card a cualquier hora del día y beneficiarte de los viajes ilimitados durante 48, 72, 96 o 120 horas desde la primera validación. Incluye el desplazamiento de ida y vuelta en metro desde el aeropuerto hasta el centro de Barcelona."
@@ -180,7 +180,7 @@ ciudades=[
 "opciones": [
 {
 "nombre": "Travel Card",
-"duracion": ["1 dia","2 dias","3 dias"],
+"duracion": ["1 día","2 días","3 días"],
 "precio": [8,13.50,19],
 "image": "https://www.iamsterdam.com/media/city-card-and-canal-cruise-ticket/plan-your-trip-widget/site-must-haves-city-card-775x440.jpg?as=false&h=328&w=580&iar=true",
 "descripcion": "Indicamos los precios de los billetes y abonos de transporte de Ámsterdam, todos son válidos para el tranvía, los autobuses y el metro."
@@ -201,7 +201,7 @@ ciudades=[
 },
 {
 "nombre": "Bicicletas",
-"duracion": ["1 dia"],
+"duracion": ["1 día"],
 "precio": [12],
 "image": "https://cdn2.civitatis.com/paises-bajos/amsterdam/galeria/big/bicicletas.jpg",
 "descripcion": "Las más de 400.000 bicicletas que circulan por las calles de Ámsterdam cuentan con unas infraestructuras privilegiadas."
