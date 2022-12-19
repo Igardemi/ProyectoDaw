@@ -677,7 +677,7 @@ nav {
   height: 700px;
 }
 .c-login__header {
-  margin-top: 160px;
+  margin-top: 128px;
   margin-bottom: 32px;
 }
 .c-login__footer {
@@ -704,6 +704,20 @@ nav {
   height: 48px;
   width: 50px;
 }
+.c-login__iniciar {
+  margin-top: 15px;
+  width: 282px;
+  margin-bottom: 15px;
+}
+.c-login__cerrar {
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  padding-top: 20px;
+  padding-right: 20px;
+  font-size: 24px;
+}
 
 .c-pago {
   height: 520px;
@@ -716,7 +730,6 @@ nav {
   display: flex;
   padding-left: 24px;
   padding-right: 24px;
-  border: 2px solid lightgrey;
   font-family: "Roboto";
 }
 .c-pago__input {
@@ -777,8 +790,10 @@ nav {
   padding: 0;
   border: 0;
   margin-top: 20px;
-  background-color: transparent;
   font-family: "Roboto";
+  border-radius: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .c-button {
@@ -860,7 +875,7 @@ nav {
   border: 0;
 }
 .c-carrito__titulo {
-  margin-top: 80px;
+  margin-top: 24px;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -871,8 +886,6 @@ nav {
 .c-carrito__volver {
   margin-top: auto;
   margin-right: auto;
-  font-size: 16px;
-  font-weight: bold;
 }
 .c-carrito__nombre {
   font-size: 16px;
@@ -882,6 +895,17 @@ nav {
 .c-carrito__grande {
   font-size: 30px;
   font-weight: bolder;
+}
+.c-carrito__btn {
+  width: 342px;
+}
+.c-carrito__cerrar {
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  padding-top: 20px;
+  font-size: 24px;
 }
 
 .c-item {
@@ -967,6 +991,9 @@ nav {
   background-repeat: no-repeat;
   height: 100%;
   font-family: "Roboto";
+}
+.c-categorie:hover {
+  transform: translateY(20px);
 }
 .c-categorie__image {
   grid-area: imagen;

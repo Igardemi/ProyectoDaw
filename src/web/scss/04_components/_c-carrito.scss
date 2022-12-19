@@ -35,7 +35,7 @@
     }
 
     &__titulo{
-        margin-top: getMargin(13);
+        margin-top: getMargin(8);
         font-size: getFontSize("2XL");
         font-weight: bold;
         margin-bottom: getMargin(7);
@@ -49,9 +49,6 @@
     &__volver{
         margin-top: auto;
         margin-right: auto;
-        font-size: getFontSize("M");
-        font-weight: bold;
-
     }
 
     &__nombre{
@@ -63,6 +60,19 @@
     &__grande{
         font-size: getFontSize("3XL");
         font-weight: bolder;
+    }
+
+    &__btn{
+        width: 342px;
+    }
+
+    &__cerrar{
+        color: red;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+        padding-top: 20px;
+        font-size: getFontSize("2XL")
     }
 
 }

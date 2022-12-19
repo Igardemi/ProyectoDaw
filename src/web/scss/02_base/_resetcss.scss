@@ -375,6 +375,7 @@ table {
 dialog[open] {
   -webkit-animation: show 1s ease normal;
 }
+
 @-webkit-keyframes show{
   from {
       transform: translateY(-110%);

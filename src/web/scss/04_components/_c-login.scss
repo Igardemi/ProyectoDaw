@@ -5,7 +5,6 @@
     font-family: 'Roboto';
 
     &__izquierda{
-        // background-color: getColor("principal",4);
         background-color: getColor("principal", 2);
         border: 1px solid white ;
         width: 500px;
@@ -30,7 +29,7 @@
     }
 
     &__header{
-        margin-top:getMargin(16);
+        margin-top:getMargin(15);
         margin-bottom: getMargin(9);
     }
 
@@ -60,6 +59,22 @@
     &__icon{
         height: 48px;
         width: 50px;
+    }
+
+    &__iniciar{
+        margin-top: 15px;
+        width: 282px;
+        margin-bottom: 15px;
+    }
+
+    &__cerrar{
+        color: red;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+        padding-top: 20px;
+        padding-right: 20px;
+        font-size: getFontSize("2XL")
     }
 
 }
