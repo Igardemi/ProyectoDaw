@@ -356,7 +356,7 @@ hr {
 
 @font-face {
   font-family: "Roboto";
-  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
 }
 .seleccion {
   font-family: "Roboto";
@@ -631,6 +631,7 @@ hr {
   background-color: #E6E6E6;
   border-radius: 20px;
   width: 1000px;
+  font-family: "Roboto";
 }
 .c-login__izquierda {
   background-color: #1C63A0;
@@ -693,6 +694,7 @@ hr {
   padding-left: 24px;
   padding-right: 24px;
   border: 2px solid lightgrey;
+  font-family: "Roboto";
 }
 .c-pago__input {
   background: rgba(255, 255, 255, 0.2);
@@ -753,6 +755,7 @@ hr {
   border: 0;
   margin-top: 20px;
   background-color: transparent;
+  font-family: "Roboto";
 }
 
 .c-button {
@@ -792,6 +795,7 @@ hr {
   width: 1000px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  font-family: "Roboto";
 }
 .c-carrito__left {
   width: 600px;
@@ -846,6 +850,7 @@ hr {
   flex-direction: row;
   align-items: center;
   gap: 30px;
+  font-family: "Roboto";
 }
 .c-item__imagen {
   width: 100px;
@@ -881,6 +886,7 @@ hr {
   border: 1px solid lightgray;
   border-radius: 16px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
+  font-family: "Roboto";
 }
 .c-article__imagen {
   border-top-left-radius: 16px;
@@ -926,6 +932,7 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
+  font-family: "Roboto";
 }
 .c-categorie:hover {
   transform: translateY(20px);
@@ -1029,6 +1036,7 @@ hr {
   justify-content: flex-end;
   margin-top: 30px;
   width: 100%;
+  font-family: "Roboto";
 }
 .c-footer__logo {
   fill: white;
@@ -1040,7 +1048,7 @@ hr {
   display: flex;
   text-align: center;
   justify-content: space-evenly;
-  font-size: 14px;
+  font-size: 16px;
 }
 .c-footer__content-links {
   color: white;
@@ -1068,7 +1076,7 @@ hr {
   padding-top: 10px;
 }
 .c-footer__final-copyright {
-  font-size: 12px;
+  font-size: 14px;
   color: white;
   margin-bottom: 4px;
   opacity: 0.75;
@@ -1078,6 +1086,7 @@ hr {
   border-radius: 8px;
   background-color: #FCFCFC;
   font-size: 20px;
+  font-family: "Roboto";
 }
 .c-detail__titulo {
   font-size: 24px;
@@ -1139,6 +1148,7 @@ hr {
   border-radius: 20px;
   background-color: #E6E6E6;
   padding: 40px;
+  font-family: "Roboto";
 }
 
 .g--font-size-2XS {

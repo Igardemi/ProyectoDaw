@@ -5,6 +5,8 @@
     justify-content: flex-end;
     margin-top: 30px;
     width: 100%;
+    font-family: 'Roboto';
+
 
 
     &__logo{
@@ -18,7 +20,7 @@
         display: flex;
         text-align: center;
         justify-content: space-evenly;
-        font-size: getFontSize("S");
+        font-size: getFontSize("M");
     }
 
     &__content-links{
@@ -53,7 +55,7 @@
     }
 
     &__final-copyright{
-        font-size: getFontSize("XS");
+        font-size: getFontSize("S");
         color: white;
         margin-bottom: getMargin(1);
         opacity: 0.75;
