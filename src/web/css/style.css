@@ -372,6 +372,13 @@ hr {
   border-bottom: solid 1px #154B75;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+
 .l-grid {
   display: grid;
 }
