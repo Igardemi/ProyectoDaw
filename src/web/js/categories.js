@@ -46,8 +46,8 @@ object.opciones.forEach(opcion => {
     <div class='c-article__duracion'>${getOption(opcion.duracion)}</div>
     <div class='c-article__precio'>${opcion.precio[0]} Euros</div>
     <div class='l-flex l-flex--direction-row l-flex--gap-5'>
-    <button class="c-button c-article__button c-button--alternativo ${opcion.nombre} ${opcion.duracion} btnBuy">Comprar</button>
-    <button class="c-button c-article__button ${opcion.nombre} ${opcion.duracion} btnInfo">info</button>      
+    <button class="c-button c-article__button ${opcion.nombre} ${opcion.duracion} btnBuy">Comprar</button>
+    <button class="c-button c-article__button c-button--secundario ${opcion.nombre} ${opcion.duracion} btnInfo">info</button>      
     </div>
     </div>`;   
 })

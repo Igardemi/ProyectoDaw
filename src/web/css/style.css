@@ -600,31 +600,47 @@ hr {
   background-color: #498CDF;
   padding: 15px;
   border-radius: 10px;
-  margin-top: 30px;
   border: 0;
   font-family: "Roboto";
-  margin-bottom: 25px;
   color: white;
   font-weight: bold;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+.c-button--secundario {
+  background-color: #F5F5F5;
+  color: #498CDF;
+  border: 1px solid #498CDF;
+}
+.c-button--terciario {
+  background-color: white;
+  color: #498CDF;
+}
 .c-button--alternativo {
-  background-color: #2FCA63;
+  background-color: #58D586;
 }
-.c-button--alternativo:hover {
-  background-color: #2FCA63;
+.c-button--alternativo-secundario {
+  background-color: #F5F5F5;
+  color: #58D586;
+  border: 1px solid #58D586;
 }
-.c-button--pagar {
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: green;
+.c-button--alternativo-terciario {
+  background-color: white;
+  color: #58D586;
+}
+.c-button--peligroso {
+  background-color: #EF4343;
+}
+.c-button--peligroso-secundario {
+  background-color: #F5F5F5;
+  color: #EF4343;
+  border: 1px solid #EF4343;
+}
+.c-button--peligroso-terciario {
+  background-color: white;
+  color: #EF4343;
 }
 .c-button--eliminar {
   background-color: red;
-}
-
-.c-button:hover {
-  background-color: #2FCA63;
 }
 
 .c-login {
@@ -759,31 +775,47 @@ hr {
   background-color: #498CDF;
   padding: 15px;
   border-radius: 10px;
-  margin-top: 30px;
   border: 0;
   font-family: "Roboto";
-  margin-bottom: 25px;
   color: white;
   font-weight: bold;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+.c-button--secundario {
+  background-color: #F5F5F5;
+  color: #498CDF;
+  border: 1px solid #498CDF;
+}
+.c-button--terciario {
+  background-color: white;
+  color: #498CDF;
+}
 .c-button--alternativo {
-  background-color: #2FCA63;
+  background-color: #58D586;
 }
-.c-button--alternativo:hover {
-  background-color: #2FCA63;
+.c-button--alternativo-secundario {
+  background-color: #F5F5F5;
+  color: #58D586;
+  border: 1px solid #58D586;
 }
-.c-button--pagar {
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: green;
+.c-button--alternativo-terciario {
+  background-color: white;
+  color: #58D586;
+}
+.c-button--peligroso {
+  background-color: #EF4343;
+}
+.c-button--peligroso-secundario {
+  background-color: #F5F5F5;
+  color: #EF4343;
+  border: 1px solid #EF4343;
+}
+.c-button--peligroso-terciario {
+  background-color: white;
+  color: #EF4343;
 }
 .c-button--eliminar {
   background-color: red;
-}
-
-.c-button:hover {
-  background-color: #2FCA63;
 }
 
 .c-carrito {
