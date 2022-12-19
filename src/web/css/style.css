@@ -612,6 +612,7 @@ nav {
   color: white;
   font-weight: bold;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
 }
 .c-button--secundario {
   background-color: #F5F5F5;
@@ -619,8 +620,11 @@ nav {
   border: 1px solid #498CDF;
 }
 .c-button--terciario {
-  background-color: white;
+  background-color: transparent;
   color: #498CDF;
+  text-align: left;
+  box-shadow: none;
+  padding: 0;
 }
 .c-button--alternativo {
   background-color: #58D586;
@@ -633,6 +637,7 @@ nav {
 .c-button--alternativo-terciario {
   background-color: white;
   color: #58D586;
+  box-shadow: none;
 }
 .c-button--peligroso {
   background-color: #EF4343;
@@ -645,6 +650,7 @@ nav {
 .c-button--peligroso-terciario {
   background-color: white;
   color: #EF4343;
+  box-shadow: none;
 }
 .c-button--eliminar {
   background-color: red;
@@ -805,6 +811,7 @@ nav {
   color: white;
   font-weight: bold;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
 }
 .c-button--secundario {
   background-color: #F5F5F5;
@@ -812,8 +819,11 @@ nav {
   border: 1px solid #498CDF;
 }
 .c-button--terciario {
-  background-color: white;
+  background-color: transparent;
   color: #498CDF;
+  text-align: left;
+  box-shadow: none;
+  padding: 0;
 }
 .c-button--alternativo {
   background-color: #58D586;
@@ -826,6 +836,7 @@ nav {
 .c-button--alternativo-terciario {
   background-color: white;
   color: #58D586;
+  box-shadow: none;
 }
 .c-button--peligroso {
   background-color: #EF4343;
@@ -838,6 +849,7 @@ nav {
 .c-button--peligroso-terciario {
   background-color: white;
   color: #EF4343;
+  box-shadow: none;
 }
 .c-button--eliminar {
   background-color: red;
@@ -853,7 +865,9 @@ nav {
 }
 .c-carrito__left {
   width: 600px;
-  padding: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
   display: flex;
   flex-direction: column;
 }
@@ -875,8 +889,8 @@ nav {
   border: 0;
 }
 .c-carrito__titulo {
-  margin-top: 24px;
-  font-size: 24px;
+  margin-top: 40px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -991,9 +1005,6 @@ nav {
   background-repeat: no-repeat;
   height: 100%;
   font-family: "Roboto";
-}
-.c-categorie:hover {
-  transform: translateY(20px);
 }
 .c-categorie__image {
   grid-area: imagen;
@@ -1205,8 +1216,17 @@ nav {
   width: 1000px;
   border-radius: 20px;
   background-color: #E6E6E6;
-  padding: 40px;
+  padding-left: 40px;
   font-family: "Roboto";
+}
+.c-historial__cerrar {
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  padding-top: 20px;
+  margin-right: 64px;
+  font-size: 24px;
 }
 
 .g--font-size-2XS {

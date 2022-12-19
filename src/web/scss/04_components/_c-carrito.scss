@@ -9,9 +9,12 @@
     
     &__left{
         width: 600px;
-        padding: getPadding(9);
+        padding-left: getPadding(9);
+        padding-right: getPadding(9);
+        padding-bottom: getPadding(9);
         display: flex;
         flex-direction: column;
+
 
     }
 
@@ -35,8 +38,8 @@
     }
 
     &__titulo{
-        margin-top: getMargin(8);
-        font-size: getFontSize("2XL");
+        margin-top: getMargin(10);
+        font-size: getFontSize("3XL");
         font-weight: bold;
         margin-bottom: getMargin(7);
     }

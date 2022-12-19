@@ -136,7 +136,7 @@
 
                         
                     </div>
-                    <button class="c-button c-button--secundario c-carrito__volver">Seguir comprando</button>
+                    <button id="volver" class="c-button c-button--secundario c-carrito__volver ">Seguir comprando</button>
                 </div>
 
                 <div class="c-carrito__right">
@@ -151,7 +151,7 @@
                         <div class="l-flex l-flex--direction-column l-flex--gap-7  g--margin-bottom-12">
                             <div class="c-carrito__nombre">CÓDIGO DE DESCUENTO</div>
                             <input type="text" class="c-carrito__descuento" placeholder="Introduce tu codigo">
-                            <button class="c-button c-button--secundario">Aplicar descento</button>
+                            <button class="c-button c-button--terciario">Aplicar descuento</button>
                         </div>
                         <hr>
                         <div
@@ -208,8 +208,9 @@
                         <form action="" class="l-flex l-flex--direction-column l-flex--align-items-center">
                             <input type="text" name="correo" class="c-login__input" placeholder="Nombre de usuario">
                             <input type="password" name="contraseña" class="c-login__input" placeholder="Contraseña">
-                            <button class="c-button c-login__iniciar">Inciar sesión</button>
                         </form>
+
+                        <button class="c-button c-login__iniciar">Inciar sesión</button>
                         
 
                     <hr style="margin-left: 100px; margin-right: 100px;">
@@ -275,6 +276,7 @@
 
     <dialog id="historialCarritos" class="c-modal">
         <div class="c-historial">
+            <div class="c-historial__cerrar">&#10005;</div>
             <table class="c-table">
                 <tr class="c-table__titulos">
                     <td class="c-table__item">ID pedido</td>

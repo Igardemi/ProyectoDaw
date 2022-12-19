@@ -3,6 +3,16 @@
     width: 1000px;
     border-radius: getBorderRadius(6);
     background-color: getColor("grises",7);
-    padding: getPadding(10);
+    padding-left: getPadding(10);
     font-family: 'Roboto';
+
+    &__cerrar{
+        color: red;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+        padding-top: getPadding(7);
+        margin-right: getPadding(12);
+        font-size: getFontSize("2XL")
+    }
 }

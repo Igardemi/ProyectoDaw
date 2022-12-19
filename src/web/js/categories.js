@@ -82,5 +82,12 @@ document.getElementsByClassName("c-login__iniciar")[0].addEventListener("click",
 document.getElementById("login").close();
 document.getElementById("historialCarritos").showModal()});
 
+document.getElementsByClassName("c-login__cerrar")[0].addEventListener("click",()=>{document.getElementById("login").close();});
+
+document.getElementsByClassName("c-historial__cerrar")[0].addEventListener("click",()=>{document.getElementById("historialCarritos").close();});
+
+
+
+
 }
 
