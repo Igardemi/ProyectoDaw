@@ -1,5 +1,10 @@
 .c-header{
-    background-color: getColor("principal", 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    background: linear-gradient(to bottom, getColor("principal",1)60%, getColor("grises",1));
+    // background-color: getColor("principal", 2);
     padding-left: getPadding(17);
     padding-right: getPadding(17);
     padding-bottom: getPadding(5);
@@ -8,6 +13,10 @@
     outline-color: grey;
     font-family: "Roboto";
 
+
+    &__top{
+        flex-direction: row;
+    }
 
     &__logo{
         width: 200px;
@@ -51,10 +60,11 @@
     }
 
     &__class{
+        display: flex;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        justify-content: space-around;
         font-family: "Roboto";
-        background-color: getColor("grises",1);
-        padding-top: getMargin(5);
-        padding-bottom: getMargin(5);
     }
 
     &__btnCategory{
@@ -67,6 +77,7 @@
     }
 
     &__btnCategory:hover{
+        font-family: "Roboto";
         background-color: white;
         border-radius: 10px;
         color: getColor("grises",1);

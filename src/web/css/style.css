@@ -1,5 +1,11 @@
 @charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 /* Document
    ========================================================================== */
 /**
@@ -54,7 +60,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace; /* 1 */
+  font-family: "Roboto"; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -92,7 +98,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
+  font-family: "Roboto"; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -143,7 +149,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
+  font-family: "Roboto"; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
@@ -351,8 +357,6 @@ hr {
 @font-face {
   font-family: "Roboto";
   src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
 }
 .seleccion {
   font-family: "Roboto";
@@ -366,10 +370,6 @@ hr {
   padding-left: 40px;
   padding-right: 40px;
   border-bottom: solid 1px #154B75;
-}
-
-.c-banner {
-  display: flex;
 }
 
 .l-grid {
@@ -602,6 +602,7 @@ hr {
   border-radius: 10px;
   margin-top: 30px;
   border: 0;
+  font-family: "Roboto";
   margin-bottom: 25px;
   color: white;
   font-weight: bold;
@@ -752,6 +753,7 @@ hr {
   border-radius: 10px;
   margin-top: 30px;
   border: 0;
+  font-family: "Roboto";
   margin-bottom: 25px;
   color: white;
   font-weight: bold;
@@ -903,7 +905,6 @@ hr {
   grid-template-rows: 250px 60px;
   grid-template-areas: "imagen" "title";
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
-  font-family: Helvetica, sans-serif;
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -932,7 +933,11 @@ hr {
 }
 
 .c-header {
-  background-color: #1C63A0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  background: linear-gradient(to bottom, #154B75 60%, #454545);
   padding-left: 192px;
   padding-right: 192px;
   padding-bottom: 12px;
@@ -940,6 +945,9 @@ hr {
   height: 100px;
   outline-color: grey;
   font-family: "Roboto";
+}
+.c-header__top {
+  flex-direction: row;
 }
 .c-header__logo {
   width: 200px;
@@ -976,10 +984,11 @@ hr {
   width: 35px;
 }
 .c-header__class {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-around;
   font-family: "Roboto";
-  background-color: #454545;
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 .c-header__btnCategory {
   width: 100%;
@@ -990,6 +999,7 @@ hr {
   padding: 10px;
 }
 .c-header__btnCategory:hover {
+  font-family: "Roboto";
   background-color: white;
   border-radius: 10px;
   color: #454545;
@@ -1017,7 +1027,6 @@ hr {
 .c-footer__content-links {
   color: white;
   text-decoration: none;
-  font-family: "Roboto";
   margin-top: 20px;
 }
 .c-footer__social {
@@ -1045,7 +1054,6 @@ hr {
   color: white;
   margin-bottom: 4px;
   opacity: 0.75;
-  font-family: "Ubuntu-Regular";
 }
 
 .c-detail {
