@@ -11,8 +11,8 @@
 
 <body>
     <nav>
-        <div class="l-flex l-flex--direction-column ">
-            <div class="c-header">
+        <div class="c-header">
+            <div class="c-header__top">
                 <div class="l-flex l-flex--align-items-center l-flex--direction-row">
 
                     <div class="c-header__logo">
@@ -27,20 +27,17 @@
                     </div>
 
                     <div class="l-flex l-flex--direction-row auto l-flex--gap-5">
-                        <img id="btnUsuario" class="c-header__icons" src="assets/img/icono-usuario.png"/>
-                        <img id="btnCarrito" class="c-header__icons" src="assets/img/icono-carrito.png"/>
+                        <img id="btnUsuario" class="c-header__icons" src="assets/img/icono-usuario.png" />
+                        <img id="btnCarrito" class="c-header__icons" src="assets/img/icono-carrito.png" />
                     </div>
                 </div>
+
             </div>
-
-
             <div class="c-header__class">
-                <div class="l-flex l-flex--justify-content-space-around g--margin-horizonal-12">
-                    <button class="c-header__btnCategory">MADRID</button>
+                <button class="c-header__btnCategory">MADRID</button>
                     <button class="c-header__btnCategory">VALENCIA</button>
                     <button class="c-header__btnCategory">BARCELONA</button>
-                    <button class="c-header__btnCategory">MURCIA</button>
-                </div>
+                    <button class="c-header__btnCategory">PARIS</button>
             </div>
         </div>
     </nav>
@@ -51,28 +48,29 @@
     <div id="titulo" class="l-flex l-flex--justify-content-center g--padding-horizonal-12 g--padding-vertical-6">
         <div id="seleccion" class="seleccion">Elige la ciudad de destino</div>
     </div>
-    
-    <div id="contenido" class="l-flex l-flex--wrap l-flex--gap-10 g--padding-horizonal-12 g--padding-vertical-6 l-flex--justify-content-center">
+
+    <div id="contenido"
+        class="l-flex l-flex--wrap l-flex--gap-10 g--padding-horizonal-12 g--padding-vertical-6 l-flex--justify-content-center">
         <!-- contenido -->
     </div>
 
     <footer>
         <div class="c-footer l-flex l-flex--direction-column l-flex--align-items-space-between">
             <div class="c-footer__logo">
-                <img class="c-footer__logo" src="assets/img/logo_vertical.png"/>
-            <div class="c-footer__social">
-                <img class="c-footer__social-icons" src="assets/img/instagram.png" alt="Instagram icon"></img>
-                <img class="c-footer__social-icons" src="assets/img/facebook.png" alt="Facebook icon"></img>
-                <img class="c-footer__social-icons" src="assets/img/twitter.png" alt="Twitter icon"></img>
+                <img class="c-footer__logo" src="assets/img/logo.png" />
+                <div class="c-footer__social">
+                    <img class="c-footer__social-icons" src="assets/img/instagram.png" alt="Instagram icon"></img>
+                    <img class="c-footer__social-icons" src="assets/img/facebook.png" alt="Facebook icon"></img>
+                    <img class="c-footer__social-icons" src="assets/img/twitter.png" alt="Twitter icon"></img>
+                </div>
             </div>
-        </div>
-            
+
             <div class="c-footer__content">
-                    <a href="#" class="c-footer__content-links">Preguntas frecuentes</a></li>
-                    <a href="#" class="c-footer__content-links">Política de privacidad</a></li>
-                    <a href="#" class="c-footer__content-links">Términos y condiciones</a></li>
-                    <a href="#" class="c-footer__content-links">Aviso legal</a></li>
-                    <a href="#" class="c-footer__content-links">Contacto</a></li>
+                <a href="#" class="c-footer__content-links">Preguntas frecuentes</a></li>
+                <a href="#" class="c-footer__content-links">Política de privacidad</a></li>
+                <a href="#" class="c-footer__content-links">Términos y condiciones</a></li>
+                <a href="#" class="c-footer__content-links">Aviso legal</a></li>
+                <a href="#" class="c-footer__content-links">Contacto</a></li>
             </div>
             <div class="c-footer__final">
                 <p class="c-footer__final-copyright">Easy Move © 2022 - Todos los derechos reservados</p>
@@ -88,7 +86,7 @@
                         CARRITO
                         <hr>
                     </div>
-                    
+
                     <div class="l-flex l-flex--direction-column">
                         <div class="c-item">
                             <img src="assets/img/bus.png" alt="bus" class="c-item__imagen">
@@ -106,7 +104,8 @@
                         </div>
 
                         <div class="c-item">
-                            <img src="assets/img/Cartaxi_generated-removebg-preview.png" alt="bus" class="c-item__imagen">
+                            <img src="assets/img/Cartaxi_generated-removebg-preview.png" alt="bus"
+                                class="c-item__imagen">
                             <div class="c-item__nombre">
                                 <div class="c-item__texto c-item__texto--pequeño">8 dias</div>
                                 <div class="c-item__texto">Coche electico</div>
@@ -135,7 +134,7 @@
                             <button class="c-item__borrar">X</button>
                         </div>
 
-                        
+
                     </div>
                     <button id="volver" class="c-carrito__volver">Seguir comprando</button>
 
@@ -145,7 +144,8 @@
                     <div class="c-carrito__titulo">RESUMEN</div>
                     <hr>
                     <div class="c-carrito__resumen">
-                        <div class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-9 g--margin-bottom-9">
+                        <div
+                            class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-9 g--margin-bottom-9">
                             <div class="c-carrito__nombre">ARTICULOS 3</div>
                             <div class="c-carrito__nombre">2.828€</div>
                         </div>
@@ -154,12 +154,13 @@
                             <input type="text" class="c-carrito__descuento" placeholder="Introduce tu codigo">
                         </div>
                         <hr>
-                        <div class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-7 g--margin-bottom-9">
+                        <div
+                            class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-7 g--margin-bottom-9">
                             <div class="c-carrito__nombre">PRECIO TOTAL</div>
                             <div class="c-carrito__precioTotal">2.828€</div>
                         </div>
                     </div>
-                    
+
                     <button id="btnPagar" class="c-button c-button--pagar">PAGAR</button>
                 </div>
             </div>
@@ -168,20 +169,22 @@
 
     <dialog id="detalleProducto" class="c-detail">
         <div class="l-flex l-flex--direction-row">
-        <div id="c-detail__imagen" class="l-flex">
-            <img src="./assets/img/logo.png">
-        </div>
-        <div id="datos" class="l-flex l-flex--direction-column l-flex--gap-7">
-            <div class="c-detail__cerrar">&#10005;</div>
-            <div id="detailTitulo" class="c-detail__titulo">Bono de transporte</div>
-            <p class="detailDescripcion">Este bono de transporte sirve para todo el transporte público de la ciudad de Valencia</p>
-            <div class="l-flex l-flex--direction-row l-flex--gap-7">
-            <span>Introduce la cantidad:</span>
-            <input type="number" id="cantidadProducto" class="c-detail__cantidad" value="1" min="1" width=100px></input>
+            <div id="c-detail__imagen" class="l-flex">
+                <img src="./assets/img/logo.png">
             </div>
-            <div class="c-detail__precio">7,00 €</div>
-            <button id="anyadirCarrito" class="c-button ">Añadir a carrito</button>
-        </div>
+            <div id="datos" class="l-flex l-flex--direction-column l-flex--gap-7">
+                <div class="c-detail__cerrar">&#10005;</div>
+                <div id="detailTitulo" class="c-detail__titulo">Bono de transporte</div>
+                <p class="detailDescripcion">Este bono de transporte sirve para todo el transporte público de la ciudad
+                    de Valencia</p>
+                <div class="l-flex l-flex--direction-row l-flex--gap-7">
+                    <span>Introduce la cantidad:</span>
+                    <input type="number" id="cantidadProducto" class="c-detail__cantidad" value="1" min="1"
+                        width=100px></input>
+                </div>
+                <div class="c-detail__precio">7,00 €</div>
+                <button id="anyadirCarrito" class="c-button ">Añadir a carrito</button>
+            </div>
         </div>
     </dialog>
 
@@ -258,7 +261,7 @@
                 </div>
                 <div class="g--margin-top-4 l-flex l-flex--direction-row l-flex--justify-content-space-between">
                     <button class='c-pago__boton c-pago__boton--positivo'>Aceptar</button>
-                    <button class="c-pago__boton c-pago__boton--negativo" >Cancelar</button>
+                    <button class="c-pago__boton c-pago__boton--negativo">Cancelar</button>
                 </div>
             </div>
         </div>
