@@ -356,7 +356,7 @@ hr {
 
 @font-face {
   font-family: "Roboto";
-  src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
 }
 .seleccion {
   font-family: "Roboto";
