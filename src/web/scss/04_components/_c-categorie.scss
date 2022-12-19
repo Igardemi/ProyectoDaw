@@ -1,5 +1,6 @@
 .c-categorie {
 	display: grid;
+	font-family: "Roboto";
 	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 	grid-template-rows: 250px 60px;
 	grid-template-areas: "imagen" "title";

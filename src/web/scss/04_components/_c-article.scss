@@ -12,17 +12,17 @@
         border-top-right-radius: 16px;
     }
     &__nombre{
+        font-family: "Roboto";
         display:flex;
-        justify-content: flex-start;
+        justify-content: center;
         padding: 10px;
+        width: 100%;
         color:white;
+        background-color: getColor("principal",3);
         margin-top: 15px;
         margin-bottom: 10px;
-        margin-left: 70px;
-        width: 90%;
-        background-color: getColor("principal",4);
         font-size: 2rem;
-        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.7);
     }
     &__descripcion{
         font-size: 1rem;

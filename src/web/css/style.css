@@ -356,7 +356,7 @@ hr {
 
 @font-face {
   font-family: "Roboto";
-  src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
 }
 .seleccion {
   font-family: "Roboto";
@@ -887,17 +887,17 @@ hr {
   border-top-right-radius: 16px;
 }
 .c-article__nombre {
+  font-family: "Roboto";
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 10px;
+  width: 100%;
   color: white;
+  background-color: #2578D0;
   margin-top: 15px;
   margin-bottom: 10px;
-  margin-left: 70px;
-  width: 90%;
-  background-color: #498CDF;
   font-size: 2rem;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.7);
 }
 .c-article__descripcion {
   font-size: 1rem;
@@ -917,6 +917,7 @@ hr {
 
 .c-categorie {
   display: grid;
+  font-family: "Roboto";
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-template-rows: 250px 60px;
   grid-template-areas: "imagen" "title";
@@ -1022,6 +1023,7 @@ hr {
 }
 
 .c-footer {
+  font-family: "Roboto";
   display: flex;
   background-color: #1C63A0;
   justify-content: flex-end;
