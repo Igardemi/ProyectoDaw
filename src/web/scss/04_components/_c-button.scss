@@ -16,6 +16,18 @@
     &--alternativo:hover {
         background-color: getColor("alternativo",3);
     }
+
+    &--pagar{
+        margin-top: 0;
+        margin-bottom: 0;
+        
+        background-color: green;
+        
+    }
+
+    &--eliminar{
+        background-color: red;
+    }
 }
 
 .c-button:hover {

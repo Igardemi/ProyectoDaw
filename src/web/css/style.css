@@ -613,6 +613,14 @@ hr {
 .c-button--alternativo:hover {
   background-color: #2FCA63;
 }
+.c-button--pagar {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: green;
+}
+.c-button--eliminar {
+  background-color: red;
+}
 
 .c-button:hover {
   background-color: #2FCA63;
@@ -624,7 +632,7 @@ hr {
   width: 1000px;
 }
 .c-login__izquierda {
-  background-color: #58D586;
+  background-color: #1C63A0;
   border: 1px solid white;
   width: 500px;
   height: 700px;
@@ -762,6 +770,14 @@ hr {
 }
 .c-button--alternativo:hover {
   background-color: #2FCA63;
+}
+.c-button--pagar {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: green;
+}
+.c-button--eliminar {
+  background-color: red;
 }
 
 .c-button:hover {
@@ -1069,6 +1085,46 @@ hr {
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
+}
+
+.c-table {
+  font-family: "Roboto";
+  margin: 20px;
+}
+.c-table__titulos {
+  font-weight: bolder;
+}
+.c-table__elementos {
+  border-bottom: 1px solid hsla(0deg, 0%, 50%, 0.5);
+}
+.c-table__recuperar {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.c-table__img {
+  height: 50px;
+  width: 50px;
+}
+.c-table__img:hover {
+  background-color: #C9C9C9;
+}
+.c-table__item {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.c-table__item--buttons {
+  gap: 5px;
+  display: flex;
+}
+
+.c-historial {
+  height: 700px;
+  width: 1000px;
+  border-radius: 20px;
+  background-color: #E6E6E6;
+  padding: 40px;
 }
 
 .g--font-size-2XS {

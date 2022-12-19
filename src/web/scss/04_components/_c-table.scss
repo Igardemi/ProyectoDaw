@@ -1,0 +1,40 @@
+.c-table{
+
+    font-family: "Roboto";
+    margin: getMargin(7);
+
+    &__titulos{
+        font-weight: bolder;
+    }
+
+    &__elementos{
+        border-bottom: 1px solid hsla(0, 0%, 50%, .5);
+    }
+
+    &__recuperar{
+       margin-top: auto;
+       margin-bottom: auto;
+    }
+
+    &__img{
+        height: 50px;
+        width: 50px;
+    }
+
+    &__img:hover{
+        background-color: getColor("grises", 6);
+    }
+
+    &__item{
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: getMargin(7);
+        margin-bottom: getMargin(7);
+
+        &--buttons{
+            gap: 5px;
+            display: flex;
+
+        }
+    }
+}

@@ -267,8 +267,40 @@
 
 
 
-    <dialog id="historialCarritos">
-
+    <dialog id="historialCarritos" class="c-modal">
+        <div class="c-historial">
+            <table class="c-table">
+                <tr class="c-table__titulos">
+                    <td class="c-table__item">ID pedido</td>
+                    <td class="c-table__item ">Fecha</td>
+                    <td class="c-table__item">Total</td>
+                    <td class="c-table__item">Estado</td>
+                    <td class="c-table__item">Operaciones</td>
+                </tr>
+                <tr class="c-table__elementos">
+                    <td class="c-table__item">736249287js4323</td>
+                    <td class="c-table__item">Domingo, 18 de Diciembre de 2022</td>
+                    <td class="c-table__item">736€</td>
+                    <td class="c-table__item">Pendiente de pago</td>
+                    <td class="c-table__item c-table__item--buttons">
+                        <button class="c-button c-button--pagar">PAGAR</button>
+                            <img src="assets/img/papelera.png" alt="borrar" class="c-table__img">
+                            <img src="assets/img/modificar.png" alt="recuperar" class="c-table__img">
+                    </td>
+                </tr>
+                <tr class="c-table__elementos">
+                    <td class="c-table__item">736249287js4323</td>
+                    <td class="c-table__item">Domingo, 18 de Diciembre de 2022</td>
+                    <td class="c-table__item">736€</td>
+                    <td class="c-table__item">Pendiente de pago</td>
+                    <td class="c-table__item c-table__item--buttons">
+                        <button class="c-button c-button--pagar">PAGAR</button>
+                        <img src="assets/img/papelera.png" alt="borrar" class="c-table__img">
+                        <img src="assets/img/modificar.png" alt="recuperar" class="c-table__img">
+                    </td>
+                </tr>
+            </table>
+        </div>
     </dialog>
     <script src="../../db/data.js"> </script>
     <script src="./js/categories.js"> </script>
