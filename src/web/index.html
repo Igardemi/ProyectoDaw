@@ -134,10 +134,9 @@
                             <button class="c-item__borrar">X</button>
                         </div>
 
-
+                        
                     </div>
-                    <button id="volver" class="c-carrito__volver">Seguir comprando</button>
-
+                    <button class="c-button c-button--secundario c-carrito__volver">Seguir comprando</button>
                 </div>
 
                 <div class="c-carrito__right">
@@ -152,6 +151,7 @@
                         <div class="l-flex l-flex--direction-column l-flex--gap-7  g--margin-bottom-12">
                             <div class="c-carrito__nombre">CÓDIGO DE DESCUENTO</div>
                             <input type="text" class="c-carrito__descuento" placeholder="Introduce tu codigo">
+                            <button class="c-button c-button--secundario">Aplicar desciento</button>
                         </div>
                         <hr>
                         <div
@@ -161,10 +161,12 @@
                         </div>
                     </div>
 
-                    <button id="btnPagar" class="c-button">PAGAR</button>
+                    <button id="btnPagar" class="c-button c-carrito__btn">PAGAR</button>
                 </div>
             </div>
+            
         </div>
+        
     </dialog>
 
     <dialog id="detalleProducto" class="c-detail">
@@ -195,19 +197,20 @@
                     <img src="assets/img/tren.png" alt="imagen loggin" class="c-login__imagen">
                 </div>
                 <div class="c-login__derecha ">
+                    <div class="c-login__cerrar">&#10005;</div>
                     <div class="c-login__header">
                         <div class="c-login__title">Hola de nuevo</div>
                         <br>
                         <div>Bienvenido, te echábamos de menos</div>
                     </div>
 
-                    <div class="l-flex l-flex--direction-column">
+
                         <form action="" class="l-flex l-flex--direction-column l-flex--align-items-center">
                             <input type="text" name="correo" class="c-login__input" placeholder="Nombre de usuario">
                             <input type="password" name="contraseña" class="c-login__input" placeholder="Contraseña">
                             <button class="c-button c-login__iniciar">Inciar sesión</button>
                         </form>
-                    </div>
+                        
 
                     <hr style="margin-left: 100px; margin-right: 100px;">
 
@@ -260,8 +263,8 @@
                     <input type="checkbox" id="guardarTarjeta"> Guardar para la próxima compra</input>
                 </div>
                 <div class="g--margin-top-4 l-flex l-flex--direction-row l-flex--justify-content-space-between">
-                    <button class='c-pago__boton c-pago__boton--positivo'>Aceptar</button>
                     <button class="c-pago__boton c-pago__boton--negativo">Cancelar</button>
+                    <button class='c-pago__boton c-pago__boton--positivo'>Aceptar</button>
                 </div>
             </div>
         </div>
