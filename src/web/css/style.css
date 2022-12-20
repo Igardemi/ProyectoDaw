@@ -1033,9 +1033,7 @@ nav {
   background: linear-gradient(to bottom, #154B75 60%, #454545);
   padding-left: 192px;
   padding-right: 192px;
-  padding-bottom: 12px;
-  padding-top: 32px;
-  height: 100px;
+  padding-top: 48px;
   outline-color: #949494;
   font-family: "Roboto";
 }
@@ -1101,9 +1099,10 @@ nav {
 .c-footer {
   font-family: "Roboto";
   display: flex;
-  background-color: #1C63A0;
+  background-color: #154B75;
   justify-content: flex-end;
   margin-top: 32px;
+  padding-top: 10px;
   width: 100%;
   font-family: "Roboto";
 }
@@ -1118,6 +1117,7 @@ nav {
   text-align: center;
   justify-content: space-evenly;
   font-size: 16px;
+  padding-bottom: 4px;
 }
 .c-footer__content-links {
   color: #FFFFFF;
@@ -1140,7 +1140,7 @@ nav {
 }
 .c-footer__final {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 16px;
   background-color: #454545;
   padding-top: 10px;
 }

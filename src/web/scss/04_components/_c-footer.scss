@@ -1,9 +1,10 @@
 .c-footer{
     font-family: "Roboto";
     display: flex;
-    background-color: getColor("principal", 2);
+    background-color: getColor("principal", 1);
     justify-content: flex-end;
     margin-top: getMargin(9);
+    padding-top: getPadding(4);
     width: 100%;
     font-family: 'Roboto';
 
@@ -21,6 +22,7 @@
         text-align: center;
         justify-content: space-evenly;
         font-size: getFontSize("M");
+        padding-bottom: getPadding(1);
     }
 
     &__content-links{
@@ -49,7 +51,7 @@
 
     &__final{
         text-align: center;
-        margin-top: getMargin(10);
+        margin-top: getMargin(6);
         background-color: getColor("grises", 1);
         padding-top: getPadding(4);
     }
