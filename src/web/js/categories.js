@@ -77,17 +77,15 @@ document.getElementById("btnPagar").addEventListener("click",()=>{
 document.getElementsByClassName("c-pago__boton--negativo")[0].addEventListener("click",()=>{document.getElementById("pago").close();});
 document.getElementById("volver").addEventListener("click",()=>{document.getElementById("carrito").close();});
 document.getElementById("anyadirCarrito").addEventListener("click",()=>{document.getElementById("detalleProducto").close();}); 
-document.getElementsByClassName("c-detail__cerrar")[0].addEventListener("click",()=>{document.getElementById("detalleProducto").close();});
+
 document.getElementsByClassName("c-login__iniciar")[0].addEventListener("click",()=>{
 document.getElementById("login").close();
 document.getElementById("historialCarritos").showModal()});
 
-document.getElementsByClassName("c-login__cerrar")[0].addEventListener("click",()=>{document.getElementById("login").close();});
 
-document.getElementsByClassName("c-historial__cerrar")[0].addEventListener("click",()=>{document.getElementById("historialCarritos").close();});
-
-
-
+document.getElementById("cerrarDetalle").addEventListener("click",()=>{document.getElementById("detalleProducto").close();});
+document.getElementById("cerrarLogin").addEventListener("click",()=>{document.getElementById("login").close();}); 
+document.getElementById("cerrarHistorial").addEventListener("click",()=>{document.getElementById("historialCarritos").close();}); 
 
 }
 
