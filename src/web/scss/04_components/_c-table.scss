@@ -1,5 +1,7 @@
 .c-table{
+    padding: getPadding(10);
     margin: getMargin(7);
+        
 
     &__titulos{
         font-weight: bolder;
@@ -9,10 +11,6 @@
         border-bottom: 1px solid hsla(0, 0%, 50%, .5);
     }
 
-    &__recuperar{
-       margin-top: getMargin(23);
-       margin-bottom: getMargin(23);
-    }
 
     &__img{
         height: 50px;

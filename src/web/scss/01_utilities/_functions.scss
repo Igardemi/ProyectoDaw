@@ -18,6 +18,22 @@
 	@return $key;
 }
 
+// funciones de width
+
+@function getWidth($key) {
+	@return nth($width-values, $key + 1); //los arrays empiezan en 1.
+}
+
+@function getWidthKeys() {
+	$key: ();
+
+	@for $indice from 0 to length($width-values) {
+		$key: append($key, $indice);
+	}
+
+	@return $key;
+}
+
 // funciones de Margins
 
 @function getMarginKeys() {

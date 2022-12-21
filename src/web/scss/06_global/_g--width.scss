@@ -1,0 +1,7 @@
+@each $index in getWidthKeys() {
+    $value: getWidth($index);
+
+    .g--width-#{$index} {
+        width: $value;
+    }
+}

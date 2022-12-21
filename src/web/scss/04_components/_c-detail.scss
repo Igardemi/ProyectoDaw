@@ -32,12 +32,6 @@
 
     }
 
-    &__cerrar {
-        color: getColor("rojos", 3);
-        display: flex;
-        justify-content: flex-end;
-        cursor: pointer;
-    }
 
     &__boton {
         background-color: getColor("principal", 4);
@@ -48,7 +42,6 @@
         color: white;
         font-weight: bold;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-        //getShadow();
 
         &--restar {
             border-bottom-left-radius: getBorderRadius(4);

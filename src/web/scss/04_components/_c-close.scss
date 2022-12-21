@@ -1,0 +1,7 @@
+.c-close{
+    color: getColor("rojos", 3);
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    font-size: getFontSize("2XL");
+}

@@ -12,84 +12,93 @@
 <body>
     <nav position="fixed">
         <div class="c-header">
-            <div class="c-header__top">
-                <div class="l-flex l-flex--align-items-center l-flex--direction-row">
+            <div class="l-flex l-flex--align-items-center l-flex--direction-row">
+                <div>
+                    <img class="g--width-6" src="assets/img/logo.png">
+                </div>
 
-                    <div class="c-header__logo">
-                        <a href=""><img class="c-header__logo" src="assets/img/logo.png"></a>
-                    </div>
-
-                    <div class="c-header__content">
-                        <div class="l-flex l-flex--direction-row l-flex--align-items-center">
-                            <img class="c-header__search-input-icon" src="assets/img/icono-lupa.png">
-                            <input type="search" class="c-header__search" placeholder="Buscar producto">
-                        </div>
-                    </div>
-
-                    <div class="l-flex l-flex--direction-row auto l-flex--gap-5">
-                        <img id="btnUsuario" class="c-header__icons" src="assets/img/icono-usuario.png" />
-                        <img id="btnCarrito" class="c-header__icons" src="assets/img/icono-carrito.png" />
+                <div class="c-header__content">
+                    <div class="l-flex l-flex--direction-row l-flex--align-items-center">
+                        <img class="c-header__search-icon" class="" src="assets/img/icono-lupa.png">
+                        <input type="search" class="c-header__search" placeholder="Buscar producto">
                     </div>
                 </div>
 
+                <div class="l-flex l-flex--direction-row auto l-flex--gap-5">
+                    <img id="btnUsuario" class="c-header__icons" src="assets/img/icono-usuario.png" />
+                    <img id="btnCarrito" class="c-header__icons" src="assets/img/icono-carrito.png" />
+                </div>
             </div>
-            <div class="c-header__class">
+
+            <div class="l-flex l-flex--justify-content-space-around g--padding-vertical-4">
                 <button class="c-header__btnCategory">MADRID</button>
-                    <button class="c-header__btnCategory">VALENCIA</button>
-                    <button class="c-header__btnCategory">BARCELONA</button>
-                    <button class="c-header__btnCategory">PARIS</button>
+                <button class="c-header__btnCategory">VALENCIA</button>
+                <button class="c-header__btnCategory">BARCELONA</button>
+                <button class="c-header__btnCategory">PARIS</button>
             </div>
         </div>
     </nav>
 
-    <div id="banner" class="c-banner g--margin-vertical-10 g--padding-horizonal-12">
-        <img src="assets/img/banner.png" width="100%">
+    <!-- apartado del banner -->
+
+    <div id="banner" class="g--margin-vertical-10 g--padding-horizonal-12">
+        <img src="assets/img/banner.png" class="g--width-20">
     </div>
 
-    <div id="titulo" class="l-flex l-flex--justify-content-center g--margin-bottom-6 g--font-size-5XL">
+    <!-- categorias -->
+
+    <div id="titulo" class="l-flex l-flex--justify-content-center g--padding-horizonal-12 g--padding-vertical-6">
         <h1 id="seleccion" class="g--padding-horizonal-19">Selecciona la ciudad de destino</h1>
     </div>
 
     <div id="contenido"
-        class="l-flex l-flex--wrap l-flex--gap-10 g--padding-horizonal-12 g--padding-vertical-10 l-flex--justify-content-center">
-        <!-- contenido -->
+        class="l-flex l-flex--wrap l-flex--gap-10 g--padding-horizonal-12 g--padding-vertical-6 l-flex--justify-content-center">
     </div>
+
+    <!-- footer -->
 
     <footer>
         <div class="c-footer l-flex l-flex--direction-column l-flex--align-items-space-between">
-            <div class="c-footer__logo">
+
+            <div class="l-flex l-flex--justify-content-center l-flex--gap-17">
                 <img class="c-footer__logo" src="assets/img/logo.png" />
-                <div class="c-footer__social">
-                    <img class="c-footer__social-icons" src="assets/img/instagram.png" alt="Instagram icon"></img>
-                    <img class="c-footer__social-icons" src="assets/img/facebook.png" alt="Facebook icon"></img>
-                    <img class="c-footer__social-icons" src="assets/img/twitter.png" alt="Twitter icon"></img>
+
+                <div class="l-flex l-flex--direction-row l-flex--align-items-center l-flex--gap-5">
+
+                    <img class="c-footer__icons" src="assets/img/instagram.png" alt="Instagram icon"></img>
+                    <img class="c-footer__icons" src="assets/img/facebook.png" alt="Facebook icon"></img>
+                    <img class="c-footer__icons" src="assets/img/twitter.png" alt="Twitter icon"></img>
                 </div>
             </div>
 
-            <div class="c-footer__content">
-                <a href="#" class="c-footer__content-links">Preguntas frecuentes</a></li>
-                <a href="#" class="c-footer__content-links">Política de privacidad</a></li>
-                <a href="#" class="c-footer__content-links">Términos y condiciones</a></li>
-                <a href="#" class="c-footer__content-links">Aviso legal</a></li>
-                <a href="#" class="c-footer__content-links">Contacto</a></li>
-            </div>
-            <div class="c-footer__final">
-                <p class="c-footer__final-copyright">Easy Move © 2022 - Todos los derechos reservados</p>
+            <ul class="l-flex l-flex--justify-content-space-evenly g--margin-top-8 g--padding-bottom-1">
+                <li><a href="#" class="c-footer__links">Preguntas frecuentes</a></li>
+                <li><a href="#" class="c-footer__links">Política de privacidad</a></li>
+                <li><a href="#" class="c-footer__links">Términos y condiciones</a></li>
+                <li><a href="#" class="c-footer__links">Aviso legal</a></li>
+                <li><a href="#" class="c-footer__links">Contacto</a></li>
+            </ul>
+
+            <div class="c-footer__bottom">
+                <p class="c-footer__copyright">Easy Move © 2022 - Todos los derechos reservados</p>
             </div>
         </div>
     </footer>
 
+    <!-- dialogo carrito -->
+
     <dialog id="carrito" class="c-modal">
         <div class="c-carrito">
             <div class="l-flex l-flex--direction-row l-flex--align-items-space-between">
-                <div class="c-carrito__left">
-                    <div class="c-carrito__grande g--margin-top-10">
+                <div class="l-flex l-flex--direction-column g--width-10 g--padding-horizonal-9 g--padding-bottom-9">
+                    <div class="c-carrito__titulo">
                         CARRITO
                         <hr>
                     </div>
 
                     <div class="l-flex l-flex--direction-column">
-                        <div class="c-item">
+                        <!-- preguntar al grupo como hacerlo layout -->
+                        <div class="c-item ">
                             <img src="assets/img/bus.png" alt="bus" class="c-item__imagen">
                             <div class="c-item__nombre">
                                 <div class="c-item__texto c-item__texto--pequeño">3 dias</div>
@@ -134,16 +143,20 @@
                             <div class="c-item__texto c-item__nombre--pequeño">1876€</div>
                             <button class="c-item__borrar">X</button>
                         </div>
-
-                        
                     </div>
-                    <button id="volver" class="c-button c-button--secundario c-carrito__volver ">Seguir comprando</button>
+                    <button id="volver"
+                        class="c-button c-button--secundario g--margin-top-auto g--margin-right-auto ">Seguir
+                        comprando</button>
                 </div>
 
                 <div class="c-carrito__right">
-                    <div class="c-carrito__titulo">RESUMEN</div>
-                    <hr>
-                    <div class="c-carrito__resumen">
+                    <div class="c-carrito__titulo">
+                        RESUMEN
+                        <hr>
+                    </div>
+
+
+                    <div class="g--margin-top-9">
                         <div
                             class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-9 g--margin-bottom-9">
                             <div class="c-carrito__nombre">ARTÍCULOS 3</div>
@@ -158,17 +171,17 @@
                         <div
                             class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-7 g--margin-bottom-9">
                             <div class="c-carrito__nombre">PRECIO TOTAL</div>
-                            <div class="c-carrito__precioTotal">2.828€</div>
+                            <div id="precioTotal">2.828€</div>
                         </div>
                     </div>
 
-                    <button id="btnPagar" class="c-button c-carrito__btn">PAGAR</button>
+                    <button id="btnPagar" class="c-button g--width-7 ">PAGAR</button>
                 </div>
             </div>
-            
         </div>
-        
     </dialog>
+
+    <!-- tarjeta con detalles de cada producto -->
 
     <dialog id="detalleProducto" class="c-detail">
         <div class="l-flex l-flex--direction-row">
@@ -176,10 +189,12 @@
                 <img src="./assets/img/bonometro.png">
             </div>
             <div id="datos" class="l-flex l-flex--direction-column l-flex--gap-7">
-                <div class="c-detail__cerrar">&#10005;</div>
+                <div class="c-close ">&#10005;</div>
                 <div id="detailTitulo" class="c-detail__titulo">Bono de transporte</div>
-                <p id="detailDescripcion" class="c-detail__descripcion">Este bono de transporte sirve para todo el transporte público  de la ciudad
-                    de Valencia. Contiene 10 viajes para autobús, metro y tren en una única tarjeta. Puedes hacer transbordos gratuitos.</p>
+                <p id="detailDescripcion" class="c-detail__descripcion">Este bono de transporte sirve para todo el
+                    transporte público de la ciudad
+                    de Valencia. Contiene 10 viajes para autobús, metro y tren en una única tarjeta. Puedes hacer
+                    transbordos gratuitos.</p>
                 <div id="detalleCantidad" class="l-flex l-flex--direction-row l-flex--align-items-center">
                     <span>Introduce la cantidad:</span>
                     <button class="c-detail__boton c-detail__boton--restar" id="botonRestarUnidad">-</button>
@@ -193,51 +208,63 @@
         </div>
     </dialog>
 
+    <!-- apartado de login -->
+
     <dialog id="login" class="c-modal">
-        <div class="c-login">
-            <div class="l-flex l-flex--direction-row">
-                <div class="c-login__izquierda">
-                    <img src="assets/img/tren.png" alt="imagen loggin" class="c-login__imagen">
+        <div class="l-flex l-flex--direction-row">
+
+            <!-- parte derecha -->
+
+            <div class="g--background-color-principal-2">
+                <img src="assets/img/tren.png" alt="imagen loggin" height="90%" class="g--width-9">
+            </div>
+
+            <!-- parte izquierda -->
+
+            <div class="c-login">
+                <div class="c-close g--padding-top-7 g--padding-right-7">&#10005;</div>
+                <div class="g--margin-top-15 g--margin-bottom-9">
+                    <div class="c-login__title">Hola de nuevo</div>
+                    <br>
+                    <div>Bienvenido, te echábamos de menos</div>
                 </div>
-                <div class="c-login__derecha ">
-                    <div class="c-login__cerrar">&#10005;</div>
-                    <div class="c-login__header">
-                        <div class="c-login__title">Hola de nuevo</div>
-                        <br>
-                        <div>Bienvenido, te echábamos de menos</div>
+
+
+                <form action="" class="l-flex l-flex--direction-column l-flex--align-items-center">
+                    <input type="text" name="correo" class="c-login__datos" placeholder="Nombre de usuario">
+                    <input type="password" name="contraseña" class="c-login__datos" placeholder="Contraseña">
+                </form>
+
+                <button class="c-button c-login__iniciar">Inciar sesión</button>
+
+
+                <hr class="g--margin-left-14 g--margin-right-14">
+
+
+                <div
+                    class="l-flex l-flex--direction-row l-flex--justify-content-space-around g--margin-horizonal-14 g--margin-top-7 g--margin-bottom-15">
+                    <div class="c-login__icon">
+                        <img src="assets/img/iconoMac.png" alt="logo manzanita">
                     </div>
-
-
-                        <form action="" class="l-flex l-flex--direction-column l-flex--align-items-center">
-                            <input type="text" name="correo" class="c-login__input" placeholder="Nombre de usuario">
-                            <input type="password" name="contraseña" class="c-login__input" placeholder="Contraseña">
-                        </form>
-
-                        <button class="c-button c-login__iniciar">Inciar sesión</button>
-                        
-
-                    <hr style="margin-left: 100px; margin-right: 100px;">
-
-                    <div class="c-login__footer">
-                        <div class="c-login__icon">
-                            <img src="assets/img/iconoMac.png" alt="logo manzanita">
-                        </div>
-                        <div class="c-login__icon">
-                            <img src="assets/img/iconoGoogle.png" alt="logo google">
-                        </div>
-                        <div class="c-login__icon">
-                            <img src="assets/img/iconoFacebook.png" alt="logo facebook">
-                        </div>
+                    <div class="c-login__icon">
+                        <img src="assets/img/iconoGoogle.png" alt="logo google">
+                    </div>
+                    <div class="c-login__icon">
+                        <img src="assets/img/iconoFacebook.png" alt="logo facebook">
                     </div>
                 </div>
             </div>
         </div>
+
     </dialog>
 
+    <!-- apartado para pagar con tarjeta -->
+
     <dialog id="pago" class="c-modal">
+
         <div class='c-pago'>
-            <div class=' c-pago__info'>
-                <div class=" c-pago__titulo l-flex l-flex--justify-content-center g--margin-top-5">
+            <div class='g--margin-top-4 g--width-20'>
+                <div class="l-flex l-flex--justify-content-center g--margin-top-5 g--width-20">
                     PANTALLA PAGO
                 </div>
                 <hr>
@@ -274,44 +301,44 @@
         </div>
     </dialog>
 
+    <!-- historial de carritos -->
+
+    <dialog id="historialCarritos" class="c-modal c-modal--historial">
 
 
+        <div class="c-close g--padding-top-7 g--margin-right-12">&#10005;</div>
+        <table class="c-table">
+            <tr class="c-table__titulos">
+                <td class="c-table__item">ID pedido</td>
+                <td class="c-table__item ">Fecha</td>
+                <td class="c-table__item">Total</td>
+                <td class="c-table__item">Estado</td>
+                <td class="c-table__item">Operaciones</td>
+            </tr>
+            <tr class="c-table__elementos">
+                <td class="c-table__item">736249287js4323</td>
+                <td class="c-table__item">Domingo, 18 de Diciembre de 2022</td>
+                <td class="c-table__item">736€</td>
+                <td class="c-table__item">Pendiente de pago</td>
+                <td class="c-table__item c-table__item--buttons">
+                    <button class="c-button">PAGAR</button>
+                    <img src="assets/img/papelera.png" alt="borrar" class="c-table__img">
+                    <img src="assets/img/modificar.png" alt="recuperar" class="c-table__img">
+                </td>
+            </tr>
+            <tr class="c-table__elementos">
+                <td class="c-table__item">736249287js4323</td>
+                <td class="c-table__item">Domingo, 18 de Diciembre de 2022</td>
+                <td class="c-table__item">736€</td>
+                <td class="c-table__item">Pendiente de pago</td>
+                <td class="c-table__item c-table__item--buttons">
+                    <button class="c-button">PAGAR</button>
+                    <img src="assets/img/papelera.png" alt="borrar" class="c-table__img">
+                    <img src="assets/img/modificar.png" alt="recuperar" class="c-table__img">
+                </td>
+            </tr>
+        </table>
 
-    <dialog id="historialCarritos" class="c-modal">
-        <div class="c-historial">
-            <div class="c-historial__cerrar">&#10005;</div>
-            <table class="c-table">
-                <tr class="c-table__titulos">
-                    <td class="c-table__item">ID pedido</td>
-                    <td class="c-table__item ">Fecha</td>
-                    <td class="c-table__item">Total</td>
-                    <td class="c-table__item">Estado</td>
-                    <td class="c-table__item">Operaciones</td>
-                </tr>
-                <tr class="c-table__elementos">
-                    <td class="c-table__item">736249287js4323</td>
-                    <td class="c-table__item">Domingo, 18 de Diciembre de 2022</td>
-                    <td class="c-table__item">736€</td>
-                    <td class="c-table__item">Pendiente de pago</td>
-                    <td class="c-table__item c-table__item--buttons">
-                        <button class="c-button">PAGAR</button>
-                            <img src="assets/img/papelera.png" alt="borrar" class="c-table__img">
-                            <img src="assets/img/modificar.png" alt="recuperar" class="c-table__img">
-                    </td>
-                </tr>
-                <tr class="c-table__elementos">
-                    <td class="c-table__item">736249287js4323</td>
-                    <td class="c-table__item">Domingo, 18 de Diciembre de 2022</td>
-                    <td class="c-table__item">736€</td>
-                    <td class="c-table__item">Pendiente de pago</td>
-                    <td class="c-table__item c-table__item--buttons">
-                        <button class="c-button">PAGAR</button>
-                        <img src="assets/img/papelera.png" alt="borrar" class="c-table__img">
-                        <img src="assets/img/modificar.png" alt="recuperar" class="c-table__img">
-                    </td>
-                </tr>
-            </table>
-        </div>
     </dialog>
     <script src="../../db/data.js"> </script>
     <script src="./js/categories.js"> </script>

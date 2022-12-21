@@ -4,20 +4,11 @@
     justify-content: space-around;
     gap: getGap(4);
     background: linear-gradient(to bottom, getColor("principal",1)60%, getColor("grises",1));
-    // background-color: getColor("principal", 2);
     padding-left: getPadding(17);
     padding-right: getPadding(17);
-    // padding-bottom: getPadding(6);
     padding-top: getPadding(8);
     outline-color: getColor("grises",4);
 
-    &__top{
-        flex-direction: row;
-    }
-
-    &__logo{
-        width: 200px;
-    }    
     
     &__content{
         margin-left: getMargin(23);
@@ -26,12 +17,7 @@
         border-radius: getBorderRadius(6);
     }
 
-    &__search-input{
-        margin-left: getMargin(15);
-        margin-top: getMargin(5);
-    }
-
-    &__search-input-icon{
+    &__search-icon{
         width: 30px;
         height: 30px;
         opacity: 0.6;
@@ -54,13 +40,6 @@
     &__icons{
         width: 35px;
         cursor: pointer;
-    }
-
-    &__class{
-        display: flex;
-        padding-top: getPadding(4);
-        padding-bottom: getPadding(4);
-        justify-content: space-around;
     }
 
     &__btnCategory{

@@ -1,58 +1,36 @@
 .c-footer{
-    display: flex;
+ 
     background-color: getColor("principal", 1);
-    justify-content: flex-end;
     margin-top: getMargin(9);
     padding-top: getPadding(4);
     width: 100%;
 
     &__logo{
-        fill: getColor("blancos",8);
-        display: flex;
-        margin-left: getMargin(19);
         height: 80px;
     }
 
-    &__content{
-        display: flex;
-        text-align: center;
-        justify-content: space-evenly;
-        font-size: getFontSize("M");
-        padding-bottom: getPadding(1);
-    }
-
-    &__content-links{
-        color: getColor("blancos",8);
-        text-decoration: none; 
-        margin-top: getMargin(7);
-
-    }
-
-    &__social{
-        display: flex;
-        align-items: center;
-        margin-left: auto;
-        margin-right: getMargin(21);        
-    }
-
-    &__social-icons{
+    &__icons{
         width: 30px;
-        display: inline-block;
-        margin: 0 9px;
-        opacity: 0.80;
         margin-top: getMargin(5);
         margin-bottom: getMargin(5);
         cursor: pointer;
     }
 
-    &__final{
+    &__links{
+        color: getColor("blancos",8);
+        text-decoration: none;
+        font-size: getFontSize("M");
+    }
+
+   
+    &__bottom{
         text-align: center;
         margin-top: getMargin(6);
         background-color: getColor("grises", 1);
         padding-top: getPadding(4);
     }
 
-    &__final-copyright{
+    &__copyright{
         font-size: getFontSize("S");
         color: getColor("blancos",8);
         margin-bottom: getMargin(1);

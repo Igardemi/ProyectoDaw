@@ -11,16 +11,14 @@
     padding-right: getPadding(8);
 
     &__input {
-        
         border-color: getColor("principal",3);
         border-radius: getBorderRadius(2);
         margin-bottom: getMargin(7);
         margin-top: getMargin(4);
         font-size: getFontSize("M");
-        padding-top: getPadding(4);
-        padding-right: getPadding(4);
-        padding-bottom: getPadding(4);
-        padding-left: getPadding(4);
+
+        padding: getPadding(4);
+
         color: getColor("grises",3);
         box-sizing: border-box;
         width: 100%;
@@ -42,13 +40,8 @@
         color:getColor("principal",2);
     }
 
-    &__info {
-        margin-top: getMargin(4);
-        width: 100%;
-    }
     &__boton {
         border: none;
-        
         line-height: 40px;
         border-radius: getBorderRadius(4);
         font-size: getFontSize("L");
@@ -63,6 +56,7 @@
             background: getColor("alternativo",3);
         }
     }
+    
     &__boton--positivo:hover {
         background: getColor("alternativo",1);
         color: getColor("grises",6);

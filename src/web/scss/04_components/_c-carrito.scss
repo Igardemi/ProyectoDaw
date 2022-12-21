@@ -5,18 +5,6 @@
     border-radius: getBorderRadius(6);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
-    
-    &__left{
-        width: 600px;
-        padding-left: getPadding(9);
-        padding-right: getPadding(9);
-        padding-bottom: getPadding(9);
-        display: flex;
-        flex-direction: column;
-
-
-    }
-
     &__right{
         width: 400px;
         height: 700px;
@@ -40,28 +28,12 @@
         margin-top: getMargin(10);
         font-size: getFontSize("3XL");
         font-weight: bold;
-        margin-bottom: getMargin(7);
     }
-
-    &__resumen{
-        margin-top: getMargin(9);
-
-    }
-
-    &__volver{
-        margin-top: auto;
-        margin-right: auto;
-    }
-
+    
     &__nombre{
         font-size: getFontSize("M");
         font-weight: 700;
         color: #4a4a4a getColor("grises",1);
-    }
-
-    &__grande{
-        font-size: getFontSize("3XL");
-        font-weight: bolder;
     }
 
     &__btn{
