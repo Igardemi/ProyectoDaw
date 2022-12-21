@@ -6,14 +6,13 @@
     border: 1px solid getColor("grises",5);
     border-radius: getBorderRadius(5);
     box-shadow: getShadow(2);
-    font-family:"Roboto";
+
 
     &__imagen{
         border-top-left-radius: getBorderRadius(5);
         border-top-right-radius: getBorderRadius(5);
     }
     &__nombre{
-        font-family: "Roboto";
         display:flex;
         width: 90%;
         justify-content: center;

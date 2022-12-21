@@ -2,25 +2,3 @@
     font-family: "Roboto";
     src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
   }
-
-.seleccion{
-  font-family: "Roboto";
-  display: flex;
-  margin-top: getMargin(9);
-  margin-bottom: getMargin(9);
-  color: getColor("principal", 2);
-  font-size: getFontSize("5XL");
-  font-weight: bold;
-  text-shadow: 2px 2px 1px grey;
-  padding-left: getPadding(10);
-  padding-right: getPadding(10);
-  border-bottom: solid 1px getColor("principal",1);
-
-}
-
-nav{
-  position: sticky;
-  top:0;
-  z-index: 999;
-  width: 100%;
-}

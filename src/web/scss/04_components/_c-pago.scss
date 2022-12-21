@@ -9,7 +9,6 @@
     display: flex;
     padding-left: getPadding(8);
     padding-right: getPadding(8);
-    font-family: 'Roboto';
 
     &__input {
         
@@ -25,18 +24,22 @@
         color: getColor("grises",3);
         box-sizing: border-box;
         width: 100%;
+        background-color: getColor("blancos",5);
     }
     &__input::placeholder {
         color: getColor("grises",3);
         
     }
     &__input:hover {
-        background: getColor("grises",7);
-        border-color: getColor("alternativo",3);
+        background: getColor("blancos",8);
+    }
+    &__input:focus{
+        background: getColor("blancos",8);
     }
     &__titulo {
         font-size: getFontSize("3XL");
         padding-bottom: getPadding(4);
+        color:getColor("principal",2);
     }
 
     &__info {

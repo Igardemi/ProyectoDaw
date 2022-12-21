@@ -1,10 +1,7 @@
 .c-detail {
-    font-family: "Roboto";
     border-radius: getBorderRadius(4);
     background-color: getColor("blancos", 7);
     font-size: getFontSize("XL");
-    font-family: 'Roboto';
-
 
     &__imagen {
         display: flex;
@@ -14,25 +11,21 @@
     }
 
     &__titulo {
-        font-family: "Roboto";
         font-size: getFontSize("2XL");
         font-weight: bold;
     }
 
     &__precio {
-        font-family: "Roboto";
         font-size: getFontSize("5XL");
         color: getColor("negros",8);
     }
 
     &__descripcion {
-        font-family: "Roboto";
         border-color: getColor("alternativo", 3);
         width: 700px;
     }
 
     &__cantidad {
-        font-family: "Roboto";
         width: 80px;
         height: 20px;
         border-color: getColor("principal", 3);
@@ -40,7 +33,6 @@
     }
 
     &__cerrar {
-        font-family: "Roboto";
         color: getColor("rojos", 3);
         display: flex;
         justify-content: flex-end;
@@ -53,7 +45,6 @@
         width: 30px;
         height: 26px;
         border: 0;
-        font-family: "Roboto";
         color: white;
         font-weight: bold;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;

@@ -1,14 +1,10 @@
 .c-footer{
-    font-family: "Roboto";
     display: flex;
     background-color: getColor("principal", 1);
     justify-content: flex-end;
     margin-top: getMargin(9);
     padding-top: getPadding(4);
     width: 100%;
-    font-family: 'Roboto';
-
-
 
     &__logo{
         fill: getColor("blancos",8);
@@ -36,8 +32,7 @@
         display: flex;
         align-items: center;
         margin-left: auto;
-        margin-right: getMargin(21);
-        
+        margin-right: getMargin(21);        
     }
 
     &__social-icons{
@@ -47,6 +42,7 @@
         opacity: 0.80;
         margin-top: getMargin(5);
         margin-bottom: getMargin(5);
+        cursor: pointer;
     }
 
     &__final{

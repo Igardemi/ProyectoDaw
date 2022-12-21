@@ -388,3 +388,18 @@ dialog[open] {
 hr{
   background-color: getColor("principal", 2);
 }
+
+body,footer,nav{font-family: 'Roboto';}
+
+h1{
+  font-weight: bold;
+  border-bottom: solid 1px getColor("principal",1);
+  color: getColor("principal", 2);
+}
+
+nav{
+  position: sticky;
+  top:0;
+  z-index: 999;
+  width: 100%;
+}

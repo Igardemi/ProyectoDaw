@@ -8,10 +8,8 @@
     padding-left: getPadding(17);
     padding-right: getPadding(17);
     // padding-bottom: getPadding(6);
-    padding-top: getPadding(11);
+    padding-top: getPadding(8);
     outline-color: getColor("grises",4);
-    font-family: "Roboto";
-
 
     &__top{
         flex-direction: row;
@@ -41,7 +39,6 @@
     }
 
     &__search{
-        font-family: "Roboto";
         width: 280px;
         margin-right: getMargin(6);
         height: 40px;
@@ -56,6 +53,7 @@
     
     &__icons{
         width: 35px;
+        cursor: pointer;
     }
 
     &__class{
@@ -63,12 +61,10 @@
         padding-top: getPadding(4);
         padding-bottom: getPadding(4);
         justify-content: space-around;
-        font-family: "Roboto";
     }
 
     &__btnCategory{
         width: 100%;
-        font-family: "Roboto";
         background-color: transparent;
         border: 0;
         color: getColor("blancos",8);
@@ -76,7 +72,6 @@
     }
 
     &__btnCategory:hover{
-        font-family: "Roboto";
         background-color: getColor("blancos",8);
         border-radius: getBorderRadius(4);
         color: getColor("grises",1);

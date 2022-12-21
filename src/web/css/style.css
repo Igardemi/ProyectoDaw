@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 @font-face {
   font-family: "Roboto";
@@ -354,22 +358,14 @@ hr {
   background-color: #1C63A0;
 }
 
-@font-face {
+body, footer, nav {
   font-family: "Roboto";
-  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
 }
-.seleccion {
-  font-family: "Roboto";
-  display: flex;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  color: #1C63A0;
-  font-size: 48px;
+
+h1 {
   font-weight: bold;
-  text-shadow: 2px 2px 1px grey;
-  padding-left: 40px;
-  padding-right: 40px;
   border-bottom: solid 1px #154B75;
+  color: #1C63A0;
 }
 
 nav {
@@ -608,7 +604,6 @@ nav {
   padding: 15px;
   border-radius: 10px;
   border: 0;
-  font-family: "Roboto";
   color: white;
   font-weight: bold;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -660,7 +655,6 @@ nav {
   background-color: #E6E6E6;
   border-radius: 20px;
   width: 1000px;
-  font-family: "Roboto";
 }
 .c-login__izquierda {
   background-color: #1C63A0;
@@ -736,7 +730,6 @@ nav {
   display: flex;
   padding-left: 24px;
   padding-right: 24px;
-  font-family: "Roboto";
 }
 .c-pago__input {
   border-color: #2578D0;
@@ -751,17 +744,21 @@ nav {
   color: #7A7A7A;
   box-sizing: border-box;
   width: 100%;
+  background-color: #F7F7F7;
 }
 .c-pago__input::placeholder {
   color: #7A7A7A;
 }
 .c-pago__input:hover {
-  background: #E6E6E6;
-  border-color: #2FCA63;
+  background: #FFFFFF;
+}
+.c-pago__input:focus {
+  background: #FFFFFF;
 }
 .c-pago__titulo {
   font-size: 30px;
   padding-bottom: 10px;
+  color: #1C63A0;
 }
 .c-pago__info {
   margin-top: 10px;
@@ -796,7 +793,6 @@ nav {
 .c-modal {
   padding: 0px;
   border: 0;
-  font-family: "Roboto";
   border-radius: 20px;
   margin-top: auto;
   margin-bottom: auto;
@@ -807,7 +803,6 @@ nav {
   padding: 15px;
   border-radius: 10px;
   border: 0;
-  font-family: "Roboto";
   color: white;
   font-weight: bold;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -861,7 +856,6 @@ nav {
   width: 1000px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  font-family: "Roboto";
 }
 .c-carrito__left {
   width: 600px;
@@ -927,7 +921,6 @@ nav {
   flex-direction: row;
   align-items: center;
   gap: 32px;
-  font-family: "Roboto";
 }
 .c-item__imagen {
   width: 100px;
@@ -963,14 +956,12 @@ nav {
   border: 1px solid #B0B0B0;
   border-radius: 16px;
   box-shadow: 0 5px 15px gray;
-  font-family: "Roboto";
 }
 .c-article__imagen {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
 .c-article__nombre {
-  font-family: "Roboto";
   display: flex;
   width: 90%;
   justify-content: center;
@@ -995,7 +986,6 @@ nav {
 
 .c-categorie {
   display: grid;
-  font-family: "Roboto";
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-template-rows: 250px 60px;
   grid-template-areas: "imagen" "title";
@@ -1004,7 +994,6 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
-  font-family: "Roboto";
 }
 .c-categorie__image {
   grid-area: imagen;
@@ -1016,7 +1005,7 @@ nav {
   background-color: #454545;
   opacity: 0.8;
   font-size: 36px;
-  padding-top: 5px 6px;
+  padding-top: 6px;
   padding-bottom: 6px;
   user-select: none;
   list-style: none;
@@ -1033,9 +1022,8 @@ nav {
   background: linear-gradient(to bottom, #154B75 60%, #454545);
   padding-left: 192px;
   padding-right: 192px;
-  padding-top: 48px;
+  padding-top: 24px;
   outline-color: #949494;
-  font-family: "Roboto";
 }
 .c-header__top {
   flex-direction: row;
@@ -1060,7 +1048,6 @@ nav {
   padding-left: 6px;
 }
 .c-header__search {
-  font-family: "Roboto";
   width: 280px;
   margin-right: 16px;
   height: 40px;
@@ -1073,38 +1060,34 @@ nav {
 }
 .c-header__icons {
   width: 35px;
+  cursor: pointer;
 }
 .c-header__class {
   display: flex;
   padding-top: 10px;
   padding-bottom: 10px;
   justify-content: space-around;
-  font-family: "Roboto";
 }
 .c-header__btnCategory {
   width: 100%;
-  font-family: "Roboto";
   background-color: transparent;
   border: 0;
   color: #FFFFFF;
   padding: 10px;
 }
 .c-header__btnCategory:hover {
-  font-family: "Roboto";
   background-color: #FFFFFF;
   border-radius: 8px;
   color: #454545;
 }
 
 .c-footer {
-  font-family: "Roboto";
   display: flex;
   background-color: #154B75;
   justify-content: flex-end;
   margin-top: 32px;
   padding-top: 10px;
   width: 100%;
-  font-family: "Roboto";
 }
 .c-footer__logo {
   fill: #FFFFFF;
@@ -1137,6 +1120,7 @@ nav {
   opacity: 0.8;
   margin-top: 12px;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 .c-footer__final {
   text-align: center;
@@ -1152,11 +1136,9 @@ nav {
 }
 
 .c-detail {
-  font-family: "Roboto";
   border-radius: 8px;
   background-color: #FCFCFC;
   font-size: 20px;
-  font-family: "Roboto";
 }
 .c-detail__imagen {
   display: flex;
@@ -1165,28 +1147,23 @@ nav {
   margin-right: 20px;
 }
 .c-detail__titulo {
-  font-family: "Roboto";
   font-size: 24px;
   font-weight: bold;
 }
 .c-detail__precio {
-  font-family: "Roboto";
   font-size: 48px;
   color: #000000;
 }
 .c-detail__descripcion {
-  font-family: "Roboto";
   border-color: #2FCA63;
   width: 700px;
 }
 .c-detail__cantidad {
-  font-family: "Roboto";
   width: 80px;
   height: 20px;
   border-color: #2578D0;
 }
 .c-detail__cerrar {
-  font-family: "Roboto";
   color: #DC2828;
   display: flex;
   justify-content: flex-end;
@@ -1198,7 +1175,6 @@ nav {
   width: 30px;
   height: 26px;
   border: 0;
-  font-family: "Roboto";
   color: white;
   font-weight: bold;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -1214,7 +1190,6 @@ nav {
 }
 
 .c-table {
-  font-family: "Roboto";
   margin: 20px;
 }
 .c-table__titulos {
@@ -1251,7 +1226,6 @@ nav {
   border-radius: 20px;
   background-color: #E6E6E6;
   padding-left: 40px;
-  font-family: "Roboto";
 }
 .c-historial__cerrar {
   color: red;
