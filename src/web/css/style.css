@@ -364,8 +364,6 @@ body, footer, nav {
 
 h1 {
   font-weight: bold;
-  padding-left: 40px;
-  padding-right: 40px;
   border-bottom: solid 1px #154B75;
   color: #1C63A0;
 }
@@ -1112,16 +1110,6 @@ nav {
 .c-table__item--buttons {
   gap: 6px;
   display: flex;
-}
-
-.c-historial__cerrar {
-  color: red;
-  display: flex;
-  justify-content: flex-end;
-  cursor: pointer;
-  padding-top: 20px;
-  margin-right: 64px;
-  font-size: 24px;
 }
 
 .c-close {
