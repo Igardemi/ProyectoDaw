@@ -1,7 +1,19 @@
 let contenido;
 
 function getCategories(){
-    let object = ciudades;
+
+    let xhr = new XMLHttpRequest();
+	xhr.open("GET", "http://localhost:3000/ciudades");
+	xhr.responseType = "json";
+	xhr.send();
+	xhr.onload = function () {
+		paintCategories(xhr.response);
+		return xhr.response;
+	};
+}
+
+function paintCategories(object){
+
     object.forEach(element => {  
     let enlace = document.createElement("a");
     enlace.href="#";
@@ -67,6 +79,7 @@ object.opciones.forEach(opcion => {
 
 
 window.onload=()=>{
+
 contenido = document.getElementById("contenido");
 getCategories();
 document.getElementById("btnUsuario").addEventListener("click",()=>{document.getElementById("login").showModal()});
