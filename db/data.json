@@ -1,4 +1,5 @@
-ciudades=[
+{
+    "ciudades":[
 {"ciudad": "Valencia",
 "foto": "valencia.jpg",
 "opciones": [
@@ -215,4 +216,16 @@ ciudades=[
 }]
 }
 
+],
+
+"usuarios":[
+    {
+        "nombre":"Admin",
+        "password":"root"        
+    },
+    {
+        "nombre":"User",
+        "password":"root" 
+    }
 ]
+}
