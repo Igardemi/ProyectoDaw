@@ -1095,12 +1095,15 @@ nav {
   border-bottom: 1px solid hsla(0deg, 0%, 50%, 0.5);
 }
 .c-table__img {
-  height: 50px;
-  width: 50px;
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
 }
-.c-table__img:hover {
+/* .c-table__img:hover {
   background-color: #C9C9C9;
-}
+} */
 .c-table__item {
   padding-left: 20px;
   padding-right: 20px;

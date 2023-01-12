@@ -3,6 +3,7 @@
         {
             "ciudad": "Valencia",
             "foto": "valencia.jpg",
+            "destacada": true,
             "opciones": [
                 {
                     "nombre": "Valencia Tourist Card",
@@ -78,6 +79,7 @@
         {
             "ciudad": "Madrid",
             "foto": "madrid.jpg",
+            "destacada": true,
             "opciones": [
                 {
                     "nombre": "Tarjeta turistica",
@@ -177,6 +179,7 @@
         {
             "ciudad": "Paris",
             "foto": "paris.jpg",
+            "destacada": true,
             "opciones": [
                 {
                     "nombre": "Paris Visite",
@@ -239,6 +242,7 @@
         {
             "ciudad": "Londres",
             "foto": "londres.jpg",
+            "destacada": false,
             "opciones": [
                 {
                     "nombre": "Travel Card",
@@ -307,6 +311,7 @@
         {
             "ciudad": "Barcelona",
             "foto": "barcelona.jpg",
+            "destacada": true,
             "opciones": [
                 {
                     "nombre": "Hola Barcelona Travel Card",
@@ -373,6 +378,7 @@
         {
             "ciudad": "Amsterdam",
             "foto": "amsterdam.jpg",
+            "destacada": false,
             "opciones": [
                 {
                     "nombre": "Travel Card",
@@ -441,11 +447,33 @@
     "usuarios": [
         {
             "nombre": "Admin",
-            "password": "root"
+            "password": "root",
+            "carritos": [
+                {
+                    "id": 213414235235,
+                    "fecha": "11/01/2023",
+                    "pagado":false,
+                    "articulos": [
+                        {
+                            "ciudad": "Madrid",
+                            "nombre": "Abono Transporte",
+                            "duracion": "Sencillo",
+                            "precio": 1.5
+                        },
+                        {
+                            "ciudad": "Madrid",
+                            "nombre": "Abono Transporte",
+                            "duracion": "Sencillo",
+                            "precio": 2
+                        }
+                    ]
+                }
+            ]
         },
         {
             "nombre": "User",
-            "password": "root"
+            "password": "root",
+            "carritos": []
         }
     ],
     "descuentos" : [

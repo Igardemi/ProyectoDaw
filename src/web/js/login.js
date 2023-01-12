@@ -3,7 +3,7 @@ let usuario;
 function getUsers() {
     return new Promise(function (resolve, reject) {
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://localhost:3000/usuarios/");
+        xhr.open("GET", "http://localhost:3000/usuarios");
         xhr.responseType = "json";
         xhr.send();
         xhr.onload = function () {
@@ -17,8 +17,6 @@ function getUsers() {
 }
 //No se si pasarle por parametro el array
 function iniciarSesion(datos) {
-    let existeNombre = false;
-    let existeContr = false;
     let estaIniciado = false;
     let nombre = document.getElementById("user");
     let pass = document.getElementById("password");
@@ -30,21 +28,16 @@ function iniciarSesion(datos) {
             if (e.nombre == nombre.value && e.password == pass.value) {
                 usuario=e;
                 estaIniciado=true;
-                alert("Todo ok, estaIniciado="+estaIniciado+"\nEl nombre: "+usuario);
-            document.getElementById("login").close();
+                console.log(usuario);
+                gethistorial(usuario);
+                // alert("Todo ok, estaIniciado="+estaIniciado+"\nEl nombre: "+usuario);
+                document.getElementById("login").close();
+                document.getElementById("historialCarritos").showModal()
             }
         });
         if(estaIniciado==false){
-            alert("Mal")
+            alert("Datos incorrectos")
         }
-        // if (existeNombre == false || existeContr == false) {
-        //     alert("Algo esta mal");
-        // } else {
-        //     usuario=nombre.value;
-        //     estaIniciado=true;
-        //     alert("Todo ok, estaIniciado="+estaIniciado+"\nEl nombre: "+usuario);
-        //     document.getElementById("login").close();
-        // }
     }
 }
 

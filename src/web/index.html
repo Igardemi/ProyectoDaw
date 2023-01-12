@@ -31,10 +31,10 @@
             </div>
 
             <div class="l-flex l-flex--justify-content-space-around g--padding-vertical-4">
-                <button class="c-header__btnCategory">MADRID</button>
-                <button class="c-header__btnCategory">VALENCIA</button>
-                <button class="c-header__btnCategory">BARCELONA</button>
-                <button class="c-header__btnCategory">PARIS</button>
+                <button id="btnNav1" class="c-header__btnCategory">MADRID</button>
+                <button id="btnNav2" class="c-header__btnCategory">VALENCIA</button>
+                <button id="btnNav3" class="c-header__btnCategory">BARCELONA</button>
+                <button id="btnNav4" class="c-header__btnCategory">PARIS</button>
             </div>
         </div>
     </nav>
@@ -95,54 +95,8 @@
                         CARRITO
                         <hr>
                     </div>
-
-                    <div class="l-flex l-flex--direction-column" id="carritoProductos">
-                        <!-- preguntar al grupo como hacerlo layout -->
-                        <div class="c-item ">
-                            <img src="assets/img/bus.png" alt="bus" class="c-item__imagen">
-                            <div class="c-item__nombre">
-                                <div class="c-item__texto c-item__texto--pequeño">3 dias</div>
-                                <div class="c-item__texto">Autobús</div>
-                            </div>
-                            <div class="l-flex l-flex--direction-row l-flex--gap-5">
-                                <div class="c-item__texto">-</div>
-                                <div class="c-item__cantidad">07</div>
-                                <div class="c-item__texto">+</div>
-                            </div>
-                            <div class="c-item__texto c-item__nombre--pequeño">76€</div>
-                            <button class="c-item__borrar">X</button>
-                        </div>
-
-                        <div class="c-item">
-                            <img src="assets/img/Cartaxi_generated-removebg-preview.png" alt="bus"
-                                class="c-item__imagen">
-                            <div class="c-item__nombre">
-                                <div class="c-item__texto c-item__texto--pequeño">8 días</div>
-                                <div class="c-item__texto">Coche eléctrico</div>
-                            </div>
-                            <div class="l-flex l-flex--direction-row l-flex--gap-5">
-                                <div class="c-item__texto">-</div>
-                                <div class="c-item__cantidad">15</div>
-                                <div class="c-item__texto">+</div>
-                            </div>
-                            <div class="c-item__texto c-item__nombre--pequeño">876€</div>
-                            <button class="c-item__borrar">X</button>
-                        </div>
-
-                        <div class="c-item">
-                            <img src="assets/img/moto.png" alt="bus" class="c-item__imagen">
-                            <div class="c-item__nombre">
-                                <div class="c-item__texto c-item__texto--pequeño">1 hora</div>
-                                <div class="c-item__texto">Moto eléctrica</div>
-                            </div>
-                            <div class="l-flex l-flex--direction-row l-flex--gap-5">
-                                <div class="c-item__texto">-</div>
-                                <div class="c-item__cantidad">20</div>
-                                <div class="c-item__texto">+</div>
-                            </div>
-                            <div class="c-item__texto c-item__nombre--pequeño">1876€</div>
-                            <button class="c-item__borrar">X</button>
-                        </div>
+                    <div id="carritoProductos" class="l-flex l-flex--direction-column">
+                        
                     </div>
 
 
@@ -162,7 +116,7 @@
                         <div
                             class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-9 g--margin-bottom-9">
                             <div class="c-carrito__nombre">ARTÍCULOS 3</div>
-                            <div class="c-carrito__nombre" id="precioTotal">2.828€</div>
+                            <div class="c-carrito__nombre" id="precioTotal">0</div>
                         </div>
                         <div class="l-flex l-flex--direction-column l-flex--gap-7  g--margin-bottom-12">
                             <div class="c-carrito__nombre">CÓDIGO DE DESCUENTO</div>
@@ -173,7 +127,7 @@
                         <div
                             class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-7 g--margin-bottom-9">
                             <div class="c-carrito__nombre">PRECIO TOTAL</div>
-                            <div id="precioFinal">2.828€</div>
+                            <div id="precioFinal">0</div>
                         </div>
                     </div>
 
@@ -252,7 +206,6 @@
                 <hr>
                 <div class="g--padding-bottom-4">
                     <img src='./assets/img/tarjetas.png' height='50' width="80"></img>
-                    <img src='./assets/img/logoPaypal.png' height='30' width="90"></img>
                 </div>
                 <div>
                     <div class=" g--font-size-L">Número de tarjeta</div>
@@ -286,48 +239,20 @@
     <!-- historial de carritos -->
 
     <dialog id="historialCarritos" class="c-modal c-modal--historial">
-
-
+        
         <div id="cerrarHistorial" class="c-close g--padding-top-7 g--margin-right-12">&#10005;</div>
-        <table class="c-table">
-            <tr class="c-table__titulos">
-                <td class="c-table__item">ID pedido</td>
-                <td class="c-table__item ">Fecha</td>
-                <td class="c-table__item">Total</td>
-                <td class="c-table__item">Estado</td>
-                <td class="c-table__item">Operaciones</td>
-            </tr>
-            <tr class="c-table__elementos">
-                <td class="c-table__item">736249287js4323</td>
-                <td class="c-table__item">Domingo, 18 de Diciembre de 2022</td>
-                <td class="c-table__item">736€</td>
-                <td class="c-table__item">Pendiente de pago</td>
-                <td class="c-table__item c-table__item--buttons">
-                    <button class="c-button">PAGAR</button>
-                    <img src="assets/img/papelera.png" alt="borrar" class="c-table__img">
-                    <img src="assets/img/modificar.png" alt="recuperar" class="c-table__img">
-                </td>
-            </tr>
-            <tr class="c-table__elementos">
-                <td class="c-table__item">736249287js4323</td>
-                <td class="c-table__item">Domingo, 18 de Diciembre de 2022</td>
-                <td class="c-table__item">736€</td>
-                <td class="c-table__item">Pendiente de pago</td>
-                <td class="c-table__item c-table__item--buttons">
-                    <button class="c-button">PAGAR</button>
-                    <img src="assets/img/papelera.png" alt="borrar" class="c-table__img">
-                    <img src="assets/img/modificar.png" alt="recuperar" class="c-table__img">
-                </td>
-            </tr>
+        <table id="tablaHistorial"class="c-table">
+            
         </table>
 
     </dialog>
-    <script src="./js/categories.js"> </script>
-    <script src="js/carrito.js"></script>
-    <script src="js/articulo.js"></script>
+    <script src="./js/carrito.js"></script>
     <script src="./js/detail.js"></script>
-
+    <script src="./js/categories.js"> </script>
+    <script src="./js/articulo.js"></script>
     <script src="./js/login.js"></script>
+    <script src="./js/historial.js"> </script>
+    <script src="./js/main.js"> </script>
 </body>
 
 </html>

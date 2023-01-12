@@ -21,4 +21,6 @@ function muestraProducto(elemento) {
         <button id="anyadirCarrito" class="c-button ">Añadir a carrito</button>
     </div>
 `;
+document.getElementById("cerrarDetalle").addEventListener("click",()=>{document.getElementById("detalleProducto").close();}); 
+ 
 }
