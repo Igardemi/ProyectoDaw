@@ -12,6 +12,18 @@ function getCategories(){
 	};
 }
 
+function getDescuentos(){
+
+    let xhr = new XMLHttpRequest();
+	xhr.open("GET", "http://localhost:3000/descuentos");
+	xhr.responseType = "json";
+	xhr.send();
+	xhr.onload = function () {
+		calcularDescuento(xhr.response);
+		return xhr.response;
+	};
+}
+
 function paintCategories(object){
 
     object.forEach(element => {  
@@ -45,8 +57,7 @@ function getOption(opciones){
     return textInfo;
 }
 
-function getProductos(object){
-    console.log(object);
+function getProductos(object){;
     document.getElementById("seleccion").innerText="Opciones de movilidad en "+object.ciudad;
     let innerText=`<div class='l-flex l-flex--wrap l-flex--gap-10 l-flex--justify-content-center'>`;
      
@@ -60,7 +71,7 @@ object.opciones.forEach(opcion => {
     <div class='c-article__precio'>${opcion.precio[0]} Euros</div>
     </div>
     <div class='l-flex l-flex--direction-row l-flex--gap-10 g--margin-top-6 g--margin-bottom-6'>
-    <button class="c-button c-article__button ${opcion.nombre} ${opcion.duracion} btnBuy">Comprar</button>
+    <button id='${opcion.nombre}' class="c-button c-article__button ${opcion.nombre} ${opcion.duracion} btnBuy">Comprar</button>
     <button class="c-button c-button--secundario c-article__button ${opcion.nombre} ${opcion.duracion} btnInfo">info</button>      
     </div>
     </div>`;   
@@ -71,11 +82,112 @@ object.opciones.forEach(opcion => {
     Array.from(document.getElementsByClassName("btnInfo")).forEach(btn =>{
         btn.addEventListener("click",()=>{document.getElementById("detalleProducto").showModal()})
     });
+
+
+    // ----------------------
     Array.from(document.getElementsByClassName("btnBuy")).forEach(btn =>{
-        btn.addEventListener("click",()=>{alert("Producto añadido al carrito")});
+        btn.addEventListener("click",()=>{
+            let duracion = document.getElementById("opciones").value;
+            añadirArticulosCarrito(btn.id , duracion, object.opciones);
+        })
     });
 
+
+
+    // -----------------------
+    
+
 }
+
+
+// funciones de el carrito
+let carrito;
+
+function añadirArticulosCarrito(nombreArticulo, duracion, opciones){
+    let producto = opciones.find(a => a.nombre == nombreArticulo);
+    
+    let articulo = new Articulo(producto.nombre,producto.duracion[duracion],producto.precio[duracion],producto.image);
+
+    carrito.nuevoArticulo(articulo);
+}
+
+function verCarrito() {
+    let dialog = document.getElementById("carrito");
+
+    if (dialog.open) {
+        dialog.close();
+    }
+    dialog.showModal();
+
+    let listaProductos = document.getElementById("carritoProductos");
+    let precioTotal = document.getElementById("precioTotal");
+    let precioFinal = document.getElementById("precioFinal");
+
+    precioFinal.innerHTML= "0";
+    precioTotal.innerHTML= "0";
+
+    let productos = carrito.crearCarrito();
+    listaProductos.innerHTML = productos.html;
+    precioTotal.innerHTML = productos.total;
+
+    botonesCarrito();
+    aplicarDescuento();
+}
+
+function botonesCarrito() {
+    let btnSuma = document.querySelectorAll(".btnSumar");
+    let btnResta = document.querySelectorAll(".btnRestar");
+    let btnBorrar = document.querySelectorAll(".btnBorrar");
+
+    btnSuma.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          carrito.modificarUnidades(btn.id, 1);
+        });
+      });
+    
+      btnResta.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          carrito.modificarUnidades(btn.id, -1);
+        });
+      });
+    
+      btnBorrar.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          carrito.borrarArticulo(btn.id);
+        });
+      });
+}
+
+function aplicarDescuento() {
+    let btnDescuento = document.getElementById("btnDescuento");
+    btnDescuento.addEventListener("click", () => {
+        getDescuentos()
+    })
+}
+
+function calcularDescuento(decuentos) {
+    let inputDescuento = document.getElementById("campoDescuento").value;
+    let precioTotal = document.getElementById("precioTotal");
+    let precioFinal = document.getElementById("precioFinal");
+
+    let busqueda = decuentos.find(descuento => descuento.codigo == inputDescuento);
+
+    if (busqueda) {
+        let valorDescuento = busqueda.descuento;
+        let calculoDescuento = precioTotal.textContent - (precioTotal.textContent * (valorDescuento / 100))
+        precioFinal.innerHTML = calculoDescuento.toFixed(2)
+    }else{
+        alert("noooo")
+    }
+
+}
+
+
+
+
+
+
+// -----------------------
 
 
 window.onload=()=>{
@@ -83,7 +195,15 @@ window.onload=()=>{
 contenido = document.getElementById("contenido");
 getCategories();
 document.getElementById("btnUsuario").addEventListener("click",()=>{document.getElementById("login").showModal()});
-document.getElementById("btnCarrito").addEventListener("click",()=>{document.getElementById("carrito").showModal()});
+
+// -----
+document.getElementById("btnCarrito").addEventListener("click",verCarrito);
+carrito = new Carrito(33);
+
+
+
+// ---
+
 document.getElementById("btnPagar").addEventListener("click",()=>{
     document.getElementById("carrito").close();
     document.getElementById("pago").showModal()});

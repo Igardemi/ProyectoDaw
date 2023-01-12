@@ -96,7 +96,7 @@
                         <hr>
                     </div>
 
-                    <div class="l-flex l-flex--direction-column">
+                    <div class="l-flex l-flex--direction-column" id="carritoProductos">
                         <!-- preguntar al grupo como hacerlo layout -->
                         <div class="c-item ">
                             <img src="assets/img/bus.png" alt="bus" class="c-item__imagen">
@@ -144,6 +144,8 @@
                             <button class="c-item__borrar">X</button>
                         </div>
                     </div>
+
+
                     <button id="volver"
                         class="c-button c-button--secundario g--margin-top-auto g--margin-right-auto ">Seguir
                         comprando</button>
@@ -160,18 +162,18 @@
                         <div
                             class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-9 g--margin-bottom-9">
                             <div class="c-carrito__nombre">ARTÍCULOS 3</div>
-                            <div class="c-carrito__nombre">2.828€</div>
+                            <div class="c-carrito__nombre" id="precioTotal">2.828€</div>
                         </div>
                         <div class="l-flex l-flex--direction-column l-flex--gap-7  g--margin-bottom-12">
                             <div class="c-carrito__nombre">CÓDIGO DE DESCUENTO</div>
-                            <input type="text" class="c-carrito__descuento" placeholder="Introduce tu codigo">
-                            <button class="c-button c-button--terciario">Aplicar descuento</button>
+                            <input type="text" id="campoDescuento"class="c-carrito__descuento" placeholder="Introduce tu codigo">
+                            <button id="btnDescuento"class="c-button c-button--terciario">Aplicar descuento</button>
                         </div>
                         <hr>
                         <div
                             class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-7 g--margin-bottom-9">
                             <div class="c-carrito__nombre">PRECIO TOTAL</div>
-                            <div id="precioTotal">2.828€</div>
+                            <div id="precioFinal">2.828€</div>
                         </div>
                     </div>
 
@@ -341,6 +343,8 @@
 
     </dialog>
     <script src="./js/categories.js"> </script>
+    <script src="js/carrito.js"></script>
+    <script src="js/articulo.js"></script>
 </body>
 
 </html>
