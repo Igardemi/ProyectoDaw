@@ -192,6 +192,8 @@ function calcularDescuento(decuentos) {
 
 window.onload=()=>{
 
+    //Categorías
+
 contenido = document.getElementById("contenido");
 getCategories();
 document.getElementById("btnUsuario").addEventListener("click",()=>{document.getElementById("login").showModal()});
@@ -220,5 +222,10 @@ document.getElementById("cerrarDetalle").addEventListener("click",()=>{document.
 document.getElementById("cerrarLogin").addEventListener("click",()=>{document.getElementById("login").close();}); 
 document.getElementById("cerrarHistorial").addEventListener("click",()=>{document.getElementById("historialCarritos").close();}); 
 
-}
+//Detalle del producto
 
+document.getElementById("imagenBono").src = getImagen();
+document.getElementById("detalleTitulo").innerText = getTitulo();
+document.getElementById("detalleDescripcion").innerText = getDescripcion();
+document.getElementById("detallePrecio").innerText = getPrecio();
+}
