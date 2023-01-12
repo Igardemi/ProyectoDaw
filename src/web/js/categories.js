@@ -64,7 +64,7 @@ function getProductos(object){;
 object.opciones.forEach(opcion => {
     innerText+=`
     <div class='c-article'>
-    <img class='c-article__imagen' src="${opcion.image}" alt="foto ticket" width="300" height="200">
+    <img class='c-article__imagen' src="./assets/img/${opcion.nombre}.jpg" alt="foto ticket" width="300" height="200">
     <div class='c-article__nombre'>${opcion.nombre}</div>
     <div class='l-flex l-flex--direction-row l-flex--justify-content-center l-flex--align-content-center l-flex--gap-5'>
     <div class='c-article__duracion'>${getOption(opcion.duracion)}</div>
@@ -75,7 +75,11 @@ object.opciones.forEach(opcion => {
     <button class="c-button c-button--secundario c-article__button ${opcion.nombre} ${opcion.duracion} btnInfo">info</button>      
     </div>
     </div>`;   
-})
+
+});
+
+
+alert(object.opciones)
     innerText+="</div>"
     let lienzo = document.getElementById("contenido");
     lienzo.innerHTML=innerText;
@@ -213,19 +217,17 @@ document.getElementsByClassName("c-pago__boton--negativo")[0].addEventListener("
 document.getElementById("volver").addEventListener("click",()=>{document.getElementById("carrito").close();});
 document.getElementById("anyadirCarrito").addEventListener("click",()=>{document.getElementById("detalleProducto").close();}); 
 
-document.getElementsByClassName("c-login__iniciar")[0].addEventListener("click",()=>{
-document.getElementById("login").close();
-document.getElementById("historialCarritos").showModal()});
+// document.getElementsByClassName("c-login__iniciar")[0].addEventListener("click",()=>{
+// document.getElementById("login").close();
+// document.getElementById("historialCarritos").showModal()});
 
 
 document.getElementById("cerrarDetalle").addEventListener("click",()=>{document.getElementById("detalleProducto").close();});
 document.getElementById("cerrarLogin").addEventListener("click",()=>{document.getElementById("login").close();}); 
 document.getElementById("cerrarHistorial").addEventListener("click",()=>{document.getElementById("historialCarritos").close();}); 
 
-//Detalle del producto
+//Boton Inicio Sesion
+document.getElementById("btnInicioSesion").addEventListener("click",()=>{usoPromesa()});
 
-document.getElementById("imagenBono").src = getImagen();
-document.getElementById("detalleTitulo").innerText = getTitulo();
-document.getElementById("detalleDescripcion").innerText = getDescripcion();
-document.getElementById("detallePrecio").innerText = getPrecio();
 }
+
