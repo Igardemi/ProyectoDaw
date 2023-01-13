@@ -1,9 +1,20 @@
 class Carrito{
     constructor(id){
         this.id= id;
-        this.articulos = [];
+        this.idCliente; //introducir la id cuando alvaro acabe el login
         this.fechaCreacion = this.crearFecha();
-        this.idCliente = 0; //introducir la id cuando alvaro acabe el login
+        this.estado;
+        this.articulos = [];
+    }
+
+    setIdCliente(user){
+        this.idCliente= user;
+    }
+
+    
+
+    vaciarCarrito(){
+        this.articulos=[];
     }
 
     //ya esta
@@ -17,6 +28,7 @@ class Carrito{
 
     //ya esta
     nuevoArticulo(articulo){
+        console.log(articulo)
         let buscarRepetido = this.articulos.find(producto => producto.id == articulo.id);
         if (!buscarRepetido) {
             articulo.cantidad = 1;

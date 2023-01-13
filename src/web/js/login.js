@@ -1,4 +1,4 @@
-let usuario;
+let usuario = null;
 
 function getUsers() {
     return new Promise(function (resolve, reject) {
@@ -17,6 +17,7 @@ function getUsers() {
 }
 //No se si pasarle por parametro el array
 function iniciarSesion(datos) {
+
     let estaIniciado = false;
     let nombre = document.getElementById("user");
     let pass = document.getElementById("password");
@@ -28,11 +29,19 @@ function iniciarSesion(datos) {
             if (e.nombre == nombre.value && e.password == pass.value) {
                 usuario=e;
                 estaIniciado=true;
-                console.log(usuario);
-                gethistorial(usuario);
-                // alert("Todo ok, estaIniciado="+estaIniciado+"\nEl nombre: "+usuario);
+
+                if (carrito.articulos.length == 0) {
+                    // vacio
+                }else{
+                    carrito.setIdCliente(usuario)
+                    guardarCarrito();
+                }
+
+                getCarritos();
                 document.getElementById("login").close();
                 document.getElementById("historialCarritos").showModal()
+
+
             }
         });
         if(estaIniciado==false){
@@ -42,6 +51,7 @@ function iniciarSesion(datos) {
 }
 
 function usoPromesa() {
+    
     getUsers()
         .then((datos) => iniciarSesion(datos))
         .catch((error) => console.log(error));

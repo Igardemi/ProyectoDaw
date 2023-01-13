@@ -38,16 +38,16 @@ function paintCategories(object) {
 
 }
 
-function getOption(opciones) {
-	textInfo =
-		"<select id='opciones' name='opciones' style='height:45px; width:100px;'>";
-	let contador = 0;
-	opciones.duracion.forEach((opcion) => {
-		textInfo += `<option value="${opciones.precio[contador]}">${opcion}</option>`;
-		contador++;
-	});
-	textInfo += "</select>";
-	return textInfo;
+
+function getOption(opcion){
+    textInfo=`<select id='${opcion.nombre}' name='opciones' style='height:45px; width:100px;'>`;
+    let contador = 0;
+    opcion.duracion.forEach(duraciones => {
+        textInfo+=`<option value="${contador}">${duraciones}</option>`;
+        contador++;
+    })
+    textInfo+="</select>";
+    return textInfo;
 }
 
 /**
@@ -74,6 +74,7 @@ object.opciones.forEach(opcion => {
     </div>`;   
 
 });
+
     innerText+="</div>"
     let lienzo = document.getElementById("contenido");
     lienzo.innerHTML=innerText;
@@ -86,10 +87,10 @@ object.opciones.forEach(opcion => {
 		});
 	});
 
-
+    // boton de comprar de la tarjeta
     Array.from(document.getElementsByClassName("btnBuy")).forEach(btn =>{
         btn.addEventListener("click",()=>{
-			let duracion = document.getElementById("opciones").value;
+            let duracion = document.getElementById(btn.id).value;
             anyadirArticulosCarrito(btn.id , duracion, object.opciones);
         })
     });
@@ -102,5 +103,3 @@ object.opciones.forEach(opcion => {
 		
 
 }
-
-
