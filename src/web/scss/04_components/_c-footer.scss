@@ -1,6 +1,6 @@
 .c-footer{
  
-    background-color: getColor("principal", 1);
+    background-color: getColor("principal", 3);
     margin-top: getMargin(9);
     padding-top: getPadding(4);
     width: 100%;
@@ -26,7 +26,7 @@
     &__bottom{
         text-align: center;
         margin-top: getMargin(6);
-        background-color: getColor("grises", 1);
+        background-color: getColor("azules", 0);
         padding-top: getPadding(4);
     }
 

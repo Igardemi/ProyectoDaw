@@ -3,8 +3,7 @@
     flex-direction: column;
     justify-content: space-around;
     gap: getGap(4);
-    background: linear-gradient(to bottom, getColor("principal",1)60%, getColor("grises",1));
-    padding-left: getPadding(17);
+    background: linear-gradient(to bottom, getColor("principal",3)60%, getColor("azules",0));    padding-left: getPadding(17);
     padding-right: getPadding(17);
     padding-top: getPadding(8);
     outline-color: getColor("grises",4);

@@ -80,7 +80,7 @@
             </ul>
 
             <div class="c-footer__bottom">
-                <p class="c-footer__copyright">Easy Move © 2022 - Todos los derechos reservados</p>
+                <p class="c-footer__copyright">Emove © 2022 - Todos los derechos reservados</p>
             </div>
         </div>
     </footer>
@@ -207,31 +207,31 @@
                 <div class="g--padding-bottom-4">
                     <img src='./assets/img/tarjetas.png' height='50' width="80"></img>
                 </div>
-                <div>
-                    <div class=" g--font-size-L">Número de tarjeta</div>
-                    <input class=' c-pago__input' placeholder="xxxx xxxx xxxx xxxx"></input>
-                </div>
-                <div class=" l-flex l-flex--direction-row l-flex--justify-content-space-between">
+                <form id="payment-form">
                     <div>
-                        <div class="g--font-size-L">Fecha caducidad</div>
-                        <input class='c-pago__input' placeholder="MM/YY"></input>
+                        <div class=" g--font-size-L">Número de tarjeta</div>
+                        <input class='c-pago__input' id="card-number" placeholder="xxxx xxxx xxxx xxxx"></input>
+                    </div>
+                    <div class=" l-flex l-flex--direction-row l-flex--justify-content-space-between">
+                        <div>
+                            <div class="g--font-size-L">Fecha caducidad</div>
+                            <input class='c-pago__input' id="expiry-date" placeholder="MM/YY"></input>
+                        </div>
+                        <div>
+                            <div class="g--font-size-L">CVC/CVV</div>
+                            <input class='c-pago__input' id="cvv" placeholder="3 dígitos"></input>
+                        </div>
                     </div>
                     <div>
-                        <div class="g--font-size-L">CVC/CVV</div>
-                        <input class='c-pago__input' placeholder="3 dígitos"></input>
+                        <div class="g--font-size-L">Nombre titular</div>
+                        <input class='c-pago__input' id="cardholder" placeholder="Jonh Doe"></input>
                     </div>
-                </div>
-                <div>
-                    <div class="g--font-size-L">Nombre titular</div>
-                    <input class='c-pago__input' placeholder="Jonh Doe"></input>
-                </div>
-                <div>
-                    <input type="checkbox" id="guardarTarjeta"> Guardar para la próxima compra</input>
-                </div>
-                <div class="g--margin-top-4 l-flex l-flex--direction-row l-flex--justify-content-space-between">
-                    <button class="c-pago__boton c-pago__boton--negativo">Cancelar</button>
-                    <button class='c-pago__boton c-pago__boton--positivo'>Aceptar</button>
-                </div>
+               
+                    <div class="g--margin-top-4 l-flex l-flex--direction-row l-flex--justify-content-space-between">
+                        <button class="c-pago__boton c-pago__boton--negativo">Cancelar</button>
+                        <button class="c-pago__boton c-pago__boton--positivo" type="submit" value="pagar">Aceptar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </dialog>
