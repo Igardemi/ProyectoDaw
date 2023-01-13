@@ -42,8 +42,8 @@ function getOption(opciones) {
 	textInfo =
 		"<select id='opciones' name='opciones' style='height:45px; width:100px;'>";
 	let contador = 0;
-	opciones.forEach((opcion) => {
-		textInfo += `<option value="${contador}">${opcion}</option>`;
+	opciones.duracion.forEach((opcion) => {
+		textInfo += `<option value="${opciones.precio[contador]}">${opcion}</option>`;
 		contador++;
 	});
 	textInfo += "</select>";
@@ -64,7 +64,7 @@ object.opciones.forEach(opcion => {
     <img class='c-article__imagen' src="./assets/img/${opcion.nombre}.jpg" alt="foto ticket" width="300" height="200">
     <div class='c-article__nombre'>${opcion.nombre}</div>
     <div class='l-flex l-flex--direction-row l-flex--justify-content-center l-flex--align-content-center l-flex--gap-5'>
-    <div class='c-article__duracion'>${getOption(opcion.duracion)}</div>
+    <div class='c-article__duracion'>${getOption(opcion)}</div>
     <div class='c-article__precio'>${opcion.precio[0]} Euros</div>
     </div>
     <div class='l-flex l-flex--direction-row l-flex--gap-10 g--margin-top-6 g--margin-bottom-6'>
@@ -86,14 +86,20 @@ object.opciones.forEach(opcion => {
 		});
 	});
 
+
     Array.from(document.getElementsByClassName("btnBuy")).forEach(btn =>{
         btn.addEventListener("click",()=>{
-            let duracion = document.getElementById("opciones").value;
+			let duracion = document.getElementById("opciones").value;
             anyadirArticulosCarrito(btn.id , duracion, object.opciones);
         })
     });
 
-    
+	const select = Array.from(document.getElementsByName('opciones')).forEach((a)=>{a.addEventListener('change', ()=>{ 
+		// console.log(a.parentNode.parentNode.getElementsByClassName('c-article__precio')[0].textContent);
+		a.parentNode.parentNode.getElementsByClassName('c-article__precio')[0].textContent=a.value + " Euros";
+		
+	});});
+		
 
 }
 
