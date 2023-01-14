@@ -3,7 +3,7 @@ class Carrito{
         this.id= id;
         this.idCliente; //introducir la id cuando alvaro acabe el login
         this.fechaCreacion = this.crearFecha();
-        this.estado;
+        this.pagado=false;
         this.articulos = [];
     }
 

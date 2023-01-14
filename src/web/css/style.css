@@ -1095,8 +1095,9 @@ nav {
   border-bottom: 1px solid hsla(0deg, 0%, 50%, 0.5);
 }
 .c-table__img {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
+  padding-left: 10px;
 }
 .c-table__img:hover {
   background-color: #C9C9C9;

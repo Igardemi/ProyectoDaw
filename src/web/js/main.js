@@ -162,9 +162,5 @@ document.getElementById("cerrarLogin").addEventListener("click",()=>{document.ge
 //botones historial carritos
 document.getElementById("cerrarHistorial").addEventListener("click",()=>{document.getElementById("historialCarritos").close();}); 
 
-//probando con el boton del nav
-document.getElementById("btnNav1").addEventListener("click",()=>{gethistorial("Admin")});
-
-
 }
 

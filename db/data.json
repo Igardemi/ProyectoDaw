@@ -479,6 +479,34 @@
     }
   ],
   "carritos": [
-
+    {
+      "id": 1673699043205,
+      "fechaCreacion": "sábado, 14 de enero de 2023",
+      "pagado": false,
+      "articulos": [
+        {
+          "nombre": "Valencia Tourist Card",
+          "image": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/01/53/45.jpg",
+          "id": "Valencia Tourist Cardundefinedundefined",
+          "cantidad": 1,
+          "precio":23
+        },
+        {
+          "nombre": "Bonobus",
+          "image": "https://www.lovevalencia.com/wp-content/uploads/2011/02/movilis-e1307605552844.jpg",
+          "id": "Bonobusundefinedundefined",
+          "cantidad": 1,
+          "precio":8
+        },
+        {
+          "nombre": "Bonometro",
+          "image": "https://www.guidersvalencia.com/wp-content/uploads/2016/02/plano-metro-valencia-1014x487.jpg",
+          "id": "Bonometroundefinedundefined",
+          "cantidad": 1,
+          "precio":12
+        }
+      ],
+      "idCliente": 1
+    }
   ]
 }
