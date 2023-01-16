@@ -1,5 +1,27 @@
 let carrito;
 
+//funcion que crea los botones de las ciudades destacadas.
+function botonesNav(){
+  getCategories().then(
+    response => {
+      let botonesNav = document.getElementById("buttonsNav");
+      response.forEach(evento => {
+          if(evento.destacada==true){
+            let button = document.createElement("button");
+            button.type='button';
+            button.innerText=evento.ciudad.toUpperCase();
+            button.classList="c-header__btnCategory";
+            botonesNav.appendChild(button);
+  
+            button.addEventListener("click", () => {
+              getProductos(evento);
+            });
+          }
+      })
+    }
+  )
+  }
+
 function getDescuentos() {
   let xhr = new XMLHttpRequest();
   xhr.open("GET", "http://localhost:3000/descuentos");
@@ -149,7 +171,8 @@ window.onload = () => {
 
   //categorias y botones
   contenido = document.getElementById("contenido");
-  getCategories();
+  paintCategories();
+  botonesNav();
 
   //botones header
   document.getElementById("btnUsuario").addEventListener("click", () => {
@@ -194,4 +217,10 @@ window.onload = () => {
   document.getElementById("btnBusqueda").addEventListener("click", ()=>{
     buscar()
   });
+
+  //boton nav
+  document.getElementById("btnNav1").addEventListener("click", ()=>{
+    botonesNav();
+  });
 };
+

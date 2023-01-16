@@ -1,22 +1,29 @@
 let contenido;
 
 function getCategories() {
-	let xhr = new XMLHttpRequest();
-	xhr.open("GET", "http://localhost:3000/ciudades");
-	xhr.responseType = "json";
-	xhr.send();
-	xhr.onload = function () {
-		paintCategories(xhr.response);
-		return xhr.response;
-	};
-}
+	return new Promise(function (resolve, reject) {
+	  let xhr = new XMLHttpRequest();
+	  xhr.responseType = "json";
+	  xhr.open("GET", "http://localhost:3000/ciudades");
+	  xhr.send();
+	  xhr.onload = () => {
+		if (xhr.status == 200) {
+		  resolve(xhr.response);
+		} else {
+		  reject("no se han recibido datos");
+		}
+	  };
+	});
+  }
 
 /**
  * Recorre todas las categorias del json y las pinta en cards.
  * @param {*} object Recibe la respuesta de la Api con los datos de todas las ciudades y sus opciones
  */
-function paintCategories(object) {
-	object.forEach((element) => {
+function paintCategories() {
+	getCategories().then((object) => {
+		console.log(object);	
+	Array.from(object).forEach((element) => {
 		let enlace = document.createElement("a");
 		enlace.href = "#";
 		enlace.className = "g--decoration-none";
@@ -35,7 +42,8 @@ function paintCategories(object) {
 		enlace.appendChild(box);
 		contenido.appendChild(enlace);
 	});
-
+})
+.catch((error) => console.log(error));
 }
 
 function getOption(opciones) {
