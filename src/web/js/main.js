@@ -153,7 +153,13 @@ window.onload = () => {
 
   //botones header
   document.getElementById("btnUsuario").addEventListener("click", () => {
-    document.getElementById("login").showModal();
+    if(usuario==null){
+      document.getElementById("login").showModal()
+    }else{
+      getCarritos();
+      document.getElementById("historialCarritos").showModal();
+    }
+
   });
   document.getElementById("btnCarrito").addEventListener("click", verCarrito);
 
