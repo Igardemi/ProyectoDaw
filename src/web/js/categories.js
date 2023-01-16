@@ -89,12 +89,12 @@ object.opciones.forEach(opcion => {
 
     Array.from(document.getElementsByClassName("btnBuy")).forEach(btn =>{
         btn.addEventListener("click",()=>{
-			let duracion = document.getElementById("opciones").value;
-            anyadirArticulosCarrito(btn.id , duracion, object.opciones);
+			let posicion = btn.parentNode.parentNode.getElementsByClassName('c-article__duracion')[0].firstChild.selectedIndex;
+            anyadirArticulosCarrito(btn.id , posicion, object.opciones);
         })
     });
 
-	const select = Array.from(document.getElementsByName('opciones')).forEach((a)=>{a.addEventListener('change', ()=>{ 
+	Array.from(document.getElementsByName('opciones')).forEach((a)=>{a.addEventListener('change', ()=>{ 
 		// console.log(a.parentNode.parentNode.getElementsByClassName('c-article__precio')[0].textContent);
 		a.parentNode.parentNode.getElementsByClassName('c-article__precio')[0].textContent=a.value + " Euros";
 		

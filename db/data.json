@@ -503,7 +503,31 @@
           "image": "https://www.guidersvalencia.com/wp-content/uploads/2016/02/plano-metro-valencia-1014x487.jpg",
           "id": "Bonometroundefinedundefined",
           "cantidad": 1,
-          "precio":12
+          "precio": 12
+        }
+      ],
+      "idCliente": 1
+    },
+    {
+      "id": 1673718752460,
+      "fechaCreacion": "sábado, 14 de enero de 2023",
+      "pagado": false,
+      "articulos": [
+        {
+          "nombre": "Abono Transporte",
+          "duracion": "Billete combinado",
+          "precio": 3,
+          "image": "https://www.metrosligerosdemadrid.es/wp-content/uploads/2018/01/tarjeta_multi.jpg",
+          "id": "Abono TransporteBillete combinado3",
+          "cantidad": 1
+        },
+        {
+          "nombre": "Cercanias",
+          "duracion": "Bono tren 10 viajes",
+          "precio": 10,
+          "image": "https://www.planometromadrid.org/mapas-metro/plano-metro-madrid-accesible-2022-01.png",
+          "id": "CercaniasBono tren 10 viajes10",
+          "cantidad": 3
         }
       ],
       "idCliente": 1
