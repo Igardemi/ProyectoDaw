@@ -42,6 +42,7 @@ function getOption(opciones) {
 	textInfo =
 		"<select id='opciones' name='opciones' style='height:45px; width:100px;'>";
 	let contador = 0;
+	console.log(opciones)
 	opciones.duracion.forEach((opcion) => {
 		textInfo += `<option value="${opciones.precio[contador]}">${opcion}</option>`;
 		contador++;
@@ -54,14 +55,14 @@ function getOption(opciones) {
  * Recorre las opciones de movilidad de la ciuidad selecciona y las pinta en cards.
  * @param {*} object recibe como parametro un objeto ciudad
  */
-function getProductos(object){;
+function getProductos(object){
     document.getElementById("seleccion").innerText="Opciones de movilidad en "+object.ciudad;
     let innerText=`<div class='l-flex l-flex--wrap l-flex--gap-10 l-flex--justify-content-center'>`;
      
 object.opciones.forEach(opcion => {
     innerText+=`
     <div class='c-article'>
-    <img class='c-article__imagen' src="./assets/img/${opcion.nombre}.jpg" alt="foto ticket" width="300" height="200">
+    <img class='c-article__imagen' src="./assets/img/${opcion.image}" alt="foto ticket" width="300" height="200">
     <div class='c-article__nombre'>${opcion.nombre}</div>
     <div class='l-flex l-flex--direction-row l-flex--justify-content-center l-flex--align-content-center l-flex--gap-5'>
     <div class='c-article__duracion'>${getOption(opcion)}</div>

@@ -4,7 +4,7 @@ function muestraProducto(elemento) {
     contenedor.innerHTML =
         `
     <div id="imagenBono" class="c-detail__imagen">
-    <img src="${elemento.image}">
+    <img src="./assets/img/${elemento.image}" width="640px" height="390px">
     </div>
     <div id="datos" class="l-flex l-flex--direction-column l-flex--gap-7">
         <div class="c-close" id="cerrarDetalle">&#10005;</div>

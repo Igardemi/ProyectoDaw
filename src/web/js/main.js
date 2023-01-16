@@ -183,4 +183,9 @@ window.onload = () => {
   document.getElementById("cerrarHistorial").addEventListener("click", () => {
     document.getElementById("historialCarritos").close();
   });
+
+  //Boton busqueda
+  document.getElementById("btnBusqueda").addEventListener("click", ()=>{
+    buscar()
+  });
 };

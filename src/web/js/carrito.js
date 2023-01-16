@@ -66,7 +66,7 @@ class Carrito{
         this.articulos.forEach(producto => {
             precioTotal += producto.precio * producto.cantidad;
             sentencia += `<div class="c-item ">
-                            <img src="${producto.image}" alt="bus" class="c-item__imagen">
+                            <img src="./assets/img/${producto.image}" alt="bus" class="c-item__imagen">
                             <div class="c-item__nombre">
                                 <div class="c-item__texto c-item__texto--pequeño">${producto.duracion}</div>
                                 <div class="c-item__texto">${producto.nombre}</div>
