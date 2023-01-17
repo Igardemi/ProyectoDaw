@@ -38,14 +38,14 @@ class Carrito{
     }
 
     //ya esta
-    nuevoArticulo(articulo){
+    nuevoArticulo(articulo, unidades){
         console.log(articulo)
         let buscarRepetido = this.articulos.find(producto => producto.id == articulo.id);
         if (!buscarRepetido) {
-            articulo.cantidad = 1;
+            articulo.cantidad = unidades;
             this.articulos.push(articulo);
         }else{
-            buscarRepetido.cantidad++;
+            buscarRepetido.cantidad=Number.parseInt(unidades)+Number.parseInt(buscarRepetido.cantidad);
         }
     }
 

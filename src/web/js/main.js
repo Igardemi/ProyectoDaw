@@ -70,17 +70,21 @@ function post(newPost) {
 }
 
 // funciones de el carrito
-function anyadirArticulosCarrito(nombreArticulo, duracion, opciones) {
+function anyadirArticulosCarrito(nombreArticulo, duracion, opciones, cantidad) {
   let producto = opciones.find((a) => a.nombre == nombreArticulo);
-
+  console.log(duracion+"d")
   let articulo = new Articulo(
     producto.nombre,
     producto.duracion[duracion],
     producto.precio[duracion],
     producto.image
   );
-
-  carrito.nuevoArticulo(articulo);
+    if(cantidad!=null){
+      carrito.nuevoArticulo(articulo, cantidad);
+    }else{
+      carrito.nuevoArticulo(articulo, 1);
+    }
+  
 }
 
 function verCarrito() {
@@ -91,6 +95,12 @@ function verCarrito() {
     dialog.close();
   }
   dialog.showModal();
+
+  let articulosTotales=0;
+  carrito.articulos.forEach(articulo=>{
+    articulosTotales+=articulo.cantidad;
+  });
+  document.getElementById("cantidadArticulos").innerHTML="ARTICULOS: "+articulosTotales;
 
   let listaProductos = document.getElementById("carritoProductos");
   let precioTotal = document.getElementById("precioTotal");
@@ -262,10 +272,14 @@ window.onload = () => {
   });
 
   //Boton busqueda
-  document.getElementById("btnBusqueda").addEventListener("click", ()=>{
-    buscar()
+  document.getElementById("busqueda").addEventListener("keyup", function(event){
+    if(event.code==='Enter'){
+      document.getElementById("btnBusqueda").click();
+    }
+    
   });
-
-
+  document.getElementById("btnBusqueda").onclick = function(){
+    buscar();
+  }
 };
 

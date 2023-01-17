@@ -89,7 +89,7 @@ object.opciones.forEach(opcion => {
 
    Array.from(document.getElementsByClassName("btnInfo")).forEach((btn) => {
 		btn.addEventListener("click", () => {
-			muestraProducto(object.opciones.find((a) => a.nombre == btn.getAttribute("ref")));
+			muestraProducto(object.opciones.find((a) => a.nombre == btn.getAttribute("ref")), object);
             //pinta el modal
 			document.getElementById("detalleProducto").showModal();
 		});
