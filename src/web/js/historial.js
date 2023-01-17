@@ -68,7 +68,6 @@ function paintHistorial(carritos){
                 </tr>`
             }
             
-            //faltan los botones
         });
         historialTabla.innerHTML=tr;
 

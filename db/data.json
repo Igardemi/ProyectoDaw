@@ -574,6 +574,70 @@
         }
       ],
       "fechaCreacion": "martes, 17 de enero de 2023"
+    },
+    {
+      "id": 1673985095868,
+      "idCliente": 1,
+      "pagado": false,
+      "articulos": [
+        {
+          "nombre": "Ticket t+",
+          "duracion": "Sencillo",
+          "precio": 8.5,
+          "image": "Ticket t+.jpg",
+          "id": "Ticket t+Sencillo8.5",
+          "cantidad": 1
+        },
+        {
+          "nombre": "Passe Navigo",
+          "duracion": "Semanal",
+          "precio": 22.8,
+          "image": "Passe Navigo.jpg",
+          "id": "Passe NavigoSemanal22.8",
+          "cantidad": 1
+        },
+        {
+          "nombre": "Vélib’",
+          "duracion": "TICKET-V 45 min",
+          "precio": 3,
+          "image": "Vélib’.jpg",
+          "id": "Vélib’TICKET-V 45 min3",
+          "cantidad": 3
+        }
+      ],
+      "fechaCreacion": "martes, 17 de enero de 2023"
+    },
+    {
+      "id": 1673985173023,
+      "idCliente": 1,
+      "pagado": false,
+      "articulos": [
+        {
+          "nombre": "Tranvia",
+          "duracion": "Sencillo",
+          "precio": 3.2,
+          "image": "Tranvia.jpg",
+          "id": "TranviaSencillo3.2",
+          "cantidad": 1
+        },
+        {
+          "nombre": "Metro de Amsterdam",
+          "duracion": "Sencillo",
+          "precio": 3.2,
+          "image": "Metro de Amsterdam.jpg",
+          "id": "Metro de AmsterdamSencillo3.2",
+          "cantidad": 1
+        },
+        {
+          "nombre": "Bicicletas",
+          "duracion": "1 día",
+          "precio": 12,
+          "image": "Bicicletas.jpg",
+          "id": "Bicicletas1 día12",
+          "cantidad": 2
+        }
+      ],
+      "fechaCreacion": "martes, 17 de enero de 2023"
     }
   ]
 }

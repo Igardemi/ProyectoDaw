@@ -72,7 +72,6 @@ function post(newPost) {
 // funciones de el carrito
 function anyadirArticulosCarrito(nombreArticulo, duracion, opciones, cantidad) {
   let producto = opciones.find((a) => a.nombre == nombreArticulo);
-  console.log(duracion+"d")
   let articulo = new Articulo(
     producto.nombre,
     producto.duracion[duracion],
@@ -208,7 +207,7 @@ function guardarCarrito() {
     }else{
       post(carrito).then(gethistorial());
     }
-    console.log(carritos)
+    console.log("carrito guardado")
   })
   
   
@@ -216,7 +215,7 @@ function guardarCarrito() {
 
 function cargarCarrito(cartId){
   getCarritos().then((datos) => {
-    console.log(datos);
+    // console.log(datos);
     let carroRecuperado = datos.find(element => element.id == cartId);
     let carroObjecto= new Carrito(carroRecuperado.id, carroRecuperado.idCliente, carroRecuperado.fechaCreacion, carroRecuperado.articulos)
     carrito=carroObjecto;

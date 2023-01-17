@@ -92,7 +92,7 @@
                         CARRITO
                         <hr>
                     </div>
-                    <div id="carritoProductos" class="l-flex l-flex--direction-column">
+                    <div id="carritoProductos" class="l-flex l-flex--direction-column l-flex--gap-5" style="height: 500px; overflow: auto;">
                         
                     </div>
 
@@ -238,14 +238,17 @@
     <!-- historial de carritos -->
 
     <dialog id="historialCarritos" class="c-modal c-modal--historial">
-        
+        <div class="l-flex l-flex--direction-column" style="height: 600px; overflow: auto;">
         <div id="cerrarHistorial" class="c-close g--padding-top-7 g--margin-right-12">&#10005;</div>
         <table id="tablaHistorial"class="c-table">
             
         </table>
-        
-        <a href=""><div class="c-button c-button--secundario g--margin-top-auto g--margin-right-auto"> Cerrar sesión</div></a>
-
+        </div>
+        <div class="l-flex l-flex--direction-column">
+        <div class="g--margin-top-auto g--margin-left-auto g--padding-8">
+            <a href=""><div class="c-button c-button--secundario"> Cerrar sesión</div></a>
+        </div>
+    </div>
     </dialog>
 
     <script src="./js/carrito.js"></script>
