@@ -638,6 +638,22 @@
         }
       ],
       "fechaCreacion": "martes, 17 de enero de 2023"
+    },
+    {
+      "id": 1673986419641,
+      "idCliente": 2,
+      "pagado": false,
+      "articulos": [
+        {
+          "nombre": "Yego urban mobility",
+          "duracion": "Seed",
+          "precio": 9.9,
+          "image": "Yego urban mobility.jpg",
+          "id": "Yego urban mobilitySeed9.9",
+          "cantidad": 1
+        }
+      ],
+      "fechaCreacion": "martes, 17 de enero de 2023"
     }
   ]
 }
