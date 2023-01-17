@@ -22,6 +22,24 @@ function botonesNav(){
   )
   }
 
+
+  function put(newPost) {
+    return new Promise (function(resolve,reject){
+    let xhr = new XMLHttpRequest();
+    xhr.responseType = "json";
+    xhr.open( "PUT", "http://localhost:3000/carritos/" + newPost['id']);
+    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+    xhr.send(JSON.stringify(newPost));
+
+    xhr.onload = () => {
+        if (xhr.status == 200) {
+            resolve("se ha insertado correctamente")
+        }else{
+            reject("no se ha insertado")
+        }
+    }
+    })
+}
 function getDescuentos() {
   let xhr = new XMLHttpRequest();
   xhr.open("GET", "http://localhost:3000/descuentos");
@@ -33,7 +51,7 @@ function getDescuentos() {
   };
 }
 
-function post(newPost, idUsuario) {
+function post(newPost) {
   return new Promise(function (resolve, reject) {
     let xhr = new XMLHttpRequest();
     xhr.responseType = "json";
@@ -80,7 +98,6 @@ function verCarrito() {
 
   precioFinal.innerHTML = "0";
   precioTotal.innerHTML = "0";
-
   let productos = carrito.crearCarrito();
   listaProductos.innerHTML = productos.html;
   precioTotal.innerHTML = productos.total;
@@ -93,10 +110,20 @@ function botonesCarrito() {
   document.getElementById("btnPagar").addEventListener("click", () => {
     document.getElementById("carrito").close();
     if (usuario != null) {
-      document.getElementById("pago").showModal();
+      
+      if (carrito.articulos.length != 0) {
+        document.getElementById("pago").close();
+        document.getElementById("pago").showModal();
+        guardarCarrito();
+      }else{
+        alert("debe añadir aticulos para pagar")
+      }
+      
     } else {
       document.getElementById("login").close();
       document.getElementById("login").showModal();
+
+
     }
   });
 
@@ -162,8 +189,29 @@ function calcularDescuento(decuentos) {
 
 function guardarCarrito() {
   carrito.setIdCliente(usuario.id);
-  console.log(carrito);
-  post(carrito).then();
+
+  //comprobar si existe
+  getCarritos().then(carritos => {
+    let busqueda = carritos.find(cesta => cesta.id == carrito.id);
+    if (busqueda) {
+      put(carrito).then(gethistorial())
+    }else{
+      post(carrito).then(gethistorial());
+    }
+    console.log(carritos)
+  })
+  
+  
+}
+
+function cargarCarrito(cartId){
+  getCarritos().then((datos) => {
+    console.log(datos);
+    let carroRecuperado = datos.find(element => element.id == cartId);
+    let carroObjecto= new Carrito(carroRecuperado.id, carroRecuperado.idCliente, carroRecuperado.fechaCreacion, carroRecuperado.articulos)
+    carrito=carroObjecto;
+    console.log("carrito recuperado");  
+  })
 }
 
 window.onload = () => {
@@ -218,9 +266,6 @@ window.onload = () => {
     buscar()
   });
 
-  //boton nav
-  document.getElementById("btnNav1").addEventListener("click", ()=>{
-    botonesNav();
-  });
+
 };
 

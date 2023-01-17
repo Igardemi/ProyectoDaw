@@ -22,7 +22,7 @@ function getCategories() {
  */
 function paintCategories() {
 	getCategories().then((object) => {
-		console.log(object);	
+		// console.log(object);	
 	Array.from(object).forEach((element) => {
 		let enlace = document.createElement("a");
 		enlace.href = "#";

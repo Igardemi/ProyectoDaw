@@ -30,14 +30,13 @@ function iniciarSesion(datos) {
                 usuario=e;
                 estaIniciado=true;
 
-                if (carrito.articulos.length == 0) {
-                    // vacio
-                }else{
-                    carrito.setIdCliente(usuario)
+                if (carrito.articulos.length != 0) {
                     guardarCarrito();
                 }
 
-                getCarritos();
+
+
+                gethistorial();
                 document.getElementById("login").close();
                 document.getElementById("historialCarritos").showModal()
 

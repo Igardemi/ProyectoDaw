@@ -1,27 +1,3 @@
-// function getCarritos(){
-//     let xhr = new XMLHttpRequest();
-//       xhr.open("GET", "http://localhost:3000/carritos");
-//       xhr.responseType = "json";
-//       xhr.send();
-//       xhr.onload = function () {
-//           gethistorial(xhr.response)
-//           return xhr.response;
-//       };
-//   }
-
-
-
-function gethistorial(carritos){
-    let busqueda = carritos.filter(carrito => carrito.idCliente == usuario.id)
-    if(usuario!=null){
-        paintHistorial(busqueda);
-    }
-    else{
-        alert("No tiene carritos")
-    }
-
-}
-
 function getCarritos(){
 	return new Promise(function(resolve,reject){
         xhr= new XMLHttpRequest();       
@@ -30,13 +6,25 @@ function getCarritos(){
         xhr.send();
         xhr.onload=function(){
             if(xhr.status==200){          
-                resolve(gethistorial(xhr.response));
+                resolve(xhr.response);
             }
             else{
                 reject("Error..."+xhr.statusText);
             }
         }
     })
+}
+
+function gethistorial(){
+    getCarritos().then((data) => {
+        let busqueda = data.filter(carrito => carrito.idCliente == usuario.id)
+        if(usuario!=null){
+            paintHistorial(busqueda);
+        }
+        else{
+            alert("No tiene carritos")
+        }
+    }).catch((error) => console.log(error))
 }
 
 function paintHistorial(carritos){
@@ -49,21 +37,22 @@ function paintHistorial(carritos){
     <td class="c-table__item">Total</td>
     <td class="c-table__item">Estado</td>
     <td class="c-table__item">Operaciones</td>
-    </tr>
-    `
+    </tr>` 
     
-    let total=0;
     if(carritos.length != 0){
+
         Array.from(carritos).forEach(carro => {
+            let total=0;
             carro.articulos.forEach(articulo => {
-                total = total + articulo.precio;
+                total = total + articulo.precio*articulo.cantidad;
             });
+            total = total.toFixed(2);
 
             tr+=`<tr class="c-table__elementos">
                 <td class="c-table__item">${carro.id}</td>
                 <td class="c-table__item">${carro.fechaCreacion}</td>
                 <td class="c-table__item">${total}</td>
-                <td class="c-table__item">${(carro.stado)?"Pagado":"No Pagado"}</td>
+                <td class="c-table__item">${(carro.pagado)?"Pagado":"No Pagado"}</td>
                 <td class="c-table__item c-table__item--buttons">`;
             if(!carro.pagado){
                 tr+=`
@@ -84,7 +73,9 @@ function paintHistorial(carritos){
         historialTabla.innerHTML=tr;
 
         Array.from(document.getElementsByClassName('RemoveCart')).forEach(a=>a.addEventListener('click', ()=>{borrarCarrito(a.id)}));
-        Array.from(document.getElementsByClassName('recoverCart')).forEach(a=>a.addEventListener('click', ()=>{console.log(a.id)}));
+        Array.from(document.getElementsByClassName('recoverCart')).forEach(a=>a.addEventListener('click', ()=>{
+                cargarCarrito(a.id);
+            }));
     }
     else{
         historialTabla.innerHTML=tr;
@@ -97,7 +88,7 @@ function borrarCarrito(id){
           xhr.responseType = "json";
           xhr.send();
           xhr.onload = function () {
-            getCarritos();
+                gethistorial();
               return xhr.response;
           };
 }

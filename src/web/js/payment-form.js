@@ -8,12 +8,15 @@ document.getElementsByClassName("c-pago__boton--positivo")[0].addEventListener("
     if (comprobarValores() == true){
       alert("Has pagado correctamente");
       carrito.pagado = true;
-      console.log(carrito);
+      put(carrito).then(datos =>{
+        console.log(carrito)
+        gethistorial()
+        carrito = new Carrito(Date.now())
+      })
     }
 });
 
 function comprobarValores(){
-  let resultado = true;
 
   if (cardNumber.value === "" || expDate.value === "" || cvv.value === "" || cardholder.value === "") {
     alert("Por favor complete todos los campos del formulario")

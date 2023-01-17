@@ -1,10 +1,22 @@
 class Carrito{
-    constructor(id){
-        this.id= id;
-        this.idCliente; //introducir la id cuando alvaro acabe el login
-        this.fechaCreacion = this.crearFecha();
+    // constructor(id){
+    //     this.id= id;
+    //     this.idCliente; //introducir la id cuando alvaro acabe el login
+    //     this.fechaCreacion = this.crearFecha();
+    //     this.pagado=false;
+    //     this.articulos = [];
+    // }
+    constructor(_id, _idcliente=null, _fechaCreacion=null, _articulos=[]){
+        this.id= _id;
+        this.idCliente= _idcliente; //introducir la id cuando alvaro acabe el login     
         this.pagado=false;
-        this.articulos = [];
+        this.articulos = _articulos;
+        if( _fechaCreacion==null){
+            this.fechaCreacion = this.crearFecha();
+        }
+        else{
+            this.fechaCreacion = _fechaCreacion;
+        }
     }
 
     setIdCliente(user){
@@ -12,7 +24,6 @@ class Carrito{
     }
 
     
-
     vaciarCarrito(){
         this.articulos=[];
     }
@@ -54,8 +65,12 @@ class Carrito{
         }
         if (unidades == -1) {
             articulo.cantidad--;
+            if(articulo.cantidad <= 0){
+                this.borrarArticulo(idArt);
+            }
             verCarrito();
         }
+
         
     }
 
