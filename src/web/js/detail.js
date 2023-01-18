@@ -23,13 +23,6 @@ function muestraProducto(elemento, object) {
         <button id="anyadirCarrito" class="c-button botonComprar">Añadir a carrito</button>
     </div>
 `;
-
-    // console.log(listaDuracion.findIndex(listaDuracion.value));
-    // let listaDuracion = document.getElementById("duracion");
-    // elemento.duracion.forEach(tipo => {
-    //     listaDuracion.innerHTML += `<option>${tipo}</option>`;
-
-    // });
     let selectDuracion = document.getElementById("duracion");
     elemento.duracion.forEach(e =>{
         let opcion = document.createElement("option");
@@ -57,14 +50,10 @@ function muestraProducto(elemento, object) {
         let valorInput = document.getElementById("cantidadProducto").value;
         document.getElementById("detallePrecio").innerHTML=elemento.precio[posicionDuracion]*valorInput+"€";
     });
-
-    //Da algun problema
     document.getElementById("anyadirCarrito").addEventListener("click", function(){
         let cantidad = document.getElementById("cantidadProducto").value;
         anyadirArticulosCarrito(elemento.nombre,posicionDuracion,object.opciones, cantidad)
-
-        
-
+        alert("Producto añadido al carrito");
     });
 
 }

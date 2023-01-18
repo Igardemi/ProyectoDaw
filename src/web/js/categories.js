@@ -100,11 +100,11 @@ object.opciones.forEach(opcion => {
         btn.addEventListener("click",()=>{
 			let posicion = btn.parentNode.parentNode.getElementsByClassName('c-article__duracion')[0].firstChild.selectedIndex;
             anyadirArticulosCarrito(btn.id , posicion, object.opciones);
+			alert("Producto añadido al carrito");
         })
     });
 
 	Array.from(document.getElementsByName('opciones')).forEach((a)=>{a.addEventListener('change', ()=>{ 
-		// console.log(a.parentNode.parentNode.getElementsByClassName('c-article__precio')[0].textContent);
 		a.parentNode.parentNode.getElementsByClassName('c-article__precio')[0].textContent=a.value + " Euros";
 		
 	});});
