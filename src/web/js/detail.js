@@ -43,17 +43,16 @@ function muestraProducto(elemento, object) {
     document.getElementById("botonRestarUnidad").addEventListener("click", () =>{
         restarUnidad();
         let valorInput = document.getElementById("cantidadProducto").value;
-        document.getElementById("detallePrecio").innerHTML=elemento.precio[posicionDuracion]*valorInput+"€";
+        document.getElementById("detallePrecio").innerHTML=(elemento.precio[posicionDuracion]*valorInput).toFixed(2)+"€";
     });
     document.getElementById("botonSumarUnidad").addEventListener("click", () =>{
         sumarUnidad();
         let valorInput = document.getElementById("cantidadProducto").value;
-        document.getElementById("detallePrecio").innerHTML=elemento.precio[posicionDuracion]*valorInput+"€";
+        document.getElementById("detallePrecio").innerHTML=(elemento.precio[posicionDuracion]*valorInput).toFixed(2)+"€";
     });
     document.getElementById("anyadirCarrito").addEventListener("click", function(){
         let cantidad = document.getElementById("cantidadProducto").value;
         anyadirArticulosCarrito(elemento.nombre,posicionDuracion,object.opciones, cantidad)
-        alert("Producto añadido al carrito");
     });
 
 }
