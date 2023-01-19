@@ -9,10 +9,15 @@ document.getElementsByClassName("c-pago__boton--positivo")[0].addEventListener("
       alert("Has pagado correctamente");
       carrito.pagado = true;
       put(carrito).then(datos =>{
-        console.log(carrito)
-        gethistorial()
-        carrito = new Carrito(Date.now())
+        console.log(carrito);
+        gethistorial();
+        carrito = new Carrito(Date.now());
+        updateItemCount();
+        document.getElementById('pago').close();
       })
+    }
+    else{
+      alert("No has podido realizar el pago correctamente");
     }
 });
 

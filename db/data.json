@@ -642,7 +642,7 @@
     {
       "id": 1673986419641,
       "idCliente": 2,
-      "pagado": false,
+      "pagado": true,
       "articulos": [
         {
           "nombre": "Yego urban mobility",
@@ -654,6 +654,94 @@
         }
       ],
       "fechaCreacion": "martes, 17 de enero de 2023"
+    },
+    {
+      "id": 1674148806364,
+      "idCliente": 2,
+      "pagado": true,
+      "articulos": [
+        {
+          "nombre": "Abono Transporte",
+          "duracion": "Sencillo",
+          "precio": 1.5,
+          "image": "Abono Transporte.jpg",
+          "id": "Abono TransporteSencillo1.5",
+          "cantidad": 1
+        },
+        {
+          "nombre": "Cercanias",
+          "duracion": "Billete Sencillo",
+          "precio": 1.7,
+          "image": "Cercanias.jpg",
+          "id": "CercaniasBillete Sencillo1.7",
+          "cantidad": 1
+        },
+        {
+          "nombre": "Tarjeta turistica",
+          "duracion": "1 día",
+          "precio": 17,
+          "image": "Tarjeta turistica.jpg",
+          "id": "Tarjeta turistica1 día17",
+          "cantidad": 1
+        },
+        {
+          "nombre": "BiciMAD",
+          "duracion": "Tarjeta Ocasional",
+          "precio": 10,
+          "image": "BiciMAD.jpg",
+          "id": "BiciMADTarjeta Ocasional10",
+          "cantidad": 1
+        },
+        {
+          "nombre": "Acciona Movilidad",
+          "duracion": "Bono 35min",
+          "precio": 9,
+          "image": "Acciona Movilidad.jpg",
+          "id": "Acciona MovilidadBono 35min9",
+          "cantidad": 1
+        }
+      ],
+      "fechaCreacion": "jueves, 19 de enero de 2023"
+    },
+    {
+      "id": 1674149584248,
+      "idCliente": 2,
+      "pagado": false,
+      "articulos": [
+        {
+          "nombre": "Bonobus",
+          "duracion": "10 viajes",
+          "precio": 8.5,
+          "image": "Bonobus.jpg",
+          "id": "Bonobus10 viajes8.5",
+          "cantidad": 1
+        },
+        {
+          "nombre": "Bonometro",
+          "duracion": "1 zona",
+          "precio": 8,
+          "image": "Bonometro.jpg",
+          "id": "Bonometro1 zona8",
+          "cantidad": 1
+        },
+        {
+          "nombre": "Valenbisi",
+          "duracion": "7 días",
+          "precio": 13.3,
+          "image": "Valenbisi.jpg",
+          "id": "Valenbisi7 días13.3",
+          "cantidad": 1
+        },
+        {
+          "nombre": "Yego urban mobility",
+          "duracion": "Seed",
+          "precio": 9.9,
+          "image": "Yego urban mobility.jpg",
+          "id": "Yego urban mobilitySeed9.9",
+          "cantidad": 1
+        }
+      ],
+      "fechaCreacion": "jueves, 19 de enero de 2023"
     }
   ]
 }

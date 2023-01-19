@@ -380,6 +380,22 @@ nav {
   cursor: pointer;
 }
 
+#item-count {
+  position: relative;
+  top: 50%;
+  right: 25%;
+  height: 15px;
+  width: 15px;
+  transform: translate(50%, -50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: #3b88c7;
+  border-radius: 50%;
+  padding: 3px;
+  text-align: center;
+}
+
 .l-grid {
   display: grid;
 }
@@ -704,7 +720,7 @@ nav {
   margin-top: 10px;
   font-size: 16px;
   padding: 10px;
-  color: #7A7A7A;
+  color: #292929;
   box-sizing: border-box;
   width: 100%;
   background-color: #F7F7F7;

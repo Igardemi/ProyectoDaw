@@ -83,6 +83,7 @@ function anyadirArticulosCarrito(nombreArticulo, duracion, opciones, cantidad) {
     }else{
       carrito.nuevoArticulo(articulo, 1);
     }
+    updateItemCount();
   
 }
 
@@ -100,7 +101,7 @@ function verCarrito() {
     articulosTotales+=articulo.cantidad;
   });
   document.getElementById("cantidadArticulos").innerHTML="ARTICULOS: "+articulosTotales;
-
+  
   let listaProductos = document.getElementById("carritoProductos");
   let precioTotal = document.getElementById("precioTotal");
   let precioFinal = document.getElementById("precioFinal");
@@ -113,6 +114,7 @@ function verCarrito() {
   precioFinal.innerHTML = productos.total;
 
   botonesArticulos();
+  updateItemCount();
 }
 
 function botonesCarrito() {
@@ -142,6 +144,7 @@ function botonesCarrito() {
 
   document.getElementById("borrarCarrito").addEventListener("click", () => {
     carrito.vaciarCarrito();
+    updateItemCount();
     document.getElementById("carrito").close();
   });
 
@@ -213,7 +216,7 @@ function guardarCarrito() {
   
 }
 
-function cargarCarrito(cartId){
+function cargarCarrito(cartId){  
   getCarritos().then((datos) => {
     // console.log(datos);
     let carroRecuperado = datos.find(element => element.id == cartId);
@@ -223,8 +226,23 @@ function cargarCarrito(cartId){
   })
 }
 
+//contador carrito
+function updateItemCount() {
+  let count = 0;
+  carrito.articulos.forEach(articulo=>{
+    count+=Number.parseInt(articulo.cantidad);
+  });
+  if (count == 0 || count==undefined) {
+      document.getElementById("item-count").style.display = "none";
+  } else {
+      document.getElementById("item-count").style.display = "block";
+      document.getElementById("item-count").innerHTML = count;
+  }
+}
+
 window.onload = () => {
   carrito = new Carrito(Date.now());
+  updateItemCount();
 
   //categorias y botones
   contenido = document.getElementById("contenido");
