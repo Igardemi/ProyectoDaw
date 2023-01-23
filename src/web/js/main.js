@@ -27,12 +27,13 @@ function botonesNav(){
     return new Promise (function(resolve,reject){
     let xhr = new XMLHttpRequest();
     xhr.responseType = "json";
-    xhr.open( "PUT", "http://localhost:3000/carritos/" + newPost['id']);
+    xhr.open( "PUT", "http://localhost:8000/api/carritos/" + newPost['id']);
     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     xhr.send(JSON.stringify(newPost));
 
     xhr.onload = () => {
         if (xhr.status == 200) {
+            gethistorial()
             resolve("se ha insertado correctamente")
         }else{
             reject("no se ha insertado")
@@ -42,7 +43,7 @@ function botonesNav(){
 }
 function getDescuentos() {
   let xhr = new XMLHttpRequest();
-  xhr.open("GET", "http://localhost:3000/descuentos");
+  xhr.open("GET", "http://localhost:8000/api/descuentos");
   xhr.responseType = "json";
   xhr.send();
   xhr.onload = function () {
@@ -55,12 +56,13 @@ function post(newPost) {
   return new Promise(function (resolve, reject) {
     let xhr = new XMLHttpRequest();
     xhr.responseType = "json";
-    xhr.open("POST", "http://localhost:3000/carritos/");
+    xhr.open("POST", "http://localhost:8000/api/carritos/");
     xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
     xhr.send(JSON.stringify(newPost));
 
     xhr.onload = () => {
       if (xhr.status == 201) {
+        gethistorial();
         resolve("se ha insertado correctamente");
       } else {
         reject("no se ha insertado");
@@ -120,23 +122,17 @@ function verCarrito() {
 function botonesCarrito() {
   document.getElementById("btnPagar").addEventListener("click", () => {
     document.getElementById("carrito").close();
-    if (usuario != null) {
-      
-      if (carrito.articulos.length != 0) {
-        document.getElementById("pago").close();
-        document.getElementById("pago").showModal();
-        guardarCarrito();
-      }else{
-        alert("debe añadir aticulos para pagar")
-      }
-      
-    } else {
+    if (usuario == null || carrito.articulos.length == 0) {    
       document.getElementById("login").close();
       document.getElementById("login").showModal();
+    } 
+    else {
+      guardarCarrito();
+      document.getElementById("pago").close();
+      document.getElementById("pago").showModal();
+  }
 
-
-    }
-  });
+});
 
   document.getElementById("volver").addEventListener("click", () => {
     document.getElementById("carrito").close();
@@ -200,20 +196,18 @@ function calcularDescuento(decuentos) {
 }
 
 function guardarCarrito() {
-  carrito.setIdCliente(usuario.id);
-
-  //comprobar si existe
+  carrito.setIdCliente(usuario._id);
   getCarritos().then(carritos => {
     let busqueda = carritos.find(cesta => cesta.id == carrito.id);
+    alert('hola')
     if (busqueda) {
-      put(carrito).then(gethistorial())
+      put(carrito);
     }else{
-      post(carrito).then(gethistorial());
+      post(carrito);
     }
     console.log("carrito guardado")
   })
-  
-  
+   
 }
 
 function cargarCarrito(cartId){  
@@ -277,7 +271,7 @@ window.onload = () => {
   document
     .getElementsByClassName("c-login__iniciar")[0]
     .addEventListener("click", () => {
-      usoPromesa();
+    usoPromesa();
     });
   document.getElementById("cerrarLogin").addEventListener("click", () => {
     document.getElementById("login").close();

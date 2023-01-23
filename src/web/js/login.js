@@ -3,7 +3,7 @@ let usuario = null;
 function getUsers() {
     return new Promise(function (resolve, reject) {
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://localhost:3000/usuarios");
+        xhr.open("GET", "http://localhost:8000/api/usuarios");
         xhr.responseType = "json";
         xhr.send();
         xhr.onload = function () {
@@ -25,22 +25,16 @@ function iniciarSesion(datos) {
     if (nombre.value == "" && pass.value == "") {
         alert("Introduce los dos datos");
     } else {
-        datos.forEach((e) => {
-            if (e.nombre == nombre.value && e.password == pass.value) {
-                usuario=e;
+        datos.forEach((user) => {
+            if (user.nombre == nombre.value && user.password == pass.value) {
+                usuario=user;
                 estaIniciado=true;
-
                 if (carrito.articulos.length != 0) {
                     guardarCarrito();
                 }
-
-
-
                 gethistorial();
                 document.getElementById("login").close();
                 document.getElementById("historialCarritos").showModal()
-
-
             }
         });
         if(estaIniciado==false){
@@ -49,9 +43,6 @@ function iniciarSesion(datos) {
     }
 }
 
-function usoPromesa() {
-    
-    getUsers()
-        .then((datos) => iniciarSesion(datos))
-        .catch((error) => console.log(error));
+function usoPromesa() {  
+    getUsers().then((datos) => iniciarSesion(datos)).catch((error) => console.log(error));
 }

@@ -4,7 +4,7 @@ function getCategories() {
 	return new Promise(function (resolve, reject) {
 	  let xhr = new XMLHttpRequest();
 	  xhr.responseType = "json";
-	  xhr.open("GET", "http://localhost:3000/ciudades");
+	  xhr.open("GET", "http://127.0.0.1:8000/api/ciudades");
 	  xhr.send();
 	  xhr.onload = () => {
 		if (xhr.status == 200) {
@@ -50,7 +50,6 @@ function getOption(opciones) {
 	textInfo =
 		"<select id='opciones' name='opciones' style='height:45px; width:100px;'>";
 	let contador = 0;
-	console.log(opciones)
 	opciones.duracion.forEach((opcion) => {
 		textInfo += `<option value="${opciones.precio[contador]}">${opcion}</option>`;
 		contador++;

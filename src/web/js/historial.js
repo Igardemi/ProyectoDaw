@@ -1,7 +1,7 @@
 function getCarritos(){
 	return new Promise(function(resolve,reject){
         xhr= new XMLHttpRequest();       
-        xhr.open("GET","http://localhost:3000/carritos");
+        xhr.open("GET","http://localhost:8000/api/carritos");
         xhr.responseType="json";
         xhr.send();
         xhr.onload=function(){
@@ -17,7 +17,7 @@ function getCarritos(){
 
 function gethistorial(){
     getCarritos().then((data) => {
-        let busqueda = data.filter(carrito => carrito.idCliente == usuario.id)
+        let busqueda = data.filter(carrito => carrito.idCliente == usuario._id)
         if(usuario!=null){
             paintHistorial(busqueda);
         }
@@ -83,7 +83,7 @@ function paintHistorial(carritos){
 
 function borrarCarrito(id){
         let xhr = new XMLHttpRequest();
-          xhr.open("DELETE", "http://localhost:3000/carritos/"+id);
+          xhr.open("DELETE", "http://localhost:8000/api/carritos/"+id);
           xhr.responseType = "json";
           xhr.send();
           xhr.onload = function () {

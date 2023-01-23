@@ -28,7 +28,6 @@ class Carrito{
         this.articulos=[];
     }
 
-    //ya esta
     crearFecha(){
         let meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
         let dias_semana = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
@@ -37,9 +36,8 @@ class Carrito{
         return fechaCompleta;
     }
 
-    //ya esta
     nuevoArticulo(articulo, unidades){
-        console.log(articulo)
+        // console.log(articulo)
         let buscarRepetido = this.articulos.find(producto => producto.id == articulo.id);
         if (!buscarRepetido) {
             articulo.cantidad = unidades;
@@ -49,14 +47,12 @@ class Carrito{
         }
     }
 
-    //ya esta
     borrarArticulo(idArt){
         let posicionArt = this.articulos.findIndex(articulo => articulo.id == idArt);
         this.articulos.splice(posicionArt,1);
         verCarrito();
     }
 
-    //ya esta
     modificarUnidades(idArt, unidades){
         let articulo = this.articulos.find(art => art.id == idArt);
         if (unidades == 1) {

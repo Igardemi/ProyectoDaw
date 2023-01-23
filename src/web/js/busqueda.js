@@ -2,7 +2,7 @@
 function getCategoriasBusqueda() {
 	return new Promise(function (resolve, reject) {
 		let xhr = new XMLHttpRequest();
-		xhr.open("GET", "http://localhost:3000/ciudades/");
+		xhr.open("GET", "http://127.0.0.1:8000/api/ciudades");
 		xhr.responseType = "json";
 		xhr.send();
 		xhr.onload = function () {
@@ -46,7 +46,7 @@ function verCoincidencias(datos) {
 		texto += "No hay ninguna coincidencia";
 	} else {
 		datos.forEach(elm => {
-			console.log(elm);
+			// console.log(elm);
 			texto += `
       <div class='c-article'>
       <img class='c-article__imagen' src="./assets/img/${
