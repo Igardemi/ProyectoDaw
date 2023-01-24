@@ -49,21 +49,21 @@ function paintHistorial(carritos){
             total = total.toFixed(2);
 
             tr+=`<tr class="c-table__elementos">
-                <td class="c-table__item">${carro.id}</td>
+                <td class="c-table__item">${carro._id}</td>
                 <td class="c-table__item">${carro.fechaCreacion}</td>
                 <td class="c-table__item">${total}</td>
                 <td class="c-table__item">${(carro.pagado)?"Pagado":"No Pagado"}</td>
                 <td class="c-table__item c-table__item--buttons">`;
             if(!carro.pagado){
                 tr+=`
-                 <img id="${carro.id}" src="assets/img/modificar.png" alt="recuperar" class="c-table__img recoverCart">
-                 <img id="${carro.id}" src="assets/img/papelera.png" alt="borrar" class="c-table__img RemoveCart">
+                 <img id="${carro._id}" src="assets/img/modificar.png" alt="recuperar" class="c-table__img recoverCart">
+                 <img id="${carro._id}" src="assets/img/papelera.png" alt="borrar" class="c-table__img RemoveCart">
                 </td>
                  </tr>`
             }
             else{
                 tr+=`
-                 <img id="${carro.id}" src="assets/img/papelera.png" alt="borrar" class="c-table__img RemoveCart">
+                 <img id="${carro._id}" src="assets/img/papelera.png" alt="borrar" class="c-table__img RemoveCart">
                 </td>
                 </tr>`
             }
@@ -82,6 +82,7 @@ function paintHistorial(carritos){
 }
 
 function borrarCarrito(id){
+
         let xhr = new XMLHttpRequest();
           xhr.open("DELETE", "http://localhost:8000/api/carritos/"+id);
           xhr.responseType = "json";

@@ -6,16 +6,16 @@ class Carrito{
     //     this.pagado=false;
     //     this.articulos = [];
     // }
-    constructor(_id, _idcliente=null, _fechaCreacion=null, _articulos=[]){
-        this.id= _id;
-        this.idCliente= _idcliente; //introducir la id cuando alvaro acabe el login     
+    constructor(id, idcliente=null, fechaCreacion=null, articulos=[]){
+        this._id= id;
+        this.idCliente=idcliente; //introducir la id cuando alvaro acabe el login     
         this.pagado=false;
-        this.articulos = _articulos;
-        if( _fechaCreacion==null){
+        this.articulos = articulos;
+        if( fechaCreacion==null){
             this.fechaCreacion = this.crearFecha();
         }
         else{
-            this.fechaCreacion = _fechaCreacion;
+            this.fechaCreacion = fechaCreacion;
         }
     }
 

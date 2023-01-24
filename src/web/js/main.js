@@ -23,17 +23,16 @@ function botonesNav(){
   }
 
 
-  function put(newPost) {
+  function put(carro) {
+    console.log(carro['_id']);
     return new Promise (function(resolve,reject){
     let xhr = new XMLHttpRequest();
     xhr.responseType = "json";
-    xhr.open( "PUT", "http://localhost:8000/api/carritos/" + newPost['id']);
+    xhr.open( "PUT", "http://localhost:8000/api/carritos/"+ carro['_id']);
     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-    xhr.send(JSON.stringify(newPost));
-
+    xhr.send(JSON.stringify(carro));
     xhr.onload = () => {
         if (xhr.status == 200) {
-            gethistorial()
             resolve("se ha insertado correctamente")
         }else{
             reject("no se ha insertado")
@@ -41,6 +40,7 @@ function botonesNav(){
     }
     })
 }
+
 function getDescuentos() {
   let xhr = new XMLHttpRequest();
   xhr.open("GET", "http://localhost:8000/api/descuentos");
@@ -62,7 +62,6 @@ function post(newPost) {
 
     xhr.onload = () => {
       if (xhr.status == 201) {
-        gethistorial();
         resolve("se ha insertado correctamente");
       } else {
         reject("no se ha insertado");
@@ -197,15 +196,20 @@ function calcularDescuento(decuentos) {
 
 function guardarCarrito() {
   carrito.setIdCliente(usuario._id);
+  // console.log(carrito);
   getCarritos().then(carritos => {
-    let busqueda = carritos.find(cesta => cesta.id == carrito.id);
-    alert('hola')
+    let busqueda = carritos.find(cesta => cesta._id == carrito._id);
     if (busqueda) {
-      put(carrito);
+      console.log('hacemos un put')
+      put(carrito).then(res =>{
+        gethistorial();
+        console.log("carrito actualizado");
+      });
     }else{
-      post(carrito);
-    }
-    console.log("carrito guardado")
+      post(carrito).then(res =>{
+        gethistorial();
+        console.log("carrito creado en la base datos");});
+    }    
   })
    
 }
@@ -213,8 +217,8 @@ function guardarCarrito() {
 function cargarCarrito(cartId){  
   getCarritos().then((datos) => {
     // console.log(datos);
-    let carroRecuperado = datos.find(element => element.id == cartId);
-    let carroObjecto= new Carrito(carroRecuperado.id, carroRecuperado.idCliente, carroRecuperado.fechaCreacion, carroRecuperado.articulos)
+    let carroRecuperado = datos.find(element => element._id == cartId);
+    let carroObjecto= new Carrito(carroRecuperado._id, carroRecuperado.idCliente, carroRecuperado.fechaCreacion, carroRecuperado.articulos)
     carrito=carroObjecto;
     console.log("carrito recuperado");  
   })
