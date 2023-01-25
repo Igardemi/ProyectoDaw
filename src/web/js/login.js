@@ -28,15 +28,16 @@ function iniciarSesion(datos) {
         datos.forEach((user) => {
             if (user.nombre == nombre.value && user.password == pass.value) {
                 usuario=user;
-                estaIniciado=true;
-                if (carrito.articulos.length != 0) {
-                    guardarCarrito();
-                }
+                estaIniciado=true;               
                 gethistorial();
                 document.getElementById("login").close();
                 document.getElementById("historialCarritos").showModal()
             }
         });
+        //probando
+        if (estaIniciado==true && carrito.articulos.length != 0) {
+                    guardarCarrito();
+        }
         if(estaIniciado==false){
             alert("Datos incorrectos")
         }
