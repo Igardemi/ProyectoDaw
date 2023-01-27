@@ -17,8 +17,11 @@ function getCarritos(){
 
 function gethistorial(){
     getCarritos().then((data) => {
-        let busqueda = data.filter(carrito => carrito.idCliente == usuario._id)
-        if(usuario!=null){
+        let userLocal = localStorage.getItem("usuario");
+        let busqueda = data.filter(carrito => carrito.idCliente == JSON.parse(userLocal)._id)
+        console.log(busqueda)
+        if(userLocal!=null){
+            console.log("g")
             paintHistorial(busqueda);
         }
         else{

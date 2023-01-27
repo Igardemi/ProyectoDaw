@@ -27,8 +27,9 @@ function iniciarSesion(datos) {
     } else {
         datos.forEach((user) => {
             if (user.nombre == nombre.value && user.password == pass.value) {
-                usuario=user;
-                estaIniciado=true;               
+                // usuario=user;
+                estaIniciado=true;   
+                localStorage.setItem("usuario",JSON.stringify(user));            
                 gethistorial();
                 document.getElementById("login").close();
                 document.getElementById("historialCarritos").showModal()

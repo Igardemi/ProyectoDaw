@@ -121,7 +121,7 @@ function verCarrito() {
 function botonesCarrito() {
   document.getElementById("btnPagar").addEventListener("click", () => {
     document.getElementById("carrito").close();
-    if (usuario == null || carrito.articulos.length == 0) {    
+    if (localStorage.getItem("usuario") == null || carrito.articulos.length == 0) {    
       document.getElementById("login").close();
       document.getElementById("login").showModal();
     } 
@@ -195,7 +195,8 @@ function calcularDescuento(decuentos) {
 }
 
 function guardarCarrito() {
-  carrito.setIdCliente(usuario._id);
+  let userLocal = localStorage.getItem("usuario")
+  carrito.setIdCliente(JSON.parse(userLocal)._id);
   // console.log(carrito);
   getCarritos().then(carritos => {
     let busqueda = carritos.find(cesta => cesta._id == carrito._id);
@@ -249,10 +250,10 @@ window.onload = () => {
 
   //botones header
   document.getElementById("btnUsuario").addEventListener("click", () => {
-    if(usuario==null){
+    if(localStorage.getItem("usuario")==null){
       document.getElementById("login").showModal()
     }else{
-      getCarritos();
+      gethistorial();
       document.getElementById("historialCarritos").showModal();
     }
 
@@ -294,7 +295,12 @@ window.onload = () => {
     
   });
   document.getElementById("btnBusqueda").onclick = function(){
-    buscar();
+    // buscar();
+    let miUser = localStorage.getItem("usuario");
+    console.log(JSON.parse(miUser) )
+  }
+  document.getElementById("cierraSesion").onclick = function(){
+    localStorage.clear();
   }
 };
 
