@@ -29,6 +29,7 @@ function botonesNav(){
     let xhr = new XMLHttpRequest();
     xhr.responseType = "json";
     xhr.open( "PUT", "http://localhost:8000/api/carritos/"+ carro['_id']);
+    xhr.setRequestHeader('Authorization', 'Bearer ' + JSON.parse(localStorage.getItem("usuario")).token);
     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     xhr.send(JSON.stringify(carro));
     xhr.onload = () => {
@@ -58,6 +59,7 @@ function post(newPost) {
     xhr.responseType = "json";
     xhr.open("POST", "http://localhost:8000/api/carritos/");
     xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+    xhr.setRequestHeader('Authorization', 'Bearer ' + JSON.parse(localStorage.getItem("usuario")).token);
     xhr.send(JSON.stringify(newPost));
 
     xhr.onload = () => {
@@ -197,11 +199,9 @@ function calcularDescuento(decuentos) {
 function guardarCarrito() {
   let userLocal = localStorage.getItem("usuario")
   carrito.setIdCliente(JSON.parse(userLocal)._id);
-  // console.log(carrito);
   getCarritos().then(carritos => {
     let busqueda = carritos.find(cesta => cesta._id == carrito._id);
     if (busqueda) {
-      console.log('hacemos un put')
       put(carrito).then(res =>{
         gethistorial();
         console.log("carrito actualizado");
@@ -276,7 +276,7 @@ window.onload = () => {
   document
     .getElementsByClassName("c-login__iniciar")[0]
     .addEventListener("click", () => {
-    usoPromesa();
+      iniciarSesion();
     });
   document.getElementById("cerrarLogin").addEventListener("click", () => {
     document.getElementById("login").close();
@@ -300,7 +300,9 @@ window.onload = () => {
     console.log(JSON.parse(miUser) )
   }
   document.getElementById("cierraSesion").onclick = function(){
+    logout();
     localStorage.clear();
+    
   }
 };
 

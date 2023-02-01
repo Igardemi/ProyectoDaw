@@ -3,6 +3,7 @@ function getCarritos(){
         xhr= new XMLHttpRequest();       
         xhr.open("GET","http://localhost:8000/api/carritos");
         xhr.responseType="json";
+        xhr.setRequestHeader('Authorization', 'Bearer ' + JSON.parse(localStorage.getItem("usuario")).token);
         xhr.send();
         xhr.onload=function(){
             if(xhr.status==200){          
@@ -89,6 +90,7 @@ function borrarCarrito(id){
         let xhr = new XMLHttpRequest();
           xhr.open("DELETE", "http://localhost:8000/api/carritos/"+id);
           xhr.responseType = "json";
+          xhr.setRequestHeader('Authorization', 'Bearer ' + JSON.parse(localStorage.getItem("usuario")).token);
           xhr.send();
           xhr.onload = function () {
                 gethistorial();
